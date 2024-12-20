@@ -90,12 +90,13 @@
             z-index: 1000;
         }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
+      .header-content {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
        /* Logo Base Styles */
         .logo {
@@ -397,7 +398,72 @@
             display: grid;
             gap: 1rem;
         }
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
 
+.brand-container:hover {
+    transform: translateY(-1px);
+}
+
+.logo-image {
+    height: 48px;
+    width: auto;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-name {
+    color: var(--primary, #2563eb);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.brand-tagline {
+    color: #4b5563;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0.75rem 1rem;
+    }
+
+    .logo-image {
+        height: 40px;
+    }
+
+    .brand-name {
+        font-size: 1.25rem;
+    }
+
+    .brand-tagline {
+        font-size: 0.75rem;
+    }
+}
+
+/* High contrast and reduced motion considerations */
+@media (prefers-contrast: more) {
+    .brand-name {
+        color: #1e40af;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .brand-container {
+        transition: none;
+    }
+}
         .form-group {
             display: grid;
             gap: 0.5rem;
@@ -463,35 +529,30 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <a href="#" class="logo">Tomi Šeregi</a>
-            <button class="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="#services"></a></li>
-                    <li><a href="#portfolio"></a></li>
-                    <li><a href="#about"></a></li>
-                    <li><a href="#contact"></a></li>
-                </ul>
-            </nav>
+<header>
+    <div class="container header-content">
+        <div class="brand-container">
+            <img src="logo.png" alt="Tomi Šeregi Logo" class="logo-image">
+            <div class="name-container">
+                <h1 class="brand-name">Tomi Šeregi</h1>
+                <p class="brand-tagline">AI Solutions</p>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
+   <section class="hero">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1>Brezplačne AI rešitve za slovenska podjetja</h1>
+            <p>Rastite znami.</p>
+            <a href="#contact" class="cta-button">Pridobite brezplačno spletno stran</a>
+        </div>
+        <div class="hero-image">
+            <img src="handshake.jpg" alt="AI Solutions Illustration">
+        </div>
+    </div>
+</section>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Brezplačne AI rešitve za slovenska podjetja</h1>
-                <p>Pomagam lokalnim podjetjem rasti s pomočjo umetne inteligence in brezplačne izdelave spletnih strani.</p>
-                <a href="#contact" class="cta-button">Pridobite brezplačno spletno stran</a>
-            </div>
-            <div class="hero-image">
-                <img src="handshake.jpg" alt="AI Solutions Illustration">
-            </div>
-        </div>
-    </section>
 
     <section id="services" class="services">
         <div class="container">
@@ -505,7 +566,7 @@
                 <div class="service-card">
                     <i class="fas fa-robot"></i>
                     <h3>Avtomatizacija procesov</h3>
-                    <p>Optimizirajte svoje poslovne procese z naprednimi AI rešitvami (kmalu na voljo).</p>
+                    <p>(kmalu na voljo)</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-handshake"></i>
