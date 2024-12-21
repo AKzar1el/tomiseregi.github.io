@@ -959,7 +959,107 @@
         width: 100%;
     }
 }
+.section-separator {
+    position: relative;
+    height: 100px;
+    margin-top: -100px; /* Pull up to overlap with previous section */
+    z-index: 1;
+}
 
+.separator-curve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    clip-path: ellipse(70% 100% at 50% 0%);
+}
+
+/* Gradient overlays for smooth transitions */
+.section-gradient {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-gradient::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--section-bg));
+    z-index: 2;
+}
+
+.section-gradient::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, transparent, var(--section-bg));
+    z-index: 2;
+}
+
+/* Section-specific styles */
+.hero {
+    --section-bg: var(--accent);
+    margin-bottom: 50px;
+}
+
+.services {
+    --section-bg: white;
+    position: relative;
+    padding-top: 100px;
+    margin-top: -50px;
+}
+
+.about {
+    --section-bg: var(--light);
+    position: relative;
+    padding-top: 100px;
+    margin-top: -50px;
+}
+
+.contact {
+    --section-bg: white;
+    position: relative;
+    padding-top: 100px;
+    margin-top: -50px;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced section animations */
+.services, .about, .contact {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.services.visible, .about.visible, .contact.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add subtle wave patterns */
+.wave-pattern {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background:
+        radial-gradient(circle at 100% 50%, transparent 20%, var(--section-bg) 21%),
+        radial-gradient(circle at 0% 50%, transparent 20%, var(--section-bg) 21%);
+    background-size: 60px 120px;
+    background-position: 0 -60px;
+    z-index: 3;
+}
     </style>
     <meta name="seobility" content="e0ffd662b00b87bc969e23beba35c048">
     <!-- Canonical Link -->
@@ -1105,7 +1205,7 @@
     </header>
 
     <main role="main" id="main-content">
-       <section class="hero" role="region" aria-labelledby="hero-title">
+       <section class="hero section-gradient" role="region" aria-labelledby="hero-title">
     <div class="container hero-content">
         <div class="hero-text">
             <h1 id="hero-title">Profesionalne spletne strani za slovenska podjetja</h1>
@@ -1128,8 +1228,10 @@
         </div>
     </div>
 </section>
-
-        <section id="services" class="services" role="region" aria-labelledby="services-title">
+<div class="section-separator">
+    <div class="separator-curve"></div>
+</div>
+        <section id="services" class="services section-gradient" role="region" aria-labelledby="services-title">
             <div class="container">
                 <h2 id="services-title" class="section-title">Moje storitve</h2>
                 <ul class="services-grid">
@@ -1151,8 +1253,10 @@
                 </ul>
             </div>
         </section>
-
-<section id="about" class="about" role="region" aria-labelledby="about-title">
+<div class="section-separator">
+    <div class="separator-curve"></div>
+</div>
+<section id="about" class="about section-gradient" role="region" aria-labelledby="about-title">
     <div class="container">
         <h2 id="about-title" class="section-title">O meni</h2>
         <div class="about-content">
@@ -1173,8 +1277,10 @@
         </div>
     </div>
 </section>
-
-        <section id="contact" class="contact" role="region" aria-labelledby="contact-title">
+<div class="section-separator">
+    <div class="separator-curve"></div>
+</div>
+        <section id="contact" class="contact section-gradient" role="region" aria-labelledby="contact-title">
             <div class="container">
                 <h2 id="contact-title" class="section-title">Kontaktirajte me</h2>
                 <div class="contact-grid">
@@ -1261,6 +1367,21 @@
                 card.style.animationDelay = `${index * 0.2}s`;
             });
         });
+        // Intersection Observer for section animations
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+// Observe all sections
+document.querySelectorAll('.services, .about, .contact').forEach(section => {
+    sectionObserver.observe(section);
+});
     </script>
     <script>
         if ('serviceWorker' in navigator) {
@@ -1275,7 +1396,6 @@
           });
         }
     </script>
-/* Add this JavaScript to handle active states */
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');

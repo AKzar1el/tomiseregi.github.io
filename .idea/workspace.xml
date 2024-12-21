@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="improved first cta button css">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="improved about me section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -68,13 +68,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00005" summary="added Tomi picture, fixed CTA button link">
-      <option name="closed" value="true" />
-      <created>1734709768623</created>
-      <option name="number" value="LOCAL−00005" />
-      <option name="presentableId" value="LOCAL−00005" />
-      <updated>1734709768623</updated>
     </task>
     <task id="LOCAL−00006" summary="replaced Tomi picture">
       <option name="closed" value="true" />
@@ -412,11 +405,17 @@
       <option name="presentableId" value="LOCAL−00053" />
       <updated>1734821030365</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL−00054" summary="improved about me section">
+      <option name="closed" value="true" />
+      <created>1734821267393</created>
+      <option name="number" value="LOCAL−00054" />
+      <option name="presentableId" value="LOCAL−00054" />
+      <updated>1734821267393</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed thank you page avoiding duplicate headers seo error" />
     <MESSAGE value="added outgoing links for seo" />
     <MESSAGE value="fixed deffer images seo problem" />
     <MESSAGE value="fixed 301 redirects are present" />
@@ -441,6 +440,7 @@
     <MESSAGE value="fixed SEO problems" />
     <MESSAGE value="improved nav" />
     <MESSAGE value="improved first cta button css" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved first cta button css" />
+    <MESSAGE value="improved about me section" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved about me section" />
   </component>
 </project>
