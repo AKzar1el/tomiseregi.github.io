@@ -607,34 +607,38 @@
             </div>
         </div>
     </section>
-
+-->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Kontaktirajte nas</h2>
             <div class="contact-grid">
                 <div class="contact-info">
                     <h3>Stopite v stik</h3>
-                    <p>Zainteresirani za brezplačno spletno stran ali druge AI rešitve? Kontaktirajte me še danes!</p>
+                    <p>Zainteresirani za brezplačno spletno stran? Kontaktirajte me še danes!</p>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
+                <form class="contact-form" action="https://api.staticforms.xyz/submit" method="post" id="staticform">
+                      <!-- Replace with your StaticForms accessKey -->
+                    <input type="hidden" name="accessKey" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
+                    <input type="hidden" name="subject" value="Nova stranka na tomiseregi.si">
+                    <input type="hidden" name="redirectTo" value="https://www.tomiseregi.si">
+                    <div class="form-group field">
                         <label for="name">Ime in priimek</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group field">
                         <label for="email">E-pošta</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group field">
                         <label for="message">Sporočilo</label>
-                        <textarea id="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="cta-button">Pošlji sporočilo</button>
+                    <button type="Submit" class="cta-button">Pošlji sporočilo</button>
                 </form>
             </div>
         </div>
     </section>
--->
+
     <footer>
         <div class="container footer-content">
             <div>
