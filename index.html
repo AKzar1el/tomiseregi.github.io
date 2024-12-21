@@ -681,6 +681,9 @@
     <meta name="author" content="Tomi Šeregi" />
     <meta name="keywords" content="AI Solutions, Slovenian Businesses, Free Website Creation, Automated Workflow, Tomi Šeregi" />
 
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.webp">
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -916,6 +919,19 @@
                 card.style.animationDelay = `${index * 0.2}s`;
             });
         });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+              .then(registration => {
+                console.log('ServiceWorker registration successful');
+              })
+              .catch(err => {
+                console.log('ServiceWorker registration failed: ', err);
+              });
+          });
+        }
     </script>
 </body>
 </html>

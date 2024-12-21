@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="implemented google tag manager">
-      <change afterPath="$PROJECT_DIR$/index.amp.html" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added amp version of website">
+      <change afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -293,11 +294,17 @@
       <option name="presentableId" value="LOCAL−00032" />
       <updated>1734797722537</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL−00033" summary="added amp version of website">
+      <option name="closed" value="true" />
+      <created>1734798056785</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1734798056785</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="replaced Tomi picture" />
     <MESSAGE value="changed title content" />
     <MESSAGE value="updated form sending" />
     <MESSAGE value="contact me typo fix" />
@@ -322,6 +329,7 @@
     <MESSAGE value="testing image" />
     <MESSAGE value="added next gen image format" />
     <MESSAGE value="implemented google tag manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented google tag manager" />
+    <MESSAGE value="added amp version of website" />
+    <option name="LAST_COMMIT_MESSAGE" value="added amp version of website" />
   </component>
 </project>
