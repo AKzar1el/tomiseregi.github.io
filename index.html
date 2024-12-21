@@ -22,6 +22,7 @@
             https://www.googletagmanager.com
             https://ssl.google-analytics.com
             https://www.google-analytics.com
+            https://*.googleapis.com
             https://cdnjs.cloudflare.com;
 
         style-src
@@ -34,6 +35,9 @@
             https://www.tomiseregi.si
             https://www.google-analytics.com
             https://ssl.google-analytics.com
+            https://*.google.com
+            https://*.googleapis.com
+            https://*.gstatic.com
             data:;
 
         font-src
@@ -47,7 +51,10 @@
 
         frame-src
             'self'
-            https://calendly.com;
+            https://calendly.com
+            https://www.google.com
+            https://www.google.com/maps/
+            https://maps.google.com/;
 
         form-action
             'self'
@@ -524,10 +531,33 @@ h1, h2, h3, h4, h5, h6 {
             padding: 4rem 0;
         }
 
-        .contact-grid {
+  .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .map-container {
+                height: 300px;
+                margin-top: 2rem;
+            }
         }
 
         .contact-form {
@@ -1420,6 +1450,9 @@ html {
                         <button type="Submit" class="cta-button" role="button">Pošlji sporočilo</button>
                     </form>
                 </div>
+                <div class="map-container">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21329.226901059094!2d14.49124327117008!3d46.052978681585984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d635a05207f%3A0xe667d30acde6b278!2sLjubljanski%20grad!5e1!3m2!1ssl!2ssi!4v1734824006776!5m2!1ssl!2ssi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
             </div>
         </section>
     </main>
