@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added aria roles and landmarks">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added security and seo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -173,7 +173,14 @@
       <option name="presentableId" value="LOCAL−00015" />
       <updated>1734791854366</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL−00016" summary="added security and seo">
+      <option name="closed" value="true" />
+      <created>1734792589644</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1734792589644</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -191,6 +198,7 @@
     <MESSAGE value="added new sitemap.xml" />
     <MESSAGE value="added new robots.txt" />
     <MESSAGE value="added aria roles and landmarks" />
-    <option name="LAST_COMMIT_MESSAGE" value="added aria roles and landmarks" />
+    <MESSAGE value="added security and seo" />
+    <option name="LAST_COMMIT_MESSAGE" value="added security and seo" />
   </component>
 </project>
