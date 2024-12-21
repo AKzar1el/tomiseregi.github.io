@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for contacting Tomi Šeregi - AI Solutions for Slovenian Businesses">
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' https:; font-src 'self' https://cdnjs.cloudflare.com; upgrade-insecure-requests;">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+    <title>Hvala za zaupanje | Tomi Šeregi</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.tomiseregi.si/favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Reusing your existing styles */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --text: #1f2937;
+            --light: #f3f4f6;
+            --accent: #dbeafe;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header styles */
+        header {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: flex-start;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-image {
+            height: 48px;
+            width: auto;
+        }
+
+        .name-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .brand-name {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .brand-tagline {
+            color: #4b5563;
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        /* Thank you section styles */
+        .thank-you {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--accent), white);
+            text-align: center;
+        }
+
+        .thank-you-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .thank-you-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .thank-you h1 {
+            font-size: 2.5rem;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .thank-you p {
+            font-size: 1.25rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: var(--secondary);
+        }
+
+        /* Footer styles */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-content {
+                padding: 2rem 1rem;
+            }
+
+            .thank-you h1 {
+                font-size: 2rem;
+            }
+
+            .thank-you p {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header role="banner">
+        <div class="container header-content">
+            <div class="brand-container">
+                <img src="https://www.tomiseregi.si/logo.png" alt="Tomi Šeregi Logo" class="logo-image">
+                <div class="name-container">
+                    <h1 class="brand-name">Tomi Šeregi</h1>
+                    <p class="brand-tagline" aria-label="Tagline">AI Solutions</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="thank-you" role="region" aria-labelledby="thank-you-title">
+            <div class="container">
+                <div class="thank-you-content">
+                    <i class="fas fa-check-circle thank-you-icon" aria-hidden="true"></i>
+                    <h1 id="thank-you-title">Hvala za vaše sporočilo!</h1>
+                    <p>Cenim vaše zaupanje in se veselim sodelovanja z vami. Odgovoril vam bom v manj kot 24 urah.</p>
+                    <p>Med tem časom si lahko ogledate moj LinkedIn profil za več informacij o mojih storitvah.</p>
+                    <a href="https://www.tomiseregi.si" class="back-button" role="button">Nazaj na domačo stran</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-content">
+            <div>
+                <h3>Tomi Šeregi</h3>
+                <p>AI rešitve za rast vašega podjetja</p>
+            </div>
+            <div>
+                <h3>Kontakt</h3>
+                <p>tomi.seregi99@gmail.com</p>
+                <a href="https://www.linkedin.com/in/tomi-seregi/" aria-label="Visit LinkedIn profile">LinkedIn: Tomi Šeregi</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EM9CVPCXYC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EM9CVPCXYC', {
+            'transport_url': 'https://ssl.google-analytics.com',
+            'transport_type': 'beacon'
+        });
+    </script>
+</body>
+</html>
