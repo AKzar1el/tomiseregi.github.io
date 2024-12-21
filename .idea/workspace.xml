@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added about me section again">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="updated max strong tags (6)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -377,11 +377,17 @@
       <option name="presentableId" value="LOCAL−00044" />
       <updated>1734814051147</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL−00045" summary="updated max strong tags (6)">
+      <option name="closed" value="true" />
+      <created>1734815594405</created>
+      <option name="number" value="LOCAL−00045" />
+      <option name="presentableId" value="LOCAL−00045" />
+      <updated>1734815594405</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added aria roles and landmarks" />
     <MESSAGE value="added security and seo" />
     <MESSAGE value="implemented cdn" />
     <MESSAGE value="removed to many h1 seo problem" />
@@ -406,6 +412,7 @@
     <MESSAGE value="fixed hero image rounding" />
     <MESSAGE value="added about me section" />
     <MESSAGE value="added about me section again" />
-    <option name="LAST_COMMIT_MESSAGE" value="added about me section again" />
+    <MESSAGE value="updated max strong tags (6)" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated max strong tags (6)" />
   </component>
 </project>
