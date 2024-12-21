@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="changed thank you page avoiding duplicate headers seo error">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added outgoing links for seo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thank-you.html" beforeDir="false" afterPath="$PROJECT_DIR$/thank-you.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +229,14 @@
       <option name="presentableId" value="LOCAL−00023" />
       <updated>1734794990695</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL−00024" summary="added outgoing links for seo">
+      <option name="closed" value="true" />
+      <created>1734795200182</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1734795200182</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -254,6 +261,7 @@
     <MESSAGE value="updated sitemap.xml" />
     <MESSAGE value="fixed seo problem not starting with h1" />
     <MESSAGE value="changed thank you page avoiding duplicate headers seo error" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed thank you page avoiding duplicate headers seo error" />
+    <MESSAGE value="added outgoing links for seo" />
+    <option name="LAST_COMMIT_MESSAGE" value="added outgoing links for seo" />
   </component>
 </project>
