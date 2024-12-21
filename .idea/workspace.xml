@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="replaced Tomi picture">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="changed title content">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +108,14 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1734711121200</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="changed title content">
+      <option name="closed" value="true" />
+      <created>1734783423167</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1734783423168</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -119,6 +125,7 @@
     <MESSAGE value="base / fixed" />
     <MESSAGE value="added Tomi picture, fixed CTA button link" />
     <MESSAGE value="replaced Tomi picture" />
-    <option name="LAST_COMMIT_MESSAGE" value="replaced Tomi picture" />
+    <MESSAGE value="changed title content" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed title content" />
   </component>
 </project>
