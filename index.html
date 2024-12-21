@@ -609,6 +609,40 @@
                 display: block;
                 padding-top: 56.25%; /* 16:9 aspect ratio */
             }
+        .nav-list {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .services-grid {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
     </style>
 
     <!-- Canonical Link -->
@@ -734,6 +768,13 @@
                     <p class="brand-tagline" aria-label="Tagline">AI Solutions</p>
                 </div>
             </div>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#services">Storitve</a></li>
+                    <li><a href="#about">O meni</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -760,23 +801,23 @@
         <section id="services" class="services" role="region" aria-labelledby="services-title">
             <div class="container">
                 <h2 id="services-title" class="section-title">Moje storitve</h2>
-                <div class="services-grid">
-                    <article class="service-card" role="article">
+                <ul class="services-grid">
+                    <li class="service-card" role="article">
                         <i class="fas fa-globe" aria-hidden="true"></i>
                         <h3>Brezplačne spletne strani</h3>
                         <p>Profesionalne spletne strani, izdelane s pomočjo AI tehnologije, brezplačno za vaše podjetje.</p>
-                    </article>
-                    <article class="service-card" role="article">
+                    </li>
+                    <li class="service-card" role="article">
                         <i class="fas fa-robot" aria-hidden="true"></i>
                         <h3>Avtomatizacija procesov</h3>
                         <p>(kmalu na voljo)</p>
-                    </article>
-                    <article class="service-card" role="article">
+                    </li>
+                    <li class="service-card" role="article">
                         <i class="fas fa-handshake" aria-hidden="true"></i>
                         <h3>Partnerski program</h3>
                         <p>Pridružite se naši rastočI mreži podjetij za medsebojno rast in promocijo.</p>
-                    </article>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
