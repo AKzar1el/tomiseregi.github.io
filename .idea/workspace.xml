@@ -391,7 +391,14 @@
       <option name="presentableId" value="LOCAL−00046" />
       <updated>1734816116294</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL−00047" summary="fixed ai buzz word appearence">
+      <option name="closed" value="true" />
+      <created>1734816279817</created>
+      <option name="number" value="LOCAL−00047" />
+      <option name="presentableId" value="LOCAL−00047" />
+      <updated>1734816279817</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
