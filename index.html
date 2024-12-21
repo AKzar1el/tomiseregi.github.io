@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tomi Šeregi - AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions.">
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' https:; font-src 'self' https://cdnjs.cloudflare.com; form-action https://api.staticforms.xyz; upgrade-insecure-requests;">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
     <title>Tomi Šeregi | Slovenia</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         :root {
             --primary: #2563eb;
@@ -527,7 +535,8 @@
             }
         }
     </style>
-        <!-- Canonical Link -->
+
+    <!-- Canonical Link -->
     <link rel="canonical" href="https://www.tomiseregi.si/" />
 
     <!-- Open Graph / Facebook -->
@@ -538,17 +547,17 @@
     <meta property="og:url" content="https://www.tomiseregi.si/" />
     <meta property="og:title" content="Tomi Šeregi | AI Solutions" />
     <meta property="og:description" content="Free website creation and automated workflow solutions tailored for Slovenian businesses." />
-    <meta property="og:image" content="logo.png" />
+    <meta property="og:image" content="https://www.tomiseregi.si/logo.png" />
 
     <!-- Twitter -->
     <meta name="twitter:image:alt" content="AI Solutions Illustration by Tomi Šeregi" />
-    <meta name="twitter:site" content="@YourTwitterHandle" />
+  <!--   <meta name="twitter:site" content="@YourTwitterHandle" />
     <meta name="twitter:creator" content="@YourTwitterHandle" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary_large_image" />-->
     <meta name="twitter:url" content="https://www.tomiseregi.si/" />
     <meta name="twitter:title" content="Tomi Šeregi | AI Solutions" />
     <meta name="twitter:description" content="Free website creation and automated workflow solutions tailored for Slovenian businesses." />
-    <meta name="twitter:image" content="logo.png" />
+    <meta name="twitter:image" content="https://www.tomiseregi.si/logo.png" />
 
     <!-- Additional SEO Tags -->
     <meta name="robots" content="index, follow" />
@@ -562,7 +571,7 @@
       "@type": "Organization",
       "name": "Tomi Šeregi",
       "url": "https://www.tomiseregi.si/",
-      "logo": "logo.png",
+      "logo": "https://www.tomiseregi.si/logo.png",
       "description": "AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions.",
       "contactPoint": {
         "@type": "ContactPoint",
@@ -614,20 +623,30 @@
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EM9CVPCXYC"></script>
+    <!-- Check if working 23.12.24 Analytics -->
     <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EM9CVPCXYC', {
+        'transport_url': 'https://ssl.google-analytics.com',
+        'transport_type': 'beacon'
+      });
+    </script>
+  <!--   <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'G-EM9CVPCXYC');
-    </script>
+    </script>-->
 </head>
 
 <body>
     <header role="banner">
         <div class="container header-content">
             <div class="brand-container">
-                <img src="logo.png" alt="Tomi Šeregi Logo" class="logo-image">
+                <img src="https://www.tomiseregi.si/logo.png" alt="Tomi Šeregi Logo" class="logo-image">
                 <div class="name-container">
                     <h1 class="brand-name">Tomi Šeregi</h1>
                     <p class="brand-tagline" aria-label="Tagline">AI Solutions</p>
@@ -645,7 +664,7 @@
                     <a href="https://calendly.com/tomi-seregi99/30min" class="cta-button" role="button" aria-label="Schedule a consultation">Pridobite stran zdaj!</a>
                 </div>
                 <div class="hero-image" role="img" aria-label="AI Solutions Illustration">
-                    <img src="tomi.png" alt="AI Solutions Illustration" loading="lazy">
+                    <img src="https://www.tomiseregi.si/tomi.png" alt="AI Solutions Illustration" loading="lazy">
                 </div>
             </div>
         </section>
@@ -719,43 +738,39 @@
     </footer>
 
     <script>
-	// Initial page load animations are handled by CSS
+        // Your existing JavaScript with added security measures
+        document.addEventListener('DOMContentLoaded', () => {
+            // Use Intersection Observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
 
-// Scroll reveal functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
+            // Add reveal class to elements
+            const sections = [
+                '.services-grid',
+                '.portfolio-grid',
+                '.contact-grid',
+                '.service-card',
+                '.portfolio-item'
+            ];
 
-    // Add reveal class to elements you want to animate
-    const sections = [
-        '.services-grid',
-        '.portfolio-grid',
-        '.contact-grid',
-        '.service-card',
-        '.portfolio-item'
-    ];
+            sections.forEach(section => {
+                document.querySelectorAll(section).forEach(element => {
+                    element.classList.add('reveal');
+                    observer.observe(element);
+                });
+            });
 
-    sections.forEach(section => {
-        document.querySelectorAll(section).forEach(element => {
-            element.classList.add('reveal');
-            observer.observe(element);
-        });
-    });
-});
-
-// Add progressive loading to service cards
-document.querySelectorAll('.service-card').forEach((card, index) => {
-    card.style.animationDelay = `${index * 0.2}s`;
-});
-        document.querySelector('.nav-toggle').addEventListener('click', () => {
-            document.querySelector('nav ul').classList.toggle('active');
+            // Progressive loading for service cards
+            document.querySelectorAll('.service-card').forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+            });
         });
     </script>
 </body>
