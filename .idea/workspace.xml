@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="updated sitemap.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +208,14 @@
       <option name="presentableId" value="LOCAL−00020" />
       <updated>1734793487622</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL−00021" summary="updated sitemap.xml">
+      <option name="closed" value="true" />
+      <created>1734793865156</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1734793865156</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
