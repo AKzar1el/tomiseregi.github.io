@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed hero image rounding">
-      <change afterPath="$PROJECT_DIR$/hero-image.png" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added about me section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -364,11 +363,17 @@
       <option name="presentableId" value="LOCAL−00042" />
       <updated>1734804066996</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL−00043" summary="added about me section">
+      <option name="closed" value="true" />
+      <created>1734813477932</created>
+      <option name="number" value="LOCAL−00043" />
+      <option name="presentableId" value="LOCAL−00043" />
+      <updated>1734813477932</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added new sitemap.xml" />
     <MESSAGE value="added new robots.txt" />
     <MESSAGE value="added aria roles and landmarks" />
     <MESSAGE value="added security and seo" />
@@ -393,6 +398,7 @@
     <MESSAGE value="fixed hero section image" />
     <MESSAGE value="updated url redirects" />
     <MESSAGE value="fixed hero image rounding" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed hero image rounding" />
+    <MESSAGE value="added about me section" />
+    <option name="LAST_COMMIT_MESSAGE" value="added about me section" />
   </component>
 </project>
