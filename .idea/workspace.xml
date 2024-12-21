@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed SEO problems">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="improved nav">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,13 +67,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00003" summary="base">
-      <option name="closed" value="true" />
-      <created>1734692152226</created>
-      <option name="number" value="LOCAL−00003" />
-      <option name="presentableId" value="LOCAL−00003" />
-      <updated>1734692152226</updated>
     </task>
     <task id="LOCAL−00004" summary="base / fixed">
       <option name="closed" value="true" />
@@ -412,11 +404,17 @@
       <option name="presentableId" value="LOCAL−00051" />
       <updated>1734817477389</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL−00052" summary="improved nav">
+      <option name="closed" value="true" />
+      <created>1734820344199</created>
+      <option name="number" value="LOCAL−00052" />
+      <option name="presentableId" value="LOCAL−00052" />
+      <updated>1734820344199</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated sitemap.xml" />
     <MESSAGE value="fixed seo problem not starting with h1" />
     <MESSAGE value="changed thank you page avoiding duplicate headers seo error" />
     <MESSAGE value="added outgoing links for seo" />
@@ -441,6 +439,7 @@
     <MESSAGE value="added seobility SEO score widget" />
     <MESSAGE value="added seobility metatag" />
     <MESSAGE value="fixed SEO problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed SEO problems" />
+    <MESSAGE value="improved nav" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved nav" />
   </component>
 </project>
