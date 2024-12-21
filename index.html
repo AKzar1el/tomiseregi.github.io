@@ -131,7 +131,6 @@
             opacity: 0;
             position: relative;
             width: 100%;
-            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -334,14 +333,14 @@
 
 
         .hero-image img {
-            width: 100%;
+            width: auto;
             height: auto;
-            max-width: 500px;
+            max-width: 100%;
+            max-height: 70vh;
             border-radius: 1.5rem;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            object-fit: cover;
-            aspect-ratio: 3/2;
+            object-fit: contain;
         }
 
 		/* Optional hover effect for better interactivity */
@@ -355,8 +354,8 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
-            width: 100%;
-            height: 100%;
+            width: calc(100% - 2rem);
+            height: calc(100% - 2rem);
             background: var(--accent);
             border-radius: 1.5rem;
             z-index: -1;
@@ -683,17 +682,18 @@
             .hero-image {
                 padding: 1rem;
                 margin: 0 auto;
-                max-width: 400px;
             }
 
             .hero-image img {
-                max-width: 100%;
+                max-height: 50vh;
                 border-radius: 1rem;
             }
 
             .hero-image::before {
                 top: 0.5rem;
                 right: 0.5rem;
+                width: calc(100% - 1rem);
+                height: calc(100% - 1rem);
                 border-radius: 1rem;
             }
         }
@@ -824,9 +824,8 @@
                 <img
                     src="https://tomiseregi.si/logo.webp"
                     alt="Tomi Šeregi Logo"
-                    class="hero-image"
+                    class="logo-image"
                     fetchpriority="high"
-                    loading="eager"
                     width="100%"
                     height="100%">
                 <div class="name-container">
@@ -857,6 +856,7 @@
                         src="https://tomiseregi.si/tomi.webp"
                         alt="AI Solutions Illustration"
                         fetchpriority="high"
+                        loading="eager"
                         width="600"
                         height="400"
                         class="hero-image">
