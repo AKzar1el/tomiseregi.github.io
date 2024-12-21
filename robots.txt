@@ -1,0 +1,8 @@
+# robots.txt for https://www.tomiseregi.si/
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+Sitemap: https://www.tomiseregi.si/sitemap.xml
