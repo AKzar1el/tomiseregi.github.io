@@ -794,6 +794,100 @@
         height: calc(100% - 1rem);
     }
 }
+
+.main-nav {
+    margin: 0;
+    padding: 0;
+}
+
+/* Enhanced Navigation Styles with increased specificity */
+.header-content .main-nav .nav-list {
+    display: flex;
+    gap: 2.5rem;
+    margin-left: auto;
+    padding-left: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.header-content .main-nav .nav-list li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.header-content .main-nav .nav-link {
+    text-decoration: none;
+    color: var(--text, #1f2937);
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline hover effect with increased specificity */
+.header-content .main-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary, #2563eb);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.header-content .main-nav .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.header-content .main-nav .nav-link:hover {
+    color: var(--primary, #2563eb);
+}
+
+/* Active state */
+.header-content .main-nav .nav-link.active {
+    color: var(--primary, #2563eb);
+}
+
+.header-content .main-nav .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .header-content .main-nav .nav-list {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        background: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        display: none;
+    }
+
+    .header-content .main-nav .nav-list.active {
+        display: flex;
+    }
+
+    .header-content .main-nav .nav-link {
+        display: block;
+        padding: 0.75rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
     </style>
     <meta name="seobility" content="e0ffd662b00b87bc969e23beba35c048">
     <!-- Canonical Link -->
@@ -915,25 +1009,24 @@
                 style="display:none;visibility:hidden">
         </iframe>
     </noscript>
-     <header role="banner">
+    <header role="banner">
         <div class="container header-content">
             <div class="brand-container">
-                <img
-                    src="https://tomiseregi.si/logo.webp"
-                    alt="Tomi Šeregi Logo"
-                    class="logo-image"
-                    fetchpriority="high"
-                    width="100%"
-                    height="100%">
+                <img src="https://tomiseregi.si/logo.webp"
+                     alt="Tomi Šeregi Logo"
+                     class="logo-image"
+                     fetchpriority="high"
+                     width="100%"
+                     height="100%">
                 <div class="name-container">
                     <p class="brand-name">Tomi Šeregi</p>
                 </div>
             </div>
-            <nav role="navigation" aria-label="Main navigation">
+            <nav role="navigation" aria-label="Main navigation" class="main-nav">
                 <ul class="nav-list">
-                    <li><a href="#services">Storitve</a></li>
-                    <li><a href="#about">O meni</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#services" class="nav-link">Storitve</a></li>
+                    <li><a href="#about" class="nav-link">O meni</a></li>
+                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -1110,5 +1203,44 @@
           });
         }
     </script>
+/* Add this JavaScript to handle active states */
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Handle active state on click
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Set active state based on current section
+    function setActiveLink() {
+        const sections = ['services', 'about', 'contact'];
+        const scrollPosition = window.scrollY;
+
+        sections.forEach(section => {
+            const element = document.getElementById(section);
+            if (element) {
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= 150 && rect.bottom >= 150) {
+                    navLinks.forEach(link => {
+                        if (link.getAttribute('href') === `#${section}`) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+    window.addEventListener('scroll', setActiveLink);
+    setActiveLink(); // Set initial state
+});
+</script>
 </body>
 </html>
