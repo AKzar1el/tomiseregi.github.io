@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added seo">
-      <change afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added new robots.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +144,28 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1734791027984</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="added sitemap.xml">
+      <option name="closed" value="true" />
+      <created>1734791121114</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1734791121114</updated>
+    </task>
+    <task id="LOCAL−00013" summary="added new sitemap.xml">
+      <option name="closed" value="true" />
+      <created>1734791183825</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1734791183825</updated>
+    </task>
+    <task id="LOCAL−00014" summary="added new robots.txt">
+      <option name="closed" value="true" />
+      <created>1734791243003</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1734791243003</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -158,6 +179,9 @@
     <MESSAGE value="updated form sending" />
     <MESSAGE value="contact me typo fix" />
     <MESSAGE value="added seo" />
-    <option name="LAST_COMMIT_MESSAGE" value="added seo" />
+    <MESSAGE value="added sitemap.xml" />
+    <MESSAGE value="added new sitemap.xml" />
+    <MESSAGE value="added new robots.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new robots.txt" />
   </component>
 </project>

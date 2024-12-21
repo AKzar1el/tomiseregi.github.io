@@ -624,108 +624,87 @@
 </head>
 
 <body>
-<header>
-    <div class="container header-content">
-        <div class="brand-container">
-            <img src="logo.png" alt="Tomi Šeregi Logo" class="logo-image">
-            <div class="name-container">
-                <h1 class="brand-name">Tomi Šeregi</h1>
-                <p class="brand-tagline">AI Solutions</p>
+    <header role="banner">
+        <div class="container header-content">
+            <div class="brand-container">
+                <img src="logo.png" alt="Tomi Šeregi Logo" class="logo-image">
+                <div class="name-container">
+                    <h1 class="brand-name">Tomi Šeregi</h1>
+                    <p class="brand-tagline" aria-label="Tagline">AI Solutions</p>
+                </div>
             </div>
         </div>
-    </div>
-</header>
-   <section class="hero">
-    <div class="container hero-content">
-        <div class="hero-text">
-            <h1>Brezplačne spletne strani za slovenska podjetja</h1>
-            <p>Rastimo skupaj!</p>
-            <a href="https://calendly.com/tomi-seregi99/30min" class="cta-button">Pridobite stran zdaj!</a>
-        </div>
-        <div class="hero-image">
-            <img src="tomi.png" alt="AI Solutions Illustration" loading="lazy">
-        </div>
-    </div>
-</section>
+    </header>
 
+    <main role="main" id="main-content">
+        <section class="hero" role="region" aria-labelledby="hero-title">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 id="hero-title">Brezplačne spletne strani za slovenska podjetja</h1>
+                    <p>Rastimo skupaj!</p>
+                    <a href="https://calendly.com/tomi-seregi99/30min" class="cta-button" role="button" aria-label="Schedule a consultation">Pridobite stran zdaj!</a>
+                </div>
+                <div class="hero-image" role="img" aria-label="AI Solutions Illustration">
+                    <img src="tomi.png" alt="AI Solutions Illustration" loading="lazy">
+                </div>
+            </div>
+        </section>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Moje storitve</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-globe"></i>
-                    <h3>Brezplačne spletne strani</h3>
-                    <p>Profesionalne spletne strani, izdelane s pomočjo AI tehnologije, brezplačno za vaše podjetje.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>Avtomatizacija procesov</h3>
-                    <p>(kmalu na voljo)</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Partnerski program</h3>
-                    <p>Pridružite se naši rastočI mreži podjetij za medsebojno rast in promocijo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-<!--
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="section-title">Naši projekti</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="/api/placeholder/400/300" alt="Project 1">
-                    <div class="portfolio-item-content">
-                        <h3>Projekt 1</h3>
-                        <p>Opis uspešnega projekta in implementiranih rešitev.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="/api/placeholder/400/300" alt="Project 2">
-                    <div class="portfolio-item-content">
-                        <h3>Projekt 2</h3>
-                        <p>Opis uspešnega projekta in implementiranih rešitev.</p>
-                    </div>
+        <section id="services" class="services" role="region" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title" class="section-title">Moje storitve</h2>
+                <div class="services-grid">
+                    <article class="service-card" role="article">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
+                        <h3>Brezplačne spletne strani</h3>
+                        <p>Profesionalne spletne strani, izdelane s pomočjo AI tehnologije, brezplačno za vaše podjetje.</p>
+                    </article>
+                    <article class="service-card" role="article">
+                        <i class="fas fa-robot" aria-hidden="true"></i>
+                        <h3>Avtomatizacija procesov</h3>
+                        <p>(kmalu na voljo)</p>
+                    </article>
+                    <article class="service-card" role="article">
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
+                        <h3>Partnerski program</h3>
+                        <p>Pridružite se naši rastočI mreži podjetij za medsebojno rast in promocijo.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
--->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Kontaktirajte me</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Stopite v stik</h3>
-                    <p>Zainteresirani za brezplačno spletno stran? Kontaktirajte me še danes!</p>
-                </div>
-                <form class="contact-form" action="https://api.staticforms.xyz/submit" method="post" id="staticform">
-                      <!-- Replace with your StaticForms accessKey -->
-                    <input type="hidden" name="accessKey" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
-                    <input type="hidden" name="subject" value="Nova stranka na tomiseregi.si">
-                    <input type="hidden" name="redirectTo" value="https://www.tomiseregi.si">
-                    <div class="form-group field">
-                        <label for="name">Ime in priimek</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group field">
-                        <label for="email">E-pošta</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group field">
-                        <label for="message">Sporočilo</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="Submit" class="cta-button">Pošlji sporočilo</button>
-                </form>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
+        <section id="contact" class="contact" role="region" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section-title">Kontaktirajte me</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Stopite v stik</h3>
+                        <p>Zainteresirani za brezplačno spletno stran? Kontaktirajte me še danes!</p>
+                    </div>
+                    <form class="contact-form" action="https://api.staticforms.xyz/submit" method="post" id="staticform" role="form" aria-labelledby="contact-title">
+                        <input type="hidden" name="accessKey" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
+                        <input type="hidden" name="subject" value="Nova stranka na tomiseregi.si">
+                        <input type="hidden" name="redirectTo" value="https://www.tomiseregi.si">
+                        <div class="form-group field">
+                            <label for="name">Ime in priimek</label>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                        </div>
+                        <div class="form-group field">
+                            <label for="email">E-pošta</label>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                        </div>
+                        <div class="form-group field">
+                            <label for="message">Sporočilo</label>
+                            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        </div>
+                        <button type="Submit" class="cta-button" role="button">Pošlji sporočilo</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
         <div class="container footer-content">
             <div>
                 <h3>Tomi Šeregi</h3>
@@ -734,7 +713,7 @@
             <div>
                 <h3>Kontakt</h3>
                 <p>tomi.seregi99@gmail.com</p>
-                <a href="https://www.linkedin.com/in/tomi-seregi/" style="color:white">LinkedIn: Tomi Šeregi</a>
+                <a href="https://www.linkedin.com/in/tomi-seregi/" style="color:white" aria-label="Visit LinkedIn profile">LinkedIn: Tomi Šeregi</a>
             </div>
         </div>
     </footer>
