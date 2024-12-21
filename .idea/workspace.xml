@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed ai buzz word appearence">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added seobility SEO score widget">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -398,11 +397,17 @@
       <option name="presentableId" value="LOCAL−00047" />
       <updated>1734816279817</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL−00048" summary="added seobility SEO score widget">
+      <option name="closed" value="true" />
+      <created>1734816646458</created>
+      <option name="number" value="LOCAL−00048" />
+      <option name="presentableId" value="LOCAL−00048" />
+      <updated>1734816646458</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented cdn" />
     <MESSAGE value="removed to many h1 seo problem" />
     <MESSAGE value="added thank-you page" />
     <MESSAGE value="updated sitemap.xml" />
@@ -427,6 +432,7 @@
     <MESSAGE value="added about me section again" />
     <MESSAGE value="updated max strong tags (6)" />
     <MESSAGE value="fixed ai buzz word appearence" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed ai buzz word appearence" />
+    <MESSAGE value="added seobility SEO score widget" />
+    <option name="LAST_COMMIT_MESSAGE" value="added seobility SEO score widget" />
   </component>
 </project>
