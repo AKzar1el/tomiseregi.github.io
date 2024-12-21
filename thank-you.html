@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thank you for contacting Tomi Šeregi - AI Solutions for Slovenian Businesses">
+    <!-- Unique meta description for thank you page -->
+    <meta name="description" content="Thank you for contacting Tomi Šeregi. We will respond to your inquiry within 24 hours. Explore our AI solutions for Slovenian businesses while you wait.">
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' https:; font-src 'self' https://cdnjs.cloudflare.com; upgrade-insecure-requests;">
     <meta http-equiv="X-Frame-Options" content="DENY">
@@ -11,10 +12,26 @@
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
 
-    <title>Hvala za zaupanje | Tomi Šeregi</title>
+    <!-- Unique title -->
+    <title>Hvala za vaše sporočilo | Tomi Šeregi</title>
+    <!-- Different canonical URL -->
+    <link rel="canonical" href="https://www.tomiseregi.si/thank-you.html" />
     <link rel="icon" type="image/svg+xml" href="https://www.tomiseregi.si/favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <!-- Unique Open Graph tags -->
+    <meta property="og:title" content="Hvala za vaše sporočilo | Tomi Šeregi" />
+    <meta property="og:description" content="Thank you for reaching out! We will respond to your inquiry within 24 hours." />
+    <meta property="og:url" content="https://www.tomiseregi.si/thank-you.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.tomiseregi.si/logo.png" />
+
+    <!-- Unique Twitter tags -->
+    <meta name="twitter:title" content="Hvala za vaše sporočilo | Tomi Šeregi" />
+    <meta name="twitter:description" content="Thank you for reaching out! We will respond to your inquiry within 24 hours." />
+    <meta name="twitter:url" content="https://www.tomiseregi.si/thank-you.html" />
+
+    <!-- Your existing styles remain the same -->
     <style>
         /* Reusing your existing styles */
         :root {
@@ -185,11 +202,13 @@
     <header role="banner">
         <div class="container header-content">
             <div class="brand-container">
-                <img src="https://www.tomiseregi.si/logo.png" alt="Tomi Šeregi Logo" class="logo-image">
-                <div class="name-container">
-                    <h1 class="brand-name">Tomi Šeregi</h1>
-                    <p class="brand-tagline" aria-label="Tagline">AI Solutions</p>
-                </div>
+                <a href="https://www.tomiseregi.si" class="brand-link">
+                    <img src="https://www.tomiseregi.si/logo.png" alt="Tomi Šeregi Logo" class="logo-image">
+                    <div class="name-container">
+                        <p class="brand-name">Tomi Šeregi</p>
+                        <p class="brand-tagline" aria-label="Tagline">AI Solutions</p>
+                    </div>
+                </a>
             </div>
         </div>
     </header>
@@ -199,10 +218,13 @@
             <div class="container">
                 <div class="thank-you-content">
                     <i class="fas fa-check-circle thank-you-icon" aria-hidden="true"></i>
-                    <h1 id="thank-you-title">Hvala za vaše sporočilo!</h1>
-                    <p>Cenim vaše zaupanje in se veselim sodelovanja z vami. Odgovoril vam bom v manj kot 24 urah.</p>
-                    <p>Med tem časom si lahko ogledate moj LinkedIn profil za več informacij o mojih storitvah.</p>
-                    <a href="https://www.tomiseregi.si" class="back-button" role="button">Nazaj na domačo stran</a>
+                    <h1 id="thank-you-title">Sporočilo uspešno poslano!</h1>
+                    <p>Zahvaljujem se vam za zaupanje. Vaše sporočilo sem prejel in nanj bom odgovoril v najkrajšem možnem času, najkasneje v 24 urah.</p>
+                    <p>Za več informacij o mojih storitvah me lahko medtem spremljate na LinkedInu ali si ogledate moje reference.</p>
+                    <div class="button-group" style="margin-top: 2rem;">
+                        <a href="https://www.tomiseregi.si" class="back-button" role="button">Nazaj na domačo stran</a>
+                        <a href="https://www.linkedin.com/in/tomi-seregi/" class="cta-button" style="margin-left: 1rem;" role="button">LinkedIn Profil</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -217,18 +239,19 @@
             <div>
                 <h3>Kontakt</h3>
                 <p>tomi.seregi99@gmail.com</p>
-                <a href="https://www.linkedin.com/in/tomi-seregi/" aria-label="Visit LinkedIn profile">LinkedIn: Tomi Šeregi</a>
+                <a href="https://www.linkedin.com/in/tomi-seregi/" style="color:white" aria-label="Visit LinkedIn profile">LinkedIn: Tomi Šeregi</a>
             </div>
         </div>
     </footer>
 
-    <!-- Google Analytics -->
+    <!-- Google Analytics with modified page path -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EM9CVPCXYC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-EM9CVPCXYC', {
+            'page_path': '/thank-you',
             'transport_url': 'https://ssl.google-analytics.com',
             'transport_type': 'beacon'
         });
