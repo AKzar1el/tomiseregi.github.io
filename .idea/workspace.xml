@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added amp version of website">
-      <change afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="implemented pwa">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,12 +42,13 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Tomi/Documents/GitHub/tomis",
+    "last_opened_file_path": "C:/Users/Tomi/Documents/GitHub/tomis/icons",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tomi\Documents\GitHub\tomis\icons" />
       <recent name="C:\Users\Tomi\Documents\GitHub\tomis" />
     </key>
   </component>
@@ -301,11 +299,17 @@
       <option name="presentableId" value="LOCAL−00033" />
       <updated>1734798056785</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL−00034" summary="implemented pwa">
+      <option name="closed" value="true" />
+      <created>1734799058302</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1734799058302</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed title content" />
     <MESSAGE value="updated form sending" />
     <MESSAGE value="contact me typo fix" />
     <MESSAGE value="added seo" />
@@ -330,6 +334,7 @@
     <MESSAGE value="added next gen image format" />
     <MESSAGE value="implemented google tag manager" />
     <MESSAGE value="added amp version of website" />
-    <option name="LAST_COMMIT_MESSAGE" value="added amp version of website" />
+    <MESSAGE value="implemented pwa" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented pwa" />
   </component>
 </project>
