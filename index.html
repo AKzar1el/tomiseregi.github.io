@@ -697,6 +697,20 @@
                 border-radius: 1rem;
             }
         }
+
+        /* Accessibility and Performance Optimizations */
+        @media (prefers-reduced-motion: reduce) {
+            .hero-image img {
+                transition: none;
+            }
+        }
+
+        @media (prefers-contrast: more) {
+            .hero-text h1,
+            .hero-text p {
+                color: #000;
+            }
+        }
     </style>
 
     <!-- Canonical Link -->
