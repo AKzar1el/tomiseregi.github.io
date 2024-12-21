@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added security and seo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="implemented cdn">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +179,14 @@
       <option name="presentableId" value="LOCAL−00016" />
       <updated>1734792589644</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL−00017" summary="implemented cdn">
+      <option name="closed" value="true" />
+      <created>1734793066838</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1734793066838</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -199,6 +205,7 @@
     <MESSAGE value="added new robots.txt" />
     <MESSAGE value="added aria roles and landmarks" />
     <MESSAGE value="added security and seo" />
-    <option name="LAST_COMMIT_MESSAGE" value="added security and seo" />
+    <MESSAGE value="implemented cdn" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented cdn" />
   </component>
 </project>
