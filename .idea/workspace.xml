@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added next gen image format">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="implemented google tag manager">
+      <change afterPath="$PROJECT_DIR$/index.amp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -285,11 +286,17 @@
       <option name="presentableId" value="LOCAL−00031" />
       <updated>1734797438921</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL−00032" summary="implemented google tag manager">
+      <option name="closed" value="true" />
+      <created>1734797722537</created>
+      <option name="number" value="LOCAL−00032" />
+      <option name="presentableId" value="LOCAL−00032" />
+      <updated>1734797722537</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added Tomi picture, fixed CTA button link" />
     <MESSAGE value="replaced Tomi picture" />
     <MESSAGE value="changed title content" />
     <MESSAGE value="updated form sending" />
@@ -314,6 +321,7 @@
     <MESSAGE value="fixed pages has no strong importance elements" />
     <MESSAGE value="testing image" />
     <MESSAGE value="added next gen image format" />
-    <option name="LAST_COMMIT_MESSAGE" value="added next gen image format" />
+    <MESSAGE value="implemented google tag manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented google tag manager" />
   </component>
 </project>
