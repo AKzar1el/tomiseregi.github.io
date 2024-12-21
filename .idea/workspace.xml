@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="improved about me section">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added section separators">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -68,13 +68,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00006" summary="replaced Tomi picture">
-      <option name="closed" value="true" />
-      <created>1734711121200</created>
-      <option name="number" value="LOCAL−00006" />
-      <option name="presentableId" value="LOCAL−00006" />
-      <updated>1734711121200</updated>
     </task>
     <task id="LOCAL−00007" summary="changed title content">
       <option name="closed" value="true" />
@@ -412,11 +405,17 @@
       <option name="presentableId" value="LOCAL−00054" />
       <updated>1734821267393</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL−00055" summary="added section separators">
+      <option name="closed" value="true" />
+      <created>1734821986547</created>
+      <option name="number" value="LOCAL−00055" />
+      <option name="presentableId" value="LOCAL−00055" />
+      <updated>1734821986547</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added outgoing links for seo" />
     <MESSAGE value="fixed deffer images seo problem" />
     <MESSAGE value="fixed 301 redirects are present" />
     <MESSAGE value="fixed twitter card incomplete" />
@@ -441,6 +440,7 @@
     <MESSAGE value="improved nav" />
     <MESSAGE value="improved first cta button css" />
     <MESSAGE value="improved about me section" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved about me section" />
+    <MESSAGE value="added section separators" />
+    <option name="LAST_COMMIT_MESSAGE" value="added section separators" />
   </component>
 </project>

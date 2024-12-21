@@ -71,19 +71,20 @@
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Tomi Šeregi</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
-            --text: #1f2937;
-            --light: #f3f4f6;
-            --accent: #dbeafe;
-        }
+:root {
+    --primary: #2563eb;
+    --secondary: #1e40af;
+    --text: #1f2937;
+    --light: #f3f4f6;
+    --accent: #dbeafe;
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
 
         * {
             margin: 0;
@@ -91,11 +92,20 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-        }
+   body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
 
         /* Initial load animations */
         @keyframes fadeInUp {
@@ -306,17 +316,29 @@
     padding: 0 1.5rem;
 }
 
-  .hero-text h1 {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
     line-height: 1.2;
-    margin-bottom: 1.5rem;
-    color: var(--text);
 }
 
-    .hero-text p {
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
-    margin-bottom: 2rem;
+.hero-text h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.hero-text p {
+    font-family: var(--font-body);
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
     color: #4b5563;
+    margin-bottom: 2rem;
+    font-weight: 400;
 }
 
        .cta-button {
@@ -871,7 +893,89 @@
     margin: 0;
     padding: 0;
 }
+/* Navigation Typography */
+.nav-link {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 1rem;
+}
 
+/* Brand Typography */
+.brand-name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.brand-tagline {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+}
+
+/* Service Cards */
+.service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.service-card p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* About Section */
+.about-text p {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Contact Form Typography */
+.contact-form label {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+/* Footer Typography */
+footer {
+    font-family: var(--font-body);
+}
+
+footer h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Button Typography */
+.cta-button {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+}
 /* Enhanced Navigation Styles with increased specificity */
 .header-content .main-nav .nav-list {
     display: flex;
@@ -1238,7 +1342,7 @@ html {
                     <li class="service-card" role="article">
                         <i class="fas fa-globe" aria-hidden="true"></i>
                         <h3><strong>Brezplačne spletne strani</strong></h3>
-                        <p>Profesionalne spletne stran, brezplačno za vaše podjetje.</p>
+                        <p>Profesionalne spletne strani, popolnoma brezplačno za vaše podjetje. Zasnovane so tako, da izboljšajo vašo spletno prisotnost in pomagajo pri rasti vašega poslovanja brez začetnih stroškov.</p>
                     </li>
                     <li class="service-card" role="article">
                         <i class="fas fa-robot" aria-hidden="true"></i>
@@ -1248,7 +1352,7 @@ html {
                     <li class="service-card" role="article">
                         <i class="fas fa-handshake" aria-hidden="true"></i>
                         <h3><strong>Partnerski program</strong></h3>
-                        <p>Pridružite se naši rastoči mreži podjetij za medsebojno rast in promocijo.</p>
+                        <p>Pridružite se naši rastoči mreži podjetij in izkoristite priložnost za medsebojno rast in promocijo. Naš partnerski program omogoča sodelovanje, ki prinaša obojestranske koristi ter spodbuja dolgoročno poslovno uspešnost.</p>
                     </li>
                 </ul>
             </div>
@@ -1270,9 +1374,11 @@ html {
                 >
             </div>
             <div class="about-text">
-                <p>Sem Tomi Šeregi, sveže diplomirani strokovnjak na področju tehnologije in umetne inteligence. S svojo strastjo do inovacij želim pomagati lokalnim slovenskim podjetjem rasti v digitalnem svetu.</p>
-                <p>Trenutno nudim brezplačne profesionalne spletne strani za slovenska podjetja. Ta storitev omogoča podjetjem, da vzpostavijo močno spletno prisotnost brez začetnih stroškov, hkrati pa mi omogoča pridobivanje dragocenih referenc in prikazovanje mojih sposobnosti.</p>
-                <p>Z združevanjem najnovejše tehnologije in osebnega pristopa si prizadevam ustvariti trajnostne digitalne rešitve, ki bodo pomagale vašemu podjetju uspeti v današnjem konkurenčnem okolju.</p>
+               <p>Sem Tomi Šeregi, sveže diplomirani strokovnjak na področju tehnologije in umetne inteligence. Z veliko strastjo do inovacij si prizadevam pomagati lokalnim slovenskim podjetjem pri rasti in uspehu v digitalnem svetu.</p>
+
+                <p>Trenutno ponujam brezplačne profesionalne spletne strani za slovenska podjetja. Ta edinstvena storitev omogoča podjetjem, da brez začetnih stroškov vzpostavijo močno spletno prisotnost, medtem ko mi omogoča pridobivanje dragocenih referenc in prikaz mojih strokovnih sposobnosti.</p>
+
+                <p>Z združevanjem najnovejših tehnoloških rešitev in osebnega pristopa si prizadevam ustvariti trajnostne digitalne rešitve, ki bodo vašemu podjetju pomagale uspeti v današnjem konkurenčnem poslovnem okolju.</p>
             </div>
         </div>
     </div>
@@ -1286,7 +1392,7 @@ html {
                 <div class="contact-grid">
                     <div class="contact-info">
                         <h3><strong>Stopite v stik</strong></h3>
-                        <p>Zainteresirani za brezplačno spletno stran? Kontaktirajte me še danes!</p>
+                        <p>Ste zainteresirani za brezplačno spletno stran? Ne odlašajte – kontaktirajte me še danes in naredimo prvi korak k izboljšanju vaše spletne prisotnosti. Skupaj lahko ustvarimo rešitev, ki bo ustrezala potrebam vašega podjetja.</p>
                     </div>
                     <form
                             class="contact-form"
