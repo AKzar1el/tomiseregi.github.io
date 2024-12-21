@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="testing image">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added next gen image format">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -277,11 +278,17 @@
       <option name="presentableId" value="LOCAL−00030" />
       <updated>1734797043824</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL−00031" summary="added next gen image format">
+      <option name="closed" value="true" />
+      <created>1734797438921</created>
+      <option name="number" value="LOCAL−00031" />
+      <option name="presentableId" value="LOCAL−00031" />
+      <updated>1734797438921</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="base / fixed" />
     <MESSAGE value="added Tomi picture, fixed CTA button link" />
     <MESSAGE value="replaced Tomi picture" />
     <MESSAGE value="changed title content" />
@@ -306,6 +313,7 @@
     <MESSAGE value="fixed page has no list markdown" />
     <MESSAGE value="fixed pages has no strong importance elements" />
     <MESSAGE value="testing image" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing image" />
+    <MESSAGE value="added next gen image format" />
+    <option name="LAST_COMMIT_MESSAGE" value="added next gen image format" />
   </component>
 </project>
