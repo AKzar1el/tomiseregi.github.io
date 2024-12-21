@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed twitter card incomplete">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed page has no list markdown">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -257,11 +257,17 @@
       <option name="presentableId" value="LOCAL−00027" />
       <updated>1734796233271</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL−00028" summary="fixed page has no list markdown">
+      <option name="closed" value="true" />
+      <created>1734796565565</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1734796565565</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added linkedin url" />
     <MESSAGE value="improved logo css" />
     <MESSAGE value="base" />
     <MESSAGE value="base / fixed" />
@@ -286,6 +292,7 @@
     <MESSAGE value="fixed deffer images seo problem" />
     <MESSAGE value="fixed 301 redirects are present" />
     <MESSAGE value="fixed twitter card incomplete" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed twitter card incomplete" />
+    <MESSAGE value="fixed page has no list markdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed page has no list markdown" />
   </component>
 </project>
