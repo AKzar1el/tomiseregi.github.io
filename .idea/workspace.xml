@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="removed to many h1 seo problem">
-      <change afterPath="$PROJECT_DIR$/thank-you.html" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="updated sitemap.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +194,21 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1734793248781</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="added thank-you page">
+      <option name="closed" value="true" />
+      <created>1734793391657</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1734793391657</updated>
+    </task>
+    <task id="LOCAL−00020" summary="updated sitemap.xml">
+      <option name="closed" value="true" />
+      <created>1734793487622</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1734793487622</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -214,6 +229,8 @@
     <MESSAGE value="added security and seo" />
     <MESSAGE value="implemented cdn" />
     <MESSAGE value="removed to many h1 seo problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed to many h1 seo problem" />
+    <MESSAGE value="added thank-you page" />
+    <MESSAGE value="updated sitemap.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated sitemap.xml" />
   </component>
 </project>
