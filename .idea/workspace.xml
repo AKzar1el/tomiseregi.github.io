@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="optimized loading time">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed hero section image">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -314,11 +313,17 @@
       <option name="presentableId" value="LOCAL−00035" />
       <updated>1734799346594</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL−00036" summary="fixed hero section image">
+      <option name="closed" value="true" />
+      <created>1734799923322</created>
+      <option name="number" value="LOCAL−00036" />
+      <option name="presentableId" value="LOCAL−00036" />
+      <updated>1734799923322</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="contact me typo fix" />
     <MESSAGE value="added seo" />
     <MESSAGE value="added sitemap.xml" />
     <MESSAGE value="added new sitemap.xml" />
@@ -343,6 +348,7 @@
     <MESSAGE value="added amp version of website" />
     <MESSAGE value="implemented pwa" />
     <MESSAGE value="optimized loading time" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimized loading time" />
+    <MESSAGE value="fixed hero section image" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed hero section image" />
   </component>
 </project>
