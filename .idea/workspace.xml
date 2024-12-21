@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed page has no list markdown">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed pages has no strong importance elements">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -264,11 +263,17 @@
       <option name="presentableId" value="LOCAL−00028" />
       <updated>1734796565565</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL−00029" summary="fixed pages has no strong importance elements">
+      <option name="closed" value="true" />
+      <created>1734796880776</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1734796880776</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improved logo css" />
     <MESSAGE value="base" />
     <MESSAGE value="base / fixed" />
     <MESSAGE value="added Tomi picture, fixed CTA button link" />
@@ -293,6 +298,7 @@
     <MESSAGE value="fixed 301 redirects are present" />
     <MESSAGE value="fixed twitter card incomplete" />
     <MESSAGE value="fixed page has no list markdown" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed page has no list markdown" />
+    <MESSAGE value="fixed pages has no strong importance elements" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed pages has no strong importance elements" />
   </component>
 </project>
