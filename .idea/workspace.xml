@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added new logo">
-      <change afterPath="$PROJECT_DIR$/background.mp4" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="changed background video">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -82,13 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00043" summary="added about me section">
-      <option name="closed" value="true" />
-      <created>1734813477932</created>
-      <option name="number" value="LOCAL−00043" />
-      <option name="presentableId" value="LOCAL−00043" />
-      <updated>1734813477932</updated>
     </task>
     <task id="LOCAL−00044" summary="added about me section again">
       <option name="closed" value="true" />
@@ -426,7 +418,14 @@
       <option name="presentableId" value="LOCAL−00091" />
       <updated>1734904413439</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL−00092" summary="changed background video">
+      <option name="closed" value="true" />
+      <created>1734906936885</created>
+      <option name="number" value="LOCAL−00092" />
+      <option name="presentableId" value="LOCAL−00092" />
+      <updated>1734906936885</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -441,7 +440,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="optimized structure again" />
     <MESSAGE value="fixed mobile design" />
     <MESSAGE value="fixed mobile hero and nav section" />
     <MESSAGE value="fixed css link not loading" />
@@ -466,6 +464,7 @@
     <MESSAGE value="added new logo again" />
     <MESSAGE value="test" />
     <MESSAGE value="added new logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new logo" />
+    <MESSAGE value="changed background video" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed background video" />
   </component>
 </project>

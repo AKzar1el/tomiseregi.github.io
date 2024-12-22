@@ -381,6 +381,15 @@
           display: inline-block;
           text-decoration: none;
         }
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
         .main-nav .nav-link::after {
           content: '';
           position: absolute;
@@ -1148,14 +1157,30 @@
           line-height: 1.7;
         }
 .modern-header {
-    background: #0A1426;
+    background: transparent; /* Start with transparent background */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
+.modern-header.scrolled {
+    background: #0A1426; /* Dark background when scrolled */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.modern-header.scrolled {
+    background: #0A1426; /* Dark background when scrolled */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.scrolled .nav-link {
+    color: #B0B7C3;
+    text-shadow: none;
+}
+
+.scrolled .nav-link:hover {
+    color: #ffffff;
+}
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -1171,11 +1196,13 @@
     gap: 1rem;
 }
 
+/* Update the brand name to be more visible on transparent background */
 .brand-name {
     color: #ffffff;
     font-size: 1.25rem;
     font-weight: 600;
     margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Add shadow for better visibility */
 }
 
 .logo-image {
@@ -1664,6 +1691,28 @@
 <script nonce="abc123">
     document.addEventListener('DOMContentLoaded',()=>{const o=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add('active')})},{threshold:.1});['.services-grid','.portfolio-grid','.contact-grid','.service-card','.portfolio-item'].forEach(e=>{document.querySelectorAll(e).forEach(t=>{t.classList.add('reveal'),o.observe(t)})});document.querySelectorAll('.service-card').forEach((e,t)=>{e.style.animationDelay=`${.2*t}s`});const r=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add('visible')})},{threshold:.2});document.querySelectorAll('.services, .about, .vision, .contact, .faq').forEach(e=>{r.observe(e)}),'serviceWorker'in navigator&&window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').then(e=>{console.log('ServiceWorker registration successful')}).catch(e=>{console.log('ServiceWorker registration failed: ',e)})});const s=document.querySelectorAll('.nav-link');function a(){const e=['services','about','contact'],t=window.scrollY;e.forEach(n=>{const i=document.getElementById(n);if(i){const c=i.getBoundingClientRect();c.top<=150&&c.bottom>=150&&s.forEach(l=>{l.getAttribute('href')===`#${n}`?l.classList.add('active'):l.classList.remove('active')})}})}s.forEach(e=>{e.addEventListener('click',function(){s.forEach(t=>t.classList.remove('active')),this.classList.add('active')})}),window.addEventListener('scroll',a),a();const d=document.querySelector('.scroll-to-top');window.addEventListener('scroll',()=>{window.scrollY>200?d.classList.add('show'):d.classList.remove('show')}),d.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})});
 </script>
+<script nonce="abc123">
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.modern-header');
+    const scrollThreshold = 50; // Adjust this value to control when the header changes
 
+    function updateHeader() {
+        if (window.scrollY > scrollThreshold) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', updateHeader);
+    updateHeader(); // Initial check
+});
+</script>
+<script nonce="abc123">
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.querySelector('.video-background video');
+        video.playbackRate = 0.9;
+    });
+</script>
 </body>
 </html>
