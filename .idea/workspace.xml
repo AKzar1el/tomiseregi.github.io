@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="refactored index.html formating">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed broken js code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.amp.html" beforeDir="false" afterPath="$PROJECT_DIR$/amp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +53,9 @@
       <recent name="C:\Users\Tomi\Documents\GitHub\tomis" />
       <recent name="C:\Users\Tomi\Documents\GitHub\tomis\icons" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tomi\Documents\GitHub\tomis\amp" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -68,13 +72,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00012" summary="added sitemap.xml">
-      <option name="closed" value="true" />
-      <created>1734791121114</created>
-      <option name="number" value="LOCAL−00012" />
-      <option name="presentableId" value="LOCAL−00012" />
-      <updated>1734791121114</updated>
     </task>
     <task id="LOCAL−00013" summary="added new sitemap.xml">
       <option name="closed" value="true" />
@@ -412,11 +409,17 @@
       <option name="presentableId" value="LOCAL−00060" />
       <updated>1734865641240</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL−00061" summary="fixed broken js code">
+      <option name="closed" value="true" />
+      <created>1734865943535</created>
+      <option name="number" value="LOCAL−00061" />
+      <option name="presentableId" value="LOCAL−00061" />
+      <updated>1734865943535</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="testing image" />
     <MESSAGE value="added next gen image format" />
     <MESSAGE value="implemented google tag manager" />
     <MESSAGE value="added amp version of website" />
@@ -441,6 +444,7 @@
     <MESSAGE value="removed redundancies and added tailwin" />
     <MESSAGE value="changed contact section structure" />
     <MESSAGE value="refactored index.html formating" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored index.html formating" />
+    <MESSAGE value="fixed broken js code" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed broken js code" />
   </component>
 </project>
