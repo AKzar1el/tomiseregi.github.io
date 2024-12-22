@@ -731,96 +731,106 @@
         }
 
         /* Mobile responsiveness */
-        @media (max-width: 768px) {
-          .logo-image {
-              height: 40px;
-          }
-          .header-content {
-            padding: 0.5rem 1rem;
-          }
-          .nav-toggle {
-            display: block;
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            color: var(--text);
-            cursor: pointer;
-          }
-          .main-nav .nav-list {
-            flex-direction: column;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background: white;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            display: none;
-          }
-          .main-nav .nav-list.active {
-            display: flex;
-          }
-          .main-nav .nav-link {
-            display: block;
-            padding: 0.75rem;
-            text-align: center;
-            width: 100%;
-          }
+@media (max-width: 768px) {
+  /* Tweak the hero's padding for a more minimal look */
+  .hero {
+    padding: 4rem 1rem 3rem; /* Adjust as desired */
+    min-height: auto;
+  }
 
-          .hero {
-            padding: 6rem 0 3rem;
-            min-height: auto;
-          }
-          .hero-content {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            text-align: center;
-          }
-          .hero-text {
-            margin: 0 auto;
-          }
-          .hero-image {
-            padding: 1rem;
-            margin: 0 auto;
-          }
-          .hero-image img {
-            max-height: 50vh;
-            border-radius: 1rem;
-          }
+  /* Make the grid only 1 column and center items */
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    justify-items: center; /* This ensures child elements are horizontally centered */
+  }
 
-          .about-content {
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            padding: 0 1.5rem;
-          }
-          .about-text {
-            padding: 1.5rem;
-            text-align: left;
-          }
-          .about-image {
-            padding: 1.5rem;
-            order: -1;
-          }
-          .about-image::before {
-            top: 1rem;
-            right: 1rem;
-            width: calc(100% - 2rem);
-            height: calc(100% - 2rem);
-          }
-          .section-title {
-            font-size: 2rem;
-            margin-bottom: 2.5rem;
-          }
+  /* Center the text; remove the right padding */
+  .hero-text {
+    margin: 0 auto;       /* Center block on smaller screens */
+    padding-right: 0;     /* Override the desktop padding */
+    text-align: center;   /* Ensure text lines up centrally */
+    max-width: 100%;      /* Remove the fixed width so it can fill the screen */
+  }
 
-          .contact-grid {
-            grid-template-columns: 1fr;
-          }
-          .map-container {
-            height: 300px;
-            margin-top: 2rem;
-          }
-        }
+  /* Keep or reduce if you want smaller brand/logo */
+  .logo-image {
+    height: 40px;
+  }
+
+  .header-content {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  .main-nav .nav-list {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none;
+  }
+  .main-nav .nav-list.active {
+    display: flex;
+  }
+  .main-nav .nav-link {
+    display: block;
+    padding: 0.75rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* About section adjustments */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0 1.5rem;
+  }
+  .about-text {
+    padding: 1.5rem;
+    text-align: left; /* or center if you prefer */
+  }
+  .about-image {
+    padding: 1.5rem;
+    order: -1;
+  }
+  .about-image::before {
+    top: 1rem;
+    right: 1rem;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+  }
+
+  /* Adjust the section title on smaller screens */
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Contact grid becomes single-column */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .map-container {
+    height: 300px;
+    margin-top: 2rem;
+  }
+}
+
 
         @media (prefers-contrast: more) {
           .logo {

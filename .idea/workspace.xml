@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="optimized structure">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="optimized structure again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -72,13 +72,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00015" summary="added aria roles and landmarks">
-      <option name="closed" value="true" />
-      <created>1734791854366</created>
-      <option name="number" value="LOCAL−00015" />
-      <option name="presentableId" value="LOCAL−00015" />
-      <updated>1734791854366</updated>
     </task>
     <task id="LOCAL−00016" summary="added security and seo">
       <option name="closed" value="true" />
@@ -416,11 +409,17 @@
       <option name="presentableId" value="LOCAL−00063" />
       <updated>1734868111552</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL−00064" summary="optimized structure again">
+      <option name="closed" value="true" />
+      <created>1734868740504</created>
+      <option name="number" value="LOCAL−00064" />
+      <option name="presentableId" value="LOCAL−00064" />
+      <updated>1734868740504</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added amp version of website" />
     <MESSAGE value="implemented pwa" />
     <MESSAGE value="optimized loading time" />
     <MESSAGE value="fixed hero section image" />
@@ -445,6 +444,7 @@
     <MESSAGE value="fixed broken js code" />
     <MESSAGE value="fixed amp structure and optimized" />
     <MESSAGE value="optimized structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimized structure" />
+    <MESSAGE value="optimized structure again" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimized structure again" />
   </component>
 </project>
