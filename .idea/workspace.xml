@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="reformated code">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added faq">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -80,13 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00035" summary="optimized loading time">
-      <option name="closed" value="true" />
-      <created>1734799346594</created>
-      <option name="number" value="LOCAL−00035" />
-      <option name="presentableId" value="LOCAL−00035" />
-      <updated>1734799346594</updated>
     </task>
     <task id="LOCAL−00036" summary="fixed hero section image">
       <option name="closed" value="true" />
@@ -424,7 +417,14 @@
       <option name="presentableId" value="LOCAL−00083" />
       <updated>1734892432009</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL−00084" summary="added faq">
+      <option name="closed" value="true" />
+      <created>1734893715268</created>
+      <option name="number" value="LOCAL−00084" />
+      <option name="presentableId" value="LOCAL−00084" />
+      <updated>1734893715268</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed redundancies and added tailwin" />
     <MESSAGE value="changed contact section structure" />
     <MESSAGE value="refactored index.html formating" />
     <MESSAGE value="fixed broken js code" />
@@ -464,6 +463,7 @@
     <MESSAGE value="added defering img and fixed incomplete twitter card for thank you page" />
     <MESSAGE value="minified js" />
     <MESSAGE value="reformated code" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformated code" />
+    <MESSAGE value="added faq" />
+    <option name="LAST_COMMIT_MESSAGE" value="added faq" />
   </component>
 </project>
