@@ -5,7 +5,7 @@
     <script nonce="abc123">
         (function(w,d,s,l,i){
           w[l]=w[l]||[];
-          w[l].push({'gtm.start':new Date().getTime(), event:'gtm.js'});
+          w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
           var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
           j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
@@ -80,7 +80,10 @@
     <link href="favicon.svg" rel="icon" type="image/svg+xml">
 
     <!-- Font Awesome with SRI -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    >
 
     <!-- Tailwind CSS with SRI -->
     <script
@@ -398,8 +401,12 @@
         box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
       }
 
+      /*
+        SERVICES SECTION
+        Now has a light gray background
+      */
       .services {
-        --section-bg: white;
+        --section-bg: #f8f9fa;
         position: relative;
         padding-top: 100px;
         margin-top: -50px;
@@ -407,6 +414,7 @@
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        background: var(--section-bg);
       }
       .services.visible {
         opacity: 1;
@@ -470,6 +478,10 @@
         line-height: 1.6;
       }
 
+      /*
+        ABOUT SECTION
+        Now has a soft gradient in the background
+      */
       .about {
         --section-bg: var(--light);
         position: relative;
@@ -479,6 +491,7 @@
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        background: linear-gradient(135deg, #f0f5ff, #ffffff);
       }
       .about.visible {
         opacity: 1;
@@ -573,8 +586,12 @@
         margin-bottom: 0.5rem;
       }
 
+      /*
+        CONTACT SECTION
+        Explicit white background
+      */
       .contact {
-        --section-bg: white;
+        --section-bg: #ffffff;
         position: relative;
         padding-top: 100px;
         margin-top: -50px;
@@ -582,6 +599,7 @@
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        background: var(--section-bg);
       }
       .contact.visible {
         opacity: 1;
@@ -623,8 +641,12 @@
         font-size: 1rem;
       }
 
+      /*
+        FOOTER
+        Now a deeper blue for more contrast
+      */
       footer {
-        background: var(--text);
+        background: var(--secondary); /* previously var(--text) */
         color: white;
         padding: 2rem 0;
         margin-top: 4rem;
@@ -830,21 +852,17 @@
 
       /* Desktop improvements for 'O meni' section spacing */
       @media (min-width: 1024px) {
-        /* Lower the bottom margin for section-title if desired */
         .section-title {
           margin-bottom: 2rem; /* was 3rem */
         }
-        /* Reduce top & bottom padding in .about */
         .about {
           margin-top: -30px;   /* was -50px */
           padding-top: 80px;   /* was 100px */
           padding-bottom: 4rem;/* was 6rem */
         }
-        /* Decrease gap between image & text */
         .about-content {
           gap: 3rem; /* was 5rem */
         }
-        /* Tweak the about-text padding */
         .about-text {
           padding: 1.5rem; /* was 2rem */
         }
