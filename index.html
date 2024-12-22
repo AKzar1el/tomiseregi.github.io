@@ -116,6 +116,65 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
+/* Moja vizija section */
+.vision {
+  /* Keep it shorter than the other sections */
+  --section-bg: #f8f9fa; /* You can change this if you'd like */
+  position: relative;
+  padding-top: 60px;
+  margin-top: -30px;
+  padding-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  /* Subtle box shadow & border for a slight pop */
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border: 1px solid #ebeff5;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.vision.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Make the heading stand out a bit */
+.vision h3 {
+  font-size: 1.75rem;
+  color: var(--secondary); /* or var(--primary) if you prefer */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Center the text, add comfortable line spacing */
+.vision p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin: 0 auto 1.5rem; /* auto left/right to center, extra bottom margin */
+  max-width: 700px;      /* keeps it nicely contained on larger screens */
+  text-align: center;
+}
+
+/* Center the badge row and give them a bit of spacing */
+.vision .trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.vision .trust-badges img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  /* Optional: subtle drop shadow or border */
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 
       .brand-container {
         display: flex;
@@ -1146,7 +1205,22 @@
       </div>
     </div>
   </section>
+<!-- New "Moja vizija" short section -->
+<section aria-labelledby="vision-title" class="vision section-gradient" id="vision" role="region">
+  <div class="container">
+    <h3 id="vision-title">Moja vizija</h3>
+    <p>
+      Z združevanjem najnovej&scaron;ih tehnolo&scaron;kih re&scaron;itev in osebnega pristopa
+      si prizadevam ustvariti trajnostne digitalne re&scaron;itve, ki bodo va&scaron;emu podjetju
+      pomagale uspeti v dana&scaron;njem konkurenčnem poslovnem okolju.
+    </p>
 
+    <div class="trust-badges">
+      <img alt="Badge 1" src="https://tomiseregi.si/icons/ssl-badge.webp"/>
+      <img alt="Badge 2" src="https://via.placeholder.com/60"/>
+    </div>
+  </div>
+</section>
   <div class="section-separator">
     <div class="separator-curve"></div>
   </div>
@@ -1286,7 +1360,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.2 });
 
-  document.querySelectorAll('.services, .about, .contact').forEach(section => {
+  document.querySelectorAll('.services, .about, .vision, .contact').forEach(section => {
     sectionObserver.observe(section);
   });
 
