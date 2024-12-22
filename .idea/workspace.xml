@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed footer structure">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added new nav">
+      <change afterPath="$PROJECT_DIR$/ts-initial.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,22 +44,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tomi/Documents/GitHub/tomis/icons&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Tomi/Documents/GitHub/tomis",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Tomi\Documents\GitHub\tomis\icons" />
       <recent name="C:\Users\Tomi\Documents\GitHub\tomis" />
+      <recent name="C:\Users\Tomi\Documents\GitHub\tomis\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tomi\Documents\GitHub\tomis\amp" />
@@ -80,13 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00037" summary="fixed hero section image">
-      <option name="closed" value="true" />
-      <created>1734800050329</created>
-      <option name="number" value="LOCAL−00037" />
-      <option name="presentableId" value="LOCAL−00037" />
-      <updated>1734800050329</updated>
     </task>
     <task id="LOCAL−00038" summary="fixed hero section image">
       <option name="closed" value="true" />
@@ -424,7 +417,14 @@
       <option name="presentableId" value="LOCAL−00085" />
       <updated>1734896990337</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL−00086" summary="added new nav">
+      <option name="closed" value="true" />
+      <created>1734900072430</created>
+      <option name="number" value="LOCAL−00086" />
+      <option name="presentableId" value="LOCAL−00086" />
+      <updated>1734900072430</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactored index.html formating" />
     <MESSAGE value="fixed broken js code" />
     <MESSAGE value="fixed amp structure and optimized" />
     <MESSAGE value="optimized structure" />
@@ -464,6 +463,7 @@
     <MESSAGE value="reformated code" />
     <MESSAGE value="added faq" />
     <MESSAGE value="fixed footer structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed footer structure" />
+    <MESSAGE value="added new nav" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new nav" />
   </component>
 </project>
