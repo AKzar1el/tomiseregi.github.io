@@ -1331,10 +1331,9 @@
         </div>
     </section>
 
-    <div class="section-separator">
+  <div class="section-separator">
         <div class="separator-curve"></div>
     </div>
-
     <!-- Contact -->
     <section aria-labelledby="contact-title" class="contact section-gradient" id="contact" role="region">
         <div class="container">
@@ -1411,21 +1410,27 @@
                     </button>
                 </form>
             </div>
+
             <div class="faq-container">
-                <section id="faq" aria-labelledby="faq-title" class="faq section-gradient" role="region">
-                    <h2 id="faq-title" class="section-title">Pogosta vprašanja</h2>
+                <section aria-labelledby="faq-title" class="faq section-gradient" id="faq" role="region">
+                    <h2 class="section-title" id="faq-title">Pogosta vprašanja</h2>
                     <div class="faq-grid">
                         <details class="faq-item">
                             <summary>Kaj ponujate?</summary>
-                            <p>Ponujamo brezplačne profesionalne spletne strani za slovenska podjetja. Naše storitve vključujejo popolno postavitev, oblikovanje in optimizacijo spletne strani za vaše podjetje.</p>
+                            <p>Ponujamo brezplačne profesionalne spletne strani za slovenska podjetja. Naše storitve
+                                vključujejo popolno postavitev, oblikovanje in optimizacijo spletne strani za vaše
+                                podjetje.</p>
                         </details>
                         <details class="faq-item">
                             <summary>Kako hitro dobim spletno stran?</summary>
-                            <p>Spletno stran lahko pričakujete v 7–10 delovnih dneh po oddaji zahtevka. V tem času bomo skupaj določili vse vaše potrebe in želje ter izdelali spletno stran po vaši meri.</p>
+                            <p>Spletno stran lahko pričakujete v 7–10 delovnih dneh po oddaji zahtevka. V tem času bomo
+                                skupaj določili vse vaše potrebe in želje ter izdelali spletno stran po vaši meri.</p>
                         </details>
                         <details class="faq-item">
                             <summary>Kaj je partnerski program?</summary>
-                            <p>Partnerski program je rastoča mreža slovenskih podjetij, ki omogoča medsebojno promocijo in sodelovanje. Vsa podjetja, ki sodelujejo z nami, so vključena v ta program, ki spodbuja skupno rast in nove poslovne priložnosti.</p>
+                            <p>Partnerski program je rastoča mreža slovenskih podjetij, ki omogoča medsebojno promocijo
+                                in sodelovanje. Vsa podjetja, ki sodelujejo z nami, so vključena v ta program, ki
+                                spodbuja skupno rast in nove poslovne priložnosti.</p>
                         </details>
                     </div>
                 </section>
@@ -1433,17 +1438,17 @@
         </div>
     </section>
     <section aria-labelledby="location-title" class="location section-gradient" id="location" role="region">
-                <div class="contentinfo map-container">
-                <iframe
-                        allowfullscreen=""
-                        height="450"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21329.226901059094!2d14.49124327117008!3d46.052978681585984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d635a05207f%3A0xe667d30acde6b278!2sLjubljanski%20grad!5e1!3m2!1ssl!2ssi!4v1734824006776!5m2!1ssl!2ssi"
-                        style="border:0;"
-                        width="600"
-                ></iframe>
-            </div>
+        <div class="contentinfo map-container">
+            <iframe
+                    allowfullscreen=""
+                    height="450"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21329.226901059094!2d14.49124327117008!3d46.052978681585984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d635a05207f%3A0xe667d30acde6b278!2sLjubljanski%20grad!5e1!3m2!1ssl!2ssi!4v1734824006776!5m2!1ssl!2ssi"
+                    style="border:0;"
+                    width="600"
+            ></iframe>
+        </div>
     </section>
 </main>
 
@@ -1480,7 +1485,7 @@
 
 <!-- Main JavaScript - Minified -->
 <script nonce="abc123">
-    document.addEventListener('DOMContentLoaded',()=>{const o=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add('active')})},{threshold:.1});['.services-grid','.portfolio-grid','.contact-grid','.service-card','.portfolio-item'].forEach(e=>{document.querySelectorAll(e).forEach(t=>{t.classList.add('reveal'),o.observe(t)})});document.querySelectorAll('.service-card').forEach((e,t)=>{e.style.animationDelay=`${.2*t}s`});const r=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add('visible')})},{threshold:.2});document.querySelectorAll('.services, .about, .vision, .contact').forEach(e=>{r.observe(e)}),'serviceWorker'in navigator&&window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').then(e=>{console.log('ServiceWorker registration successful')}).catch(e=>{console.log('ServiceWorker registration failed: ',e)})});const s=document.querySelectorAll('.nav-link');function a(){const e=['services','about','contact'],t=window.scrollY;e.forEach(n=>{const i=document.getElementById(n);if(i){const c=i.getBoundingClientRect();c.top<=150&&c.bottom>=150&&s.forEach(l=>{l.getAttribute('href')===`#${n}`?l.classList.add('active'):l.classList.remove('active')})}})}s.forEach(e=>{e.addEventListener('click',function(){s.forEach(t=>t.classList.remove('active')),this.classList.add('active')})}),window.addEventListener('scroll',a),a();const d=document.querySelector('.scroll-to-top');window.addEventListener('scroll',()=>{window.scrollY>200?d.classList.add('show'):d.classList.remove('show')}),d.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})});
+    document.addEventListener('DOMContentLoaded',()=>{const o=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add('active')})},{threshold:.1});['.services-grid','.portfolio-grid','.contact-grid','.service-card','.portfolio-item'].forEach(e=>{document.querySelectorAll(e).forEach(t=>{t.classList.add('reveal'),o.observe(t)})});document.querySelectorAll('.service-card').forEach((e,t)=>{e.style.animationDelay=`${.2*t}s`});const r=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add('visible')})},{threshold:.2});document.querySelectorAll('.services, .about, .vision, .contact, .faq').forEach(e=>{r.observe(e)}),'serviceWorker'in navigator&&window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').then(e=>{console.log('ServiceWorker registration successful')}).catch(e=>{console.log('ServiceWorker registration failed: ',e)})});const s=document.querySelectorAll('.nav-link');function a(){const e=['services','about','contact'],t=window.scrollY;e.forEach(n=>{const i=document.getElementById(n);if(i){const c=i.getBoundingClientRect();c.top<=150&&c.bottom>=150&&s.forEach(l=>{l.getAttribute('href')===`#${n}`?l.classList.add('active'):l.classList.remove('active')})}})}s.forEach(e=>{e.addEventListener('click',function(){s.forEach(t=>t.classList.remove('active')),this.classList.add('active')})}),window.addEventListener('scroll',a),a();const d=document.querySelector('.scroll-to-top');window.addEventListener('scroll',()=>{window.scrollY>200?d.classList.add('show'):d.classList.remove('show')}),d.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})});
 </script>
 </body>
 </html>
