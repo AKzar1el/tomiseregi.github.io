@@ -9,11 +9,11 @@
         })(window,document,'script','dataLayer','GTM-XXXX');
     </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tomi Šeregi">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Tomi Šeregi" name="description">
     <!-- Security Headers -->
     <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="
+    <meta content="
         default-src 'self';
 
         script-src
@@ -72,311 +72,543 @@
         upgrade-insecure-requests;
 
         block-all-mixed-content;
-    ">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    " http-equiv="Content-Security-Policy">
+    <meta content="DENY" http-equiv="X-Frame-Options">
+    <meta content="nosniff" http-equiv="X-Content-Type-Options">
+    <meta content="1; mode=block" http-equiv="X-XSS-Protection">
+    <meta content="strict-origin-when-cross-origin" http-equiv="Referrer-Policy">
+    <meta content="geolocation=(), microphone=(), camera=()" http-equiv="Permissions-Policy">
     <title>Tomi Šeregi</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="favicon.svg" rel="icon" type="image/svg+xml">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+          rel="stylesheet">
 
     <style>
-:root {
-    --primary: #2563eb;
-    --secondary: #1e40af;
-    --text: #1f2937;
-    --light: #f3f4f6;
-    --accent: #dbeafe;
-    --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-}
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --text: #1f2937;
+            --light: #f3f4f6;
+            --accent: #dbeafe;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', system-ui, -apple-system, sans-serif;
         }
 
-   body {
-    font-family: var(--font-body);
-    line-height: 1.6;
-    color: var(--text);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-}
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
 
-        /* Initial load animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+           body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
         }
 
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+                /* Initial load animations */
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
 
-        /* Add these classes to your existing elements */
-      .hero-text {
-    max-width: 560px;
-    opacity: 0;
-    animation: fadeInRight 1s ease forwards;
-    padding-right: 2rem;
-}
+                @keyframes fadeInRight {
+                    from {
+                        opacity: 0;
+                        transform: translateX(-20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
 
-.hero-image {
-    opacity: 0;
-    position: relative;
-    width: 100%;
-    max-width: 500px; /* Control maximum width */
-    aspect-ratio: 16/9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    animation: fadeInUp 1s ease 0.3s forwards;
-}
-
-        /* Scroll reveal animations */
-        .reveal {
+                /* Add these classes to your existing elements */
+              .hero-text {
+            max-width: 560px;
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+            animation: fadeInRight 1s ease forwards;
+            padding-right: 2rem;
         }
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+        .hero-image {
+            opacity: 0;
+            position: relative;
+            width: 100%;
+            max-width: 500px; /* Control maximum width */
+            aspect-ratio: 16/9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            animation: fadeInUp 1s ease 0.3s forwards;
         }
 
-        .container {
+                /* Scroll reveal animations */
+                .reveal {
+                    opacity: 0;
+                    transform: translateY(30px);
+                    transition: all 0.8s ease;
+                }
+
+                .reveal.active {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 1.5rem;
+                }
+
+                /* Header */
+                header {
+                    background: white;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    position: fixed;
+                    width: 100%;
+                    top: 0;
+                    z-index: 1000;
+                }
+
+                .header-content {
+                    display: flex;
+                    justify-content: flex-start;
+                    padding: 1rem 2rem;
+                    background: white;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+
+                /* Logo Base Styles */
+                .logo {
+                    font-size: clamp(1.25rem, 4vw, 1.5rem);
+                    font-weight: 700;
+                    color: var(--primary);
+                    text-decoration: none;
+                    padding: 0.5rem;
+                    letter-spacing: -0.02em;
+                    position: relative;
+                    display: inline-block;
+                    transition: all 0.3s ease;
+                    /* Ensure proper touch target size */
+                    min-height: 44px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                /* Add subtle interaction feedback */
+                .logo:hover {
+                    color: var(--secondary);
+                    transform: translateY(-1px);
+                }
+
+                /* Add visual separator */
+                .logo::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: var(--primary);
+                    transform: scaleX(0);
+                    transition: transform 0.3s ease;
+                    transform-origin: right;
+                }
+
+                .logo:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+
+                /* Header container adjustments */
+                .header-content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0.75rem 1rem;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+
+                /* Mobile-specific adjustments */
+                @media (max-width: 768px) {
+                    .header-content {
+                        padding: 0.5rem 1rem;
+                    }
+
+                    .logo {
+                        /* Increase touch target area on mobile */
+                        padding: 0.75rem 0.5rem;
+                        margin-right: auto; /* Push nav toggle to the right */
+                    }
+
+                    /* Ensure logo doesn't crowd the navigation toggle */
+                    .nav-toggle {
+                        margin-left: 1rem;
+                    }
+                }
+
+                /* High contrast mode support */
+                @media (prefers-contrast: more) {
+                    .logo {
+                        color: var(--secondary);
+                        text-decoration: underline;
+                    }
+                }
+
+                /* Reduce motion if user prefers */
+                @media (prefers-reduced-motion: reduce) {
+                    .logo {
+                        transition: none;
+                    }
+
+                    .logo:hover {
+                        transform: none;
+                    }
+                }
+
+                .nav-toggle {
+                    display: none;
+                }
+
+                nav ul {
+                    display: flex;
+                    gap: 2rem;
+                    list-style: none;
+                }
+
+                nav a {
+                    text-decoration: none;
+                    color: var(--text);
+                    font-weight: 500;
+                    transition: color 0.3s;
+                }
+
+                nav a:hover {
+                    color: var(--primary);
+                }
+
+                /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--accent), white);
+            min-height: 80vh; /* Reduced from 100vh for better proportions */
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr; /* Adjusted ratio to give more space to text */
+            gap: 2rem;
+            align-items: center;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
 
-        /* Header */
-        header {
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: flex-start;
-            padding: 1rem 2rem;
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        /* Logo Base Styles */
-        .logo {
-            font-size: clamp(1.25rem, 4vw, 1.5rem);
+        /* Headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
             font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            padding: 0.5rem;
             letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .hero-text h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-text p {
+            font-family: var(--font-body);
+            font-size: clamp(1.125rem, 2vw, 1.25rem);
+            color: #4b5563;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+               .cta-button {
+                    display: inline-block;
+                    background: var(--primary);
+                    color: white;
+                    padding: 1rem 2rem;
+                    border-radius: 0.5rem;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+                    position: relative;
+                    overflow: hidden;
+                    transform: translateY(0);
+                }
+
+                .cta-button:hover {
+                    background: var(--secondary);
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
+                }
+
+                .cta-button:active {
+                    transform: translateY(0);
+                    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+                }
+
+                /* Add a subtle gradient overlay */
+                .cta-button::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0));
+                    transition: opacity 0.3s ease;
+                }
+
+                .cta-button:hover::before {
+                    opacity: 0.8;
+                }
+
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
             position: relative;
-            display: inline-block;
-            transition: all 0.3s ease;
-            /* Ensure proper touch target size */
-            min-height: 44px;
-            display: flex;
-            align-items: center;
+            z-index: 1;
         }
-
-        /* Add subtle interaction feedback */
-        .logo:hover {
-            color: var(--secondary);
-            transform: translateY(-1px);
-        }
-
-        /* Add visual separator */
-        .logo::after {
+        .hero-image::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-            transform-origin: right;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(219, 234, 254, 0.3),
+                rgba(37, 99, 235, 0.1)
+            );
+            border-radius: 1rem;
+            z-index: 2;
         }
 
-        .logo:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
+                /* Optional hover effect for better interactivity */
+                .hero-image img:hover {
+                    transform: translateY(-5px);
+                }
 
-        /* Header container adjustments */
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
 
-        /* Mobile-specific adjustments */
-        @media (max-width: 768px) {
-            .header-content {
-                padding: 0.5rem 1rem;
-            }
 
-            .logo {
-                /* Increase touch target area on mobile */
-                padding: 0.75rem 0.5rem;
-                margin-right: auto; /* Push nav toggle to the right */
-            }
+                /* Services Section */
+                .services {
+                    padding: 4rem 0;
+                }
 
-            /* Ensure logo doesn't crowd the navigation toggle */
-            .nav-toggle {
-                margin-left: 1rem;
-            }
-        }
+                .section-title {
+                    text-align: center;
+                    margin-bottom: 3rem;
+                }
 
-        /* High contrast mode support */
-        @media (prefers-contrast: more) {
-            .logo {
-                color: var(--secondary);
-                text-decoration: underline;
-            }
-        }
+                .services-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2rem;
+                }
 
-        /* Reduce motion if user prefers */
-        @media (prefers-reduced-motion: reduce) {
-            .logo {
-                transition: none;
-            }
+                .service-card {
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 0.5rem;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
 
-            .logo:hover {
-                transform: none;
-            }
-        }
+                .service-card i {
+                    font-size: 2.5rem;
+                    color: var(--primary);
+                    margin-bottom: 1rem;
+                }
 
-        .nav-toggle {
-            display: none;
-        }
+                .service-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                }
 
-        nav ul {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+                .service-card::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background: var(--primary);
+                    transform: scaleX(0);
+                    transition: transform 0.3s ease;
+                }
 
-        nav a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+                .service-card:hover::before {
+                    transform: scaleX(1);
+                }
 
-        nav a:hover {
-            color: var(--primary);
-        }
+                .service-card i {
+                    transition: transform 0.3s ease;
+                }
 
-        /* Hero Section */
-.hero {
-    padding: 8rem 0 4rem;
-    background: linear-gradient(135deg, var(--accent), white);
-    min-height: 80vh; /* Reduced from 100vh for better proportions */
-    display: flex;
-    align-items: center;
-}
+                .service-card:hover i {
+                    transform: scale(1.2);
+                }
 
-.hero-content {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* Adjusted ratio to give more space to text */
-    gap: 2rem;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
+                @keyframes serviceCardIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-}
+                .service-card.animate {
+                    animation: serviceCardIn 0.6s ease forwards;
+                }
 
-.hero-text h1 {
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
+                /* Portfolio Section */
+                .portfolio {
+                    background: var(--light);
+                    padding: 4rem 0;
+                }
 
-.hero-text p {
-    font-family: var(--font-body);
-    font-size: clamp(1.125rem, 2vw, 1.25rem);
-    color: #4b5563;
-    margin-bottom: 2rem;
-    font-weight: 400;
-}
+                .portfolio-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2rem;
+                }
 
-       .cta-button {
-            display: inline-block;
+                .portfolio-item {
+                    background: white;
+                    border-radius: 0.5rem;
+                    overflow: hidden;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+
+                .portfolio-item img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+
+                .portfolio-item-content {
+                    padding: 1.5rem;
+                }
+
+                /* Contact Section */
+                .contact {
+                    padding: 4rem 0;
+                }
+
+          .contact-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 4rem;
+                    margin-bottom: 4rem;
+                }
+
+                .map-container {
+                    width: 100%;
+                    height: 400px;
+                    border-radius: 0.5rem;
+                    overflow: hidden;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    margin-top: 2rem;
+                }
+
+                .map-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                }
+
+                @media (max-width: 768px) {
+                    .map-container {
+                        height: 300px;
+                        margin-top: 2rem;
+                    }
+                }
+
+                .contact-form {
+                    display: grid;
+                    gap: 1rem;
+                }
+
+                .contact-form button[type="submit"] {
+                 cursor: pointer;
             background: var(--primary);
             color: white;
             padding: 1rem 2rem;
             border-radius: 0.5rem;
-            text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
             position: relative;
             overflow: hidden;
             transform: translateY(0);
+            width: auto;
+            display: inline-block;
+            outline: none;
+            border: none; /* Remove any default border */
         }
 
-        .cta-button:hover {
+        .contact-form button[type="submit"]:hover {
             background: var(--secondary);
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
         }
 
-        .cta-button:active {
+        .contact-form button[type="submit"]:active {
             transform: translateY(0);
             box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
         }
+        .contact-form button[type="submit"]:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5); /* Adds a blue focus ring */
+        }
 
-        /* Add a subtle gradient overlay */
-        .cta-button::before {
+        .contact-form button[type="submit"]:focus:not(:focus-visible) {
+            box-shadow: none; /* Removes the focus ring when using mouse */
+        }
+
+        .contact-form button[type="submit"]:focus-visible {
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5); /* Adds focus ring only when using keyboard */
+        }
+        /* Add hover effect */
+        .contact-form button[type="submit"]::before {
             content: '';
             position: absolute;
             top: 0;
@@ -387,871 +619,640 @@ h1, h2, h3, h4, h5, h6 {
             transition: opacity 0.3s ease;
         }
 
-        .cta-button:hover::before {
+        .contact-form button[type="submit"]:hover::before {
             opacity: 0.8;
         }
 
+                .brand-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    transition: transform 0.3s ease;
+                }
 
-.hero-image img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    border-radius: 1rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
-.hero-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(219, 234, 254, 0.3),
-        rgba(37, 99, 235, 0.1)
-    );
-    border-radius: 1rem;
-    z-index: 2;
-}
+                .brand-container:hover {
+                    transform: translateY(-1px);
+                }
 
-		/* Optional hover effect for better interactivity */
-		.hero-image img:hover {
-			transform: translateY(-5px);
-		}
+                .logo-image {
+                    height: 48px;
+                    width: auto;
+                }
 
+                .name-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
 
+                .brand-name {
+                    color: var(--primary, #2563eb);
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin: 0;
+                    line-height: 1.2;
+                }
 
-        /* Services Section */
-        .services {
-            padding: 4rem 0;
+                .brand-tagline {
+                    color: #4b5563;
+                    font-size: 0.875rem;
+                    margin: 0;
+                }
+
+                @media (max-width: 768px) {
+                    .header-content {
+                        padding: 0.75rem 1rem;
+                    }
+
+                    .logo-image {
+                        height: 40px;
+                    }
+
+                    .brand-name {
+                        font-size: 1.25rem;
+                    }
+
+                    .brand-tagline {
+                        font-size: 0.75rem;
+                    }
+                }
+
+                /* High contrast and reduced motion considerations */
+                @media (prefers-contrast: more) {
+                    .brand-name {
+                        color: #1e40af;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    .brand-container {
+                        transition: none;
+                    }
+                }
+                .form-group {
+                    display: grid;
+                    gap: 0.5rem;
+                }
+
+                input, textarea {
+                    padding: 0.75rem;
+                    border: 1px solid #d1d5db;
+                    border-radius: 0.375rem;
+                    width: 100%;
+                }
+
+                /* Footer */
+                footer {
+                    background: var(--text);
+                    color: white;
+                    padding: 2rem 0;
+                    margin-top: 4rem;
+                }
+
+                .footer-content {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 2rem;
+                }
+
+                /* Mobile Responsive */
+                @media (max-width: 768px) {
+                    .nav-toggle {
+                        display: block;
+                        font-size: 1.5rem;
+                        background: none;
+                        border: none;
+                        color: var(--text);
+                        cursor: pointer;
+                    }
+
+                    nav ul {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        right: 0;
+                        background: white;
+                        flex-direction: column;
+                        padding: 1rem;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    }
+
+                    nav ul.active {
+                        display: flex;
+                    }
+
+                    .hero-content {
+                        grid-template-columns: 1fr;
+                        text-align: center;
+                    }
+
+                    .contact-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                    .lazy-image {
+                        opacity: 0;
+                        transition: opacity 0.3s ease-in;
+                    }
+
+                    .lazy-image.loaded {
+                        opacity: 1;
+                    }
+
+                    /* Add a placeholder background while images load */
+                    .image-placeholder {
+                        background: #f3f4f6;
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    .image-placeholder::before {
+                        content: '';
+                        display: block;
+                        padding-top: 56.25%; /* 16:9 aspect ratio */
+                    }
+                .nav-list {
+                    display: flex;
+                    gap: 2rem;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .services-grid {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2rem;
+                }
+
+                .footer-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .footer-list ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0.5rem 0;
+                }
+
+                @media (max-width: 768px) {
+                    nav {
+                        display: none;
+                    }
+                }
+                /* Mobile Responsive Adjustments */
+                @media (max-width: 768px) {
+                    .hero {
+                        padding: 6rem 0 3rem;
+                        min-height: auto;
+                    }
+
+                    .hero-content {
+                        grid-template-columns: 1fr;
+                        gap: 2rem;
+                        text-align: center;
+                    }
+
+                    .hero-text {
+                        margin: 0 auto;
+                    }
+
+                    .hero-image {
+                        padding: 1rem;
+                        margin: 0 auto;
+                    }
+
+                    .hero-image img {
+                        max-height: 50vh;
+                        border-radius: 1rem;
+                    }
+
+                    .hero-image::before {
+                        top: 0.5rem;
+                        right: 0.5rem;
+                        width: calc(100% - 1rem);
+                        height: calc(100% - 1rem);
+                        border-radius: 1rem;
+                    }
+                }
+
+                /* Accessibility and Performance Optimizations */
+                @media (prefers-reduced-motion: reduce) {
+                    .hero-image img {
+                        transition: none;
+                    }
+                }
+
+                @media (prefers-contrast: more) {
+                    .hero-text h1,
+                    .hero-text p {
+                        color: #000;
+                    }
+                }
+
+        .about {
+            padding: 6rem 0;  /* Increased padding for better spacing */
+            background: var(--light);
+            margin: 2rem 0;  /* Added margin for better section separation */
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;  /* Increased gap between image and text */
+            align-items: center;
+            max-width: 1100px;  /* Constrained max-width for better readability */
+            margin: 0 auto;
+        }
+
+        .about-text {
+            opacity: 0;
+            animation: fadeInRight 1s ease forwards;
+            padding: 2rem;  /* Added padding for better text containment */
         }
 
         .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .service-card i {
             font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+            color: var(--text);
+            margin-bottom: 3.5rem;  /* Increased margin after title */
+            text-align: center;
+            position: relative;
         }
 
-		.service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .service-card::before {
+        .section-title::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
             background: var(--primary);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
+            border-radius: 2px;
         }
 
-        .service-card:hover::before {
-            transform: scaleX(1);
+        .about-text p {
+            margin-bottom: 2rem;  /* Increased spacing between paragraphs */
+            font-size: 1.125rem;
+            color: var(--text);
+            line-height: 1.8;
         }
 
-        .service-card i {
-            transition: transform 0.3s ease;
+        .about-text p:last-child {
+            margin-bottom: 0;  /* Remove margin from last paragraph */
         }
 
-        .service-card:hover i {
-            transform: scale(1.2);
-        }
-
-        @keyframes serviceCardIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .service-card.animate {
-            animation: serviceCardIn 0.6s ease forwards;
-        }
-
-        /* Portfolio Section */
-        .portfolio {
-            background: var(--light);
-            padding: 4rem 0;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .portfolio-item {
-            background: white;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .portfolio-item img {
+        .about-image {
+            opacity: 0;
+            position: relative;
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .portfolio-item-content {
-            padding: 1.5rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 4rem 0;
-        }
-
-  .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 4rem;
-        }
-
-        .map-container {
-            width: 100%;
-            height: 400px;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        @media (max-width: 768px) {
-            .map-container {
-                height: 300px;
-                margin-top: 2rem;
-            }
-        }
-
-        .contact-form {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .contact-form button[type="submit"] {
-         cursor: pointer;
-    background: var(--primary);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
-    position: relative;
-    overflow: hidden;
-    transform: translateY(0);
-    width: auto;
-    display: inline-block;
-    outline: none;
-    border: none; /* Remove any default border */
-}
-
-.contact-form button[type="submit"]:hover {
-    background: var(--secondary);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
-}
-
-.contact-form button[type="submit"]:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
-}
-.contact-form button[type="submit"]:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5); /* Adds a blue focus ring */
-}
-
-.contact-form button[type="submit"]:focus:not(:focus-visible) {
-    box-shadow: none; /* Removes the focus ring when using mouse */
-}
-
-.contact-form button[type="submit"]:focus-visible {
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5); /* Adds focus ring only when using keyboard */
-}
-/* Add hover effect */
-.contact-form button[type="submit"]::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0));
-    transition: opacity 0.3s ease;
-}
-
-.contact-form button[type="submit"]:hover::before {
-    opacity: 0.8;
-}
-
-        .brand-container {
             display: flex;
-            align-items: center;
-            gap: 1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .brand-container:hover {
-            transform: translateY(-1px);
-        }
-
-        .logo-image {
-            height: 48px;
-            width: auto;
-        }
-
-        .name-container {
-            display: flex;
-            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            padding: 2.5rem;  /* Increased padding around image */
+            animation: fadeInUp 1s ease 0.3s forwards;
         }
 
-        .brand-name {
-            color: var(--primary, #2563eb);
-            font-size: 1.5rem;
-            font-weight: 600;
+        .about-image img {
+            width: 100%;
+            height: auto;
+            max-width: 450px;  /* Increased max-width for larger image */
+            border-radius: 1.5rem;  /* Increased border radius */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: calc(100% - 4rem);
+            height: calc(100% - 4rem);
+            background: var(--accent);
+            border-radius: 2rem;
+            z-index: 1;
+            transform: rotate(3deg);
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .about {
+                padding: 4rem 0;  /* Slightly reduced padding on mobile */
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 0 1.5rem;
+            }
+
+            .about-text {
+                padding: 1.5rem;
+                text-align: left;  /* Keep text left-aligned on mobile */
+            }
+
+            .about-image {
+                padding: 1.5rem;
+                order: -1;  /* Move image above text on mobile */
+            }
+
+            .about-image::before {
+                top: 1rem;
+                right: 1rem;
+                width: calc(100% - 2rem);
+                height: calc(100% - 2rem);
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        .main-nav {
             margin: 0;
-            line-height: 1.2;
+            padding: 0;
+        }
+        /* Navigation Typography */
+        .nav-link {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        /* Brand Typography */
+        .brand-name {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
         }
 
         .brand-tagline {
-            color: #4b5563;
+            font-family: var(--font-body);
             font-size: 0.875rem;
+            font-weight: 400;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 3rem;
+        }
+
+        /* Service Cards */
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .service-card p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-text p {
+            font-family: var(--font-body);
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Contact Form Typography */
+        .contact-form label {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            font-family: var(--font-body);
+            font-size: 1rem;
+        }
+
+        /* Footer Typography */
+        footer {
+            font-family: var(--font-body);
+        }
+
+        footer h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Button Typography */
+        .cta-button {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        /* Enhanced Navigation Styles with increased specificity */
+        .header-content .main-nav .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            margin-left: auto;
+            padding-left: 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        .header-content .main-nav .nav-list li {
+            position: relative;
+            padding: 0;
             margin: 0;
         }
 
-        @media (max-width: 768px) {
-            .header-content {
-                padding: 0.75rem 1rem;
-            }
-
-            .logo-image {
-                height: 40px;
-            }
-
-            .brand-name {
-                font-size: 1.25rem;
-            }
-
-            .brand-tagline {
-                font-size: 0.75rem;
-            }
+        .header-content .main-nav .nav-link {
+            text-decoration: none;
+            color: var(--text, #1f2937);
+            font-weight: 500;
+            font-size: 1.125rem;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+            position: relative;
+            display: inline-block;
         }
 
-        /* High contrast and reduced motion considerations */
-        @media (prefers-contrast: more) {
-            .brand-name {
-                color: #1e40af;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .brand-container {
-                transition: none;
-            }
-        }
-        .form-group {
-            display: grid;
-            gap: 0.5rem;
-        }
-
-        input, textarea {
-            padding: 0.75rem;
-            border: 1px solid #d1d5db;
-            border-radius: 0.375rem;
+        /* Underline hover effect with increased specificity */
+        .header-content .main-nav .nav-link::after {
+            content: '';
+            position: absolute;
             width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary, #2563eb);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
         }
 
-        /* Footer */
-        footer {
-            background: var(--text);
-            color: white;
-            padding: 2rem 0;
-            margin-top: 4rem;
+        .header-content .main-nav .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+        .header-content .main-nav .nav-link:hover {
+            color: var(--primary, #2563eb);
         }
 
-        /* Mobile Responsive */
+        /* Active state */
+        .header-content .main-nav .nav-link.active {
+            color: var(--primary, #2563eb);
+        }
+
+        .header-content .main-nav .nav-link.active::after {
+            transform: scaleX(1);
+        }
+
+        /* Mobile responsive adjustments */
         @media (max-width: 768px) {
-            .nav-toggle {
-                display: block;
-                font-size: 1.5rem;
-                background: none;
-                border: none;
-                color: var(--text);
-                cursor: pointer;
-            }
-
-            nav ul {
-                display: none;
+            .header-content .main-nav .nav-list {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1.5rem;
+                background: white;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 1rem;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                display: none;
             }
 
-            nav ul.active {
+            .header-content .main-nav .nav-list.active {
                 display: flex;
             }
 
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-            .lazy-image {
-                opacity: 0;
-                transition: opacity 0.3s ease-in;
-            }
-
-            .lazy-image.loaded {
-                opacity: 1;
-            }
-
-            /* Add a placeholder background while images load */
-            .image-placeholder {
-                background: #f3f4f6;
-                position: relative;
-                overflow: hidden;
-            }
-
-            .image-placeholder::before {
-                content: '';
+            .header-content .main-nav .nav-link {
                 display: block;
-                padding-top: 56.25%; /* 16:9 aspect ratio */
-            }
-        .nav-list {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .services-grid {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-list ul {
-            list-style: none;
-            padding: 0;
-            margin: 0.5rem 0;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-        }
-        /* Mobile Responsive Adjustments */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 6rem 0 3rem;
-                min-height: auto;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+                padding: 0.75rem;
                 text-align: center;
-            }
-
-            .hero-text {
-                margin: 0 auto;
-            }
-
-            .hero-image {
-                padding: 1rem;
-                margin: 0 auto;
-            }
-
-            .hero-image img {
-                max-height: 50vh;
-                border-radius: 1rem;
-            }
-
-            .hero-image::before {
-                top: 0.5rem;
-                right: 0.5rem;
-                width: calc(100% - 1rem);
-                height: calc(100% - 1rem);
-                border-radius: 1rem;
+                width: 100%;
             }
         }
-
-        /* Accessibility and Performance Optimizations */
-        @media (prefers-reduced-motion: reduce) {
-            .hero-image img {
-                transition: none;
-            }
+        .section-separator {
+            position: relative;
+            height: 100px;
+            margin-top: -100px; /* Pull up to overlap with previous section */
+            z-index: 1;
         }
 
-        @media (prefers-contrast: more) {
-            .hero-text h1,
-            .hero-text p {
-                color: #000;
-            }
+        .separator-curve {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            clip-path: ellipse(70% 100% at 50% 0%);
         }
 
-.about {
-    padding: 6rem 0;  /* Increased padding for better spacing */
-    background: var(--light);
-    margin: 2rem 0;  /* Added margin for better section separation */
-}
+        /* Gradient overlays for smooth transitions */
+        .section-gradient {
+            position: relative;
+            overflow: hidden;
+        }
 
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;  /* Increased gap between image and text */
-    align-items: center;
-    max-width: 1100px;  /* Constrained max-width for better readability */
-    margin: 0 auto;
-}
+        .section-gradient::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, var(--section-bg));
+            z-index: 2;
+        }
 
-.about-text {
-    opacity: 0;
-    animation: fadeInRight 1s ease forwards;
-    padding: 2rem;  /* Added padding for better text containment */
-}
+        .section-gradient::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, transparent, var(--section-bg));
+            z-index: 2;
+        }
 
-.section-title {
-    font-size: 2.5rem;
-    color: var(--text);
-    margin-bottom: 3.5rem;  /* Increased margin after title */
-    text-align: center;
-    position: relative;
-}
+        /* Section-specific styles */
+        .hero {
+            --section-bg: var(--accent);
+            margin-bottom: 50px;
+        }
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: var(--primary);
-    border-radius: 2px;
-}
+        .services {
+            --section-bg: white;
+            position: relative;
+            padding-top: 100px;
+            margin-top: -50px;
+        }
 
-.about-text p {
-    margin-bottom: 2rem;  /* Increased spacing between paragraphs */
-    font-size: 1.125rem;
-    color: var(--text);
-    line-height: 1.8;
-}
+        .about {
+            --section-bg: var(--light);
+            position: relative;
+            padding-top: 100px;
+            margin-top: -50px;
+        }
 
-.about-text p:last-child {
-    margin-bottom: 0;  /* Remove margin from last paragraph */
-}
+        .contact {
+            --section-bg: white;
+            position: relative;
+            padding-top: 100px;
+            margin-top: -50px;
+        }
 
-.about-image {
-    opacity: 0;
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2.5rem;  /* Increased padding around image */
-    animation: fadeInUp 1s ease 0.3s forwards;
-}
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
 
-.about-image img {
-    width: 100%;
-    height: auto;
-    max-width: 450px;  /* Increased max-width for larger image */
-    border-radius: 1.5rem;  /* Increased border radius */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 2;
-}
+        /* Enhanced section animations */
+        .services, .about, .contact {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
 
-.about-image::before {
-    content: '';
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    width: calc(100% - 4rem);
-    height: calc(100% - 4rem);
-    background: var(--accent);
-    border-radius: 2rem;
-    z-index: 1;
-    transform: rotate(3deg);
-}
+        .services.visible, .about.visible, .contact.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-    .about {
-        padding: 4rem 0;  /* Slightly reduced padding on mobile */
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding: 0 1.5rem;
-    }
-
-    .about-text {
-        padding: 1.5rem;
-        text-align: left;  /* Keep text left-aligned on mobile */
-    }
-
-    .about-image {
-        padding: 1.5rem;
-        order: -1;  /* Move image above text on mobile */
-    }
-
-    .about-image::before {
-        top: 1rem;
-        right: 1rem;
-        width: calc(100% - 2rem);
-        height: calc(100% - 2rem);
-    }
-
-    .section-title {
-        font-size: 2rem;
-        margin-bottom: 2.5rem;
-    }
-}
-
-.main-nav {
-    margin: 0;
-    padding: 0;
-}
-/* Navigation Typography */
-.nav-link {
-    font-family: var(--font-body);
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-/* Brand Typography */
-.brand-name {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-}
-
-.brand-tagline {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    font-weight: 400;
-}
-
-/* Section Titles */
-.section-title {
-    font-family: var(--font-heading);
-    font-size: 2.25rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 3rem;
-}
-
-/* Service Cards */
-.service-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 1rem 0;
-}
-
-.service-card p {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* About Section */
-.about-text p {
-    font-family: var(--font-body);
-    font-size: 1.125rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-/* Contact Form Typography */
-.contact-form label {
-    font-family: var(--font-body);
-    font-weight: 500;
-    font-size: 0.875rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    font-family: var(--font-body);
-    font-size: 1rem;
-}
-
-/* Footer Typography */
-footer {
-    font-family: var(--font-body);
-}
-
-footer h3 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-/* Button Typography */
-.cta-button {
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 1rem;
-}
-/* Enhanced Navigation Styles with increased specificity */
-.header-content .main-nav .nav-list {
-    display: flex;
-    gap: 2.5rem;
-    margin-left: auto;
-    padding-left: 2rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-}
-
-.header-content .main-nav .nav-list li {
-    position: relative;
-    padding: 0;
-    margin: 0;
-}
-
-.header-content .main-nav .nav-link {
-    text-decoration: none;
-    color: var(--text, #1f2937);
-    font-weight: 500;
-    font-size: 1.125rem;
-    padding: 0.5rem 0;
-    transition: color 0.3s ease;
-    position: relative;
-    display: inline-block;
-}
-
-/* Underline hover effect with increased specificity */
-.header-content .main-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--primary, #2563eb);
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-
-.header-content .main-nav .nav-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.header-content .main-nav .nav-link:hover {
-    color: var(--primary, #2563eb);
-}
-
-/* Active state */
-.header-content .main-nav .nav-link.active {
-    color: var(--primary, #2563eb);
-}
-
-.header-content .main-nav .nav-link.active::after {
-    transform: scaleX(1);
-}
-
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-    .header-content .main-nav .nav-list {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 1.5rem;
-        background: white;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        display: none;
-    }
-
-    .header-content .main-nav .nav-list.active {
-        display: flex;
-    }
-
-    .header-content .main-nav .nav-link {
-        display: block;
-        padding: 0.75rem;
-        text-align: center;
-        width: 100%;
-    }
-}
-.section-separator {
-    position: relative;
-    height: 100px;
-    margin-top: -100px; /* Pull up to overlap with previous section */
-    z-index: 1;
-}
-
-.separator-curve {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    clip-path: ellipse(70% 100% at 50% 0%);
-}
-
-/* Gradient overlays for smooth transitions */
-.section-gradient {
-    position: relative;
-    overflow: hidden;
-}
-
-.section-gradient::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom, transparent, var(--section-bg));
-    z-index: 2;
-}
-
-.section-gradient::after {
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, transparent, var(--section-bg));
-    z-index: 2;
-}
-
-/* Section-specific styles */
-.hero {
-    --section-bg: var(--accent);
-    margin-bottom: 50px;
-}
-
-.services {
-    --section-bg: white;
-    position: relative;
-    padding-top: 100px;
-    margin-top: -50px;
-}
-
-.about {
-    --section-bg: var(--light);
-    position: relative;
-    padding-top: 100px;
-    margin-top: -50px;
-}
-
-.contact {
-    --section-bg: white;
-    position: relative;
-    padding-top: 100px;
-    margin-top: -50px;
-}
-
-/* Smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Enhanced section animations */
-.services, .about, .contact {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.services.visible, .about.visible, .contact.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Add subtle wave patterns */
-.wave-pattern {
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    background:
-        radial-gradient(circle at 100% 50%, transparent 20%, var(--section-bg) 21%),
-        radial-gradient(circle at 0% 50%, transparent 20%, var(--section-bg) 21%);
-    background-size: 60px 120px;
-    background-position: 0 -60px;
-    z-index: 3;
-}
+        /* Add subtle wave patterns */
+        .wave-pattern {
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            background:
+                radial-gradient(circle at 100% 50%, transparent 20%, var(--section-bg) 21%),
+                radial-gradient(circle at 0% 50%, transparent 20%, var(--section-bg) 21%);
+            background-size: 60px 120px;
+            background-position: 0 -60px;
+            z-index: 3;
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -1274,402 +1275,420 @@ html {
         };
     </script>
 
-    <meta name="seobility" content="e0ffd662b00b87bc969e23beba35c048">
+    <meta content="e0ffd662b00b87bc969e23beba35c048" name="seobility">
     <!-- Canonical Link -->
-    <link rel="canonical" href="https://tomiseregi.si/" />
-    <link rel="amphtml" href="https://tomiseregi.si/index.amp.html">
+    <link href="https://tomiseregi.si/" rel="canonical"/>
+    <link href="https://tomiseregi.si/index.amp.html" rel="amphtml">
     <!-- Open Graph / Facebook -->
-    <meta property="og:locale" content="sl_SI" />
-    <meta property="og:site_name" content="Tomi Šeregi" />
-    <meta property="og:image:alt" content="AI Solutions Illustration by Tomi Šeregi" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tomiseregi.si/" />
-    <meta property="og:title" content="Tomi Šeregi" />
-    <meta property="og:description" content="Free website creation and automated workflow solutions tailored for Slovenian businesses." />
-    <meta property="og:image" content="https://tomiseregi.si/logo.webp" />
+    <meta content="sl_SI" property="og:locale"/>
+    <meta content="Tomi Šeregi" property="og:site_name"/>
+    <meta content="AI Solutions Illustration by Tomi Šeregi" property="og:image:alt"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://tomiseregi.si/" property="og:url"/>
+    <meta content="Tomi Šeregi" property="og:title"/>
+    <meta content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
+          property="og:description"/>
+    <meta content="https://tomiseregi.si/logo.webp" property="og:image"/>
 
     <!-- Twitter -->
-    <meta name="twitter:image:alt" content="AI Solutions Illustration by Tomi Šeregi" />
-  <!--
-    <meta name="twitter:creator" content="@YourTwitterHandle" />-->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@tomiseregi" />
-    <meta name="twitter:url" content="https://tomiseregi.si/" />
-    <meta name="twitter:title" content="Tomi Šeregi" />
-    <meta name="twitter:description" content="Free website creation and automated workflow solutions tailored for Slovenian businesses." />
-    <meta name="twitter:image" content="https://tomiseregi.si/logo.webp" />
+    <meta content="AI Solutions Illustration by Tomi Šeregi" name="twitter:image:alt"/>
+    <!--
+      <meta name="twitter:creator" content="@YourTwitterHandle" />-->
+    <meta content="summary" name="twitter:card"/>
+    <meta content="@tomiseregi" name="twitter:site"/>
+    <meta content="https://tomiseregi.si/" name="twitter:url"/>
+    <meta content="Tomi Šeregi" name="twitter:title"/>
+    <meta content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
+          name="twitter:description"/>
+    <meta content="https://tomiseregi.si/logo.webp" name="twitter:image"/>
 
     <!-- Additional SEO Tags -->
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Tomi Šeregi" />
-    <meta name="keywords" content="AI Solutions, Slovenian Businesses, Free Website Creation, Automated Workflow, Tomi Šeregi" />
+    <meta content="index, follow" name="robots"/>
+    <meta content="Tomi Šeregi" name="author"/>
+    <meta content="AI Solutions, Slovenian Businesses, Free Website Creation, Automated Workflow, Tomi Šeregi"
+          name="keywords"/>
 
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#2563eb">
-    <link rel="apple-touch-icon" href="/icons/icon-192x192.webp">
+    <link href="/manifest.json" rel="manifest">
+    <meta content="#2563eb" name="theme-color">
+    <link href="/icons/icon-192x192.webp" rel="apple-touch-icon">
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Tomi Šeregi",
-      "url": "https://tomiseregi.si/",
-      "logo": "https://tomiseregi.si/logo.webp",
-      "description": "AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+386 123 456 789",
-        "contactType": "Customer Service",
-        "email": "tomi.seregi99@gmail.com"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/tomi-seregi/"
-      ]
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Tomi Šeregi",
+            "url": "https://tomiseregi.si/",
+            "logo": "https://tomiseregi.si/logo.webp",
+            "description": "AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions.",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+386 123 456 789",
+                "contactType": "Customer Service",
+                "email": "tomi.seregi99@gmail.com"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/tomi-seregi/"
+            ]
+        }
     </script>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Brezplačne spletne strani",
-      "description": "Profesionalne spletne strani, izdelane s pomočjo AI tehnologije, brezplačno za vaše podjetje.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Tomi Šeregi",
-        "url": "https://tomiseregi.si/",
-        "logo": "https://tomiseregi.si/logo.webp"
-      }
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Brezplačne spletne strani",
+            "description": "Profesionalne spletne strani, izdelane s pomočjo AI tehnologije, brezplačno za vaše podjetje.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Tomi Šeregi",
+                "url": "https://tomiseregi.si/",
+                "logo": "https://tomiseregi.si/logo.webp"
+            }
+        }
     </script>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://tomiseregi.si/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://tomiseregi.si/#services"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Contact",
-        "item": "https://tomiseregi.si/#contact"
-      }]
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://tomiseregi.si/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://tomiseregi.si/#services"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Contact",
+                    "item": "https://tomiseregi.si/#contact"
+                }
+            ]
+        }
     </script>
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EM9CVPCXYC"></script>
     <!-- Check if working 23.12.24 Analytics -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-EM9CVPCXYC', {
-        'transport_url': 'https://ssl.google-analytics.com',
-        'transport_type': 'beacon'
-      });
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EM9CVPCXYC', {
+          'transport_url': 'https://ssl.google-analytics.com',
+          'transport_type': 'beacon'
+        });
     </script>
-  <!--   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <!--   <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'G-EM9CVPCXYC');
-    </script>-->
+        gtag('config', 'G-EM9CVPCXYC');
+      </script>-->
 </head>
 
 <body>
-    <noscript>
-        <iframe
-                src="https://www.googletagmanager.com/ns.html?id=G-EM9CVPCXYC"
-                height="0"
-                width="0"
-                style="display:none;visibility:hidden">
-        </iframe>
-    </noscript>
-    <header role="banner">
-        <div class="container header-content">
-            <div class="brand-container">
-                <img src="https://tomiseregi.si/logo.webp"
-                     alt="Tomi Šeregi Logo"
-                     class="logo-image"
-                     fetchpriority="high"
-                     width="100%"
-                     height="100%">
-                <div class="name-container">
-                    <p class="brand-name">Tomi &Scaron;eregi</p>
-                </div>
-            </div>
-            <nav role="navigation" aria-label="Main navigation" class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="#services" class="nav-link">Storitve</a></li>
-                    <li><a href="#about" class="nav-link">O meni</a></li>
-                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main role="main" id="main-content">
-       <section class="hero section-gradient" role="region" aria-labelledby="hero-title">
-    <div class="container hero-content">
-        <div class="hero-text">
-            <h1 id="hero-title">Profesionalne spletne strani za slovenska podjetja</h1>
-            <p>Preprosto, brezplačno, zaupanja vredno</p>
-            <a href="https://calendly.com/tomi-seregi99/30min"
-               class="cta-button"
-               role="button"
-               target="_blank"
-               rel="noopener noreferrer">
-                <strong>Pridobite stran zdaj!</strong>
-            </a>
-        </div>
-        <div class="hero-image">
-            <img src="https://tomiseregi.si/hero-image.webp"
-                 alt="AI Solutions Illustration"
+<noscript>
+    <iframe
+            height="0"
+            src="https://www.googletagmanager.com/ns.html?id=G-EM9CVPCXYC"
+            style="display:none;visibility:hidden"
+            width="0">
+    </iframe>
+</noscript>
+<header role="banner">
+    <div class="container header-content">
+        <div class="brand-container">
+            <img alt="Tomi Šeregi Logo"
+                 class="logo-image"
                  fetchpriority="high"
-                 loading="eager"
-                 width="600"
-                 height="400">
-        </div>
-    </div>
-</section>
-<div class="section-separator">
-    <div class="separator-curve"></div>
-</div>
-        <section id="services" class="services section-gradient" role="region" aria-labelledby="services-title">
-            <div class="container">
-                <h2 id="services-title" class="section-title">Moje storitve</h2>
-                <ul class="services-grid">
-                    <li class="service-card" role="option">
-                        <i class="fas fa-globe" aria-hidden="true"></i>
-                        <h3><strong>Brezplačne spletne strani</strong></h3>
-                        <p>Profesionalne spletne strani, popolnoma brezplačno za va&scaron;e podjetje. Zasnovane so tako, da izboljšajo va&scaron;
-                            o spletno prisotnost in pomagajo pri rasti va&scaron;ega poslovanja brez začetnih stro&scaron;kov.</p>
-                    </li>
-                    <li class="service-card" role="option">
-                        <i class="fas fa-robot" aria-hidden="true"></i>
-                        <h3><strong>Avtomatizacija procesov</strong></h3>
-                        <p>(kmalu na voljo)</p>
-                    </li>
-                    <li class="service-card" role="option">
-                        <i class="fas fa-handshake" aria-hidden="true"></i>
-                        <h3><strong>Partnerski program</strong></h3>
-                        <p>Pridružite se na&scaron;i rastoči mreži podjetij in izkoristite priložnost za medsebojno rast in promocijo. Na&scaron;
-                            partnerski program omogoča sodelovanje, ki prinaša obojestranske koristi ter spodbuja
-                            dolgoročno poslovno uspešnost.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-<div class="section-separator">
-    <div class="separator-curve"></div>
-</div>
-<section id="about" class="about section-gradient" role="region" aria-labelledby="about-title">
-    <div class="container">
-        <h2 id="about-title" class="section-title">O meni</h2>
-        <div class="about-content">
-            <div class="about-image" role="img" aria-label="Tomi Šeregi Profile">
-                <img
-                    src="https://tomiseregi.si/tomi.webp"
-                    alt="Tomi Šeregi"
-                    loading="lazy"
-                    width="400"
-                    height="500"
-                >
-            </div>
-            <div class="about-text">
-               <p>Sem Tomi &Scaron;eregi, sveže diplomirani strokovnjak na področju tehnologije in umetne inteligence. Z veliko strastjo do inovacij si prizadevam pomagati lokalnim slovenskim podjetjem pri rasti in uspehu v digitalnem svetu.</p>
-
-                <p>Trenutno ponujam brezplačne profesionalne spletne strani za slovenska podjetja. Ta edinstvena storitev omogoča podjetjem, da brez začetnih stro&scaron;
-                    kov vzpostavijo močno spletno prisotnost, medtem ko mi omogoča pridobivanje dragocenih referenc in prikaz mojih strokovnih sposobnosti.</p>
-
-                <p>Z združevanjem najnovej&scaron;ih tehnolo&scaron;kih re&scaron;itev in osebnega pristopa si prizadevam ustvariti trajnostne digitalne re&scaron;
-                    itve, ki bodo va&scaron;emu podjetju pomagale uspeti v dana&scaron;njem konkurenčnem poslovnem okolju.</p>
+                 height="100%"
+                 src="https://tomiseregi.si/logo.webp"
+                 width="100%">
+            <div class="name-container">
+                <p class="brand-name">Tomi &Scaron;eregi</p>
             </div>
         </div>
+        <nav aria-label="Main navigation" class="main-nav" role="navigation">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="#services">Storitve</a></li>
+                <li><a class="nav-link" href="#about">O meni</a></li>
+                <li><a class="nav-link" href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
     </div>
-</section>
-<div class="section-separator">
-    <div class="separator-curve"></div>
-</div>
-        <section id="contact" class="contact section-gradient" role="region" aria-labelledby="contact-title">
-            <div class="container">
-                <h2 id="contact-title" class="section-title">Kontaktirajte me</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3><strong>Stopite v stik</strong></h3>
-                        <p>Ste zainteresirani za brezplačno spletno stran?</p>
-                        <br>
-                        <p>Ne odla&scaron;ajte &ndash; kontaktirajte me &scaron;e danes in naredimo prvi korak k izbolj&scaron;
-                            anju va&scaron;
-                            e
-                            spletne prisotnosti. Skupaj lahko ustvarimo re&scaron;itev, ki bo ustrezala potrebam va&scaron;
-                            ega
-                            podjetja.</p>
-                    </div>
-                    <form
-                            class="contact-form"
-                            action="https://api.staticforms.xyz/submit"
-                            method="post"
-                            id="staticform"
-                            role="form"
-                            aria-labelledby="contact-title"
-                            target="_blank">
-                        <input type="hidden" name="accessKey" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
-                        <input type="hidden" name="subject" value="Nova stranka na tomiseregi.si">
-                        <input type="hidden" name="redirectTo" value="https://tomiseregi.si/thank-you">
-                        <div class="form-group field">
-                            <label for="name">Ime in priimek</label>
-                            <input type="text" id="name" name="name" required aria-required="true">
-                        </div>
-                        <div class="form-group field">
-                            <label for="email">E-po&scaron;ta</label>
-                            <input type="email" id="email" name="email" required aria-required="true">
-                        </div>
-                        <div class="form-group field">
-                            <label for="message">Sporočilo</label>
-                            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-                        </div>
-                        <button
-    type="submit"
-    class="inline-block bg-[#2563eb] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-[#1e40af] hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-md relative overflow-hidden"
->
-Pošlji sporočilo
-</button>
+</header>
 
-                    </form>
+<main id="main-content" role="main">
+    <section aria-labelledby="hero-title" class="hero section-gradient" role="region">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 id="hero-title">Profesionalne spletne strani za slovenska podjetja</h1>
+                <p>Preprosto, brezplačno, zaupanja vredno</p>
+                <a class="cta-button"
+                   href="https://calendly.com/tomi-seregi99/30min"
+                   rel="noopener noreferrer"
+                   role="button"
+                   target="_blank">
+                    <strong>Pridobite stran zdaj!</strong>
+                </a>
+            </div>
+            <div class="hero-image">
+                <img alt="AI Solutions Illustration"
+                     fetchpriority="high"
+                     height="400"
+                     loading="eager"
+                     src="https://tomiseregi.si/hero-image.webp"
+                     width="600">
+            </div>
+        </div>
+    </section>
+    <div class="section-separator">
+        <div class="separator-curve"></div>
+    </div>
+    <section aria-labelledby="services-title" class="services section-gradient" id="services" role="region">
+        <div class="container">
+            <h2 class="section-title" id="services-title">Moje storitve</h2>
+            <ul class="services-grid">
+                <li class="service-card" role="option">
+                    <i aria-hidden="true" class="fas fa-globe"></i>
+                    <h3><strong>Brezplačne spletne strani</strong></h3>
+                    <p>Profesionalne spletne strani, popolnoma brezplačno za va&scaron;e podjetje. Zasnovane so tako, da
+                        izboljšajo va&scaron;
+                        o spletno prisotnost in pomagajo pri rasti va&scaron;ega poslovanja brez začetnih stro&scaron;kov.</p>
+                </li>
+                <li class="service-card" role="option">
+                    <i aria-hidden="true" class="fas fa-robot"></i>
+                    <h3><strong>Avtomatizacija procesov</strong></h3>
+                    <p>(kmalu na voljo)</p>
+                </li>
+                <li class="service-card" role="option">
+                    <i aria-hidden="true" class="fas fa-handshake"></i>
+                    <h3><strong>Partnerski program</strong></h3>
+                    <p>Pridružite se na&scaron;i rastoči mreži podjetij in izkoristite priložnost za medsebojno rast in
+                        promocijo. Na&scaron;
+                        partnerski program omogoča sodelovanje, ki prinaša obojestranske koristi ter spodbuja
+                        dolgoročno poslovno uspešnost.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div class="section-separator">
+        <div class="separator-curve"></div>
+    </div>
+    <section aria-labelledby="about-title" class="about section-gradient" id="about" role="region">
+        <div class="container">
+            <h2 class="section-title" id="about-title">O meni</h2>
+            <div class="about-content">
+                <div aria-label="Tomi Šeregi Profile" class="about-image" role="img">
+                    <img
+                            alt="Tomi Šeregi"
+                            height="500"
+                            loading="lazy"
+                            src="https://tomiseregi.si/tomi.webp"
+                            width="400"
+                    >
                 </div>
-                <div class="map-container">
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21329.226901059094!2d14.49124327117008!3d46.052978681585984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d635a05207f%3A0xe667d30acde6b278!2sLjubljanski%20grad!5e1!3m2!1ssl!2ssi!4v1734824006776!5m2!1ssl!2ssi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-            </div>
-        </section>
-    </main>
+                <div class="about-text">
+                    <p>Sem Tomi &Scaron;eregi, sveže diplomirani strokovnjak na področju tehnologije in umetne
+                        inteligence. Z veliko strastjo do inovacij si prizadevam pomagati lokalnim slovenskim podjetjem
+                        pri rasti in uspehu v digitalnem svetu.</p>
 
-    <footer role="contentinfo">
-        <div class="container footer-content">
-            <div>
-                <h3>Tomi &Scaron;eregi</h3>
-                <p>Re&scaron;itve za rast va&scaron;ega podjetja</p>
-            </div>
-            <div>
-                <h3>Kontakt</h3>
-                <p>tomi.seregi99@gmail.com</p>
-                <a href="https://www.linkedin.com/in/tomi-seregi/" style="color:white" aria-label="Visit LinkedIn profile">LinkedIn: Tomi &Scaron;
-                    eregi</a>
+                    <p>Trenutno ponujam brezplačne profesionalne spletne strani za slovenska podjetja. Ta edinstvena
+                        storitev omogoča podjetjem, da brez začetnih stro&scaron;
+                        kov vzpostavijo močno spletno prisotnost, medtem ko mi omogoča pridobivanje dragocenih referenc
+                        in prikaz mojih strokovnih sposobnosti.</p>
+
+                    <p>Z združevanjem najnovej&scaron;ih tehnolo&scaron;kih re&scaron;itev in osebnega pristopa si
+                        prizadevam ustvariti trajnostne digitalne re&scaron;
+                        itve, ki bodo va&scaron;emu podjetju pomagale uspeti v dana&scaron;njem konkurenčnem poslovnem
+                        okolju.</p>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
+    <div class="section-separator">
+        <div class="separator-curve"></div>
+    </div>
+    <section aria-labelledby="contact-title" class="contact section-gradient" id="contact" role="region">
+        <div class="container">
+            <h2 class="section-title" id="contact-title">Kontaktirajte me</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3><strong>Stopite v stik</strong></h3>
+                    <p>Ste zainteresirani za brezplačno spletno stran?</p>
+                    <br>
+                    <p>Ne odla&scaron;ajte &ndash; kontaktirajte me &scaron;e danes in naredimo prvi korak k izbolj&scaron;
+                        anju va&scaron;
+                        e
+                        spletne prisotnosti. Skupaj lahko ustvarimo re&scaron;itev, ki bo ustrezala potrebam va&scaron;
+                        ega
+                        podjetja.</p>
+                </div>
+                <form
+                        action="https://api.staticforms.xyz/submit"
+                        aria-labelledby="contact-title"
+                        class="contact-form"
+                        id="staticform"
+                        method="post"
+                        role="form"
+                        target="_blank">
+                    <input name="accessKey" type="hidden" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
+                    <input name="subject" type="hidden" value="Nova stranka na tomiseregi.si">
+                    <input name="redirectTo" type="hidden" value="https://tomiseregi.si/thank-you">
+                    <div class="form-group field">
+                        <label for="name">Ime in priimek</label>
+                        <input aria-required="true" id="name" name="name" required type="text">
+                    </div>
+                    <div class="form-group field">
+                        <label for="email">E-po&scaron;ta</label>
+                        <input aria-required="true" id="email" name="email" required type="email">
+                    </div>
+                    <div class="form-group field">
+                        <label for="message">Sporočilo</label>
+                        <textarea aria-required="true" id="message" name="message" required rows="5"></textarea>
+                    </div>
+                    <button
+                            class="inline-block bg-[#2563eb] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-[#1e40af] hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-md relative overflow-hidden"
+                            type="submit"
+                    >
+                        Pošlji sporočilo
+                    </button>
 
-    <script>
-        // Your existing JavaScript with added security measures
-        document.addEventListener('DOMContentLoaded', () => {
-            // Use Intersection Observer for scroll animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, {
-                threshold: 0.1
+                </form>
+            </div>
+            <div class="map-container">
+                <iframe allowfullscreen=""
+                        height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21329.226901059094!2d14.49124327117008!3d46.052978681585984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d635a05207f%3A0xe667d30acde6b278!2sLjubljanski%20grad!5e1!3m2!1ssl!2ssi!4v1734824006776!5m2!1ssl!2ssi" style="border:0;"
+                        width="600"></iframe>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer role="contentinfo">
+    <div class="container footer-content">
+        <div>
+            <h3>Tomi &Scaron;eregi</h3>
+            <p>Re&scaron;itve za rast va&scaron;ega podjetja</p>
+        </div>
+        <div>
+            <h3>Kontakt</h3>
+            <p>tomi.seregi99@gmail.com</p>
+            <a aria-label="Visit LinkedIn profile" href="https://www.linkedin.com/in/tomi-seregi/" style="color:white">LinkedIn:
+                Tomi &Scaron;
+                eregi</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Your existing JavaScript with added security measures
+    document.addEventListener('DOMContentLoaded', () => {
+        // Use Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
             });
+        }, {
+            threshold: 0.1
+        });
 
-            // Add reveal class to elements
-            const sections = [
-                '.services-grid',
-                '.portfolio-grid',
-                '.contact-grid',
-                '.service-card',
-                '.portfolio-item'
-            ];
+        // Add reveal class to elements
+        const sections = [
+            '.services-grid',
+            '.portfolio-grid',
+            '.contact-grid',
+            '.service-card',
+            '.portfolio-item'
+        ];
 
-            sections.forEach(section => {
-                document.querySelectorAll(section).forEach(element => {
-                    element.classList.add('reveal');
-                    observer.observe(element);
-                });
-            });
-
-            // Progressive loading for service cards
-            document.querySelectorAll('.service-card').forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
+        sections.forEach(section => {
+            document.querySelectorAll(section).forEach(element => {
+                element.classList.add('reveal');
+                observer.observe(element);
             });
         });
-        // Intersection Observer for section animations
-const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+
+        // Progressive loading for service cards
+        document.querySelectorAll('.service-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+        });
     });
+    // Intersection Observer for section animations
+const sectionObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+    }
+});
 }, {
-    threshold: 0.2
+threshold: 0.2
 });
 
 // Observe all sections
 document.querySelectorAll('.services, .about, .contact').forEach(section => {
-    sectionObserver.observe(section);
+sectionObserver.observe(section);
 });
-    </script>
-    <script>
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-              .then(registration => {
-                console.log('ServiceWorker registration successful');
-              })
-              .catch(err => {
-                console.log('ServiceWorker registration failed: ', err);
-              });
-          });
-        }
-    </script>
+</script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    // Handle active state on click
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.forEach(l => l.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-
-    // Set active state based on current section
-    function setActiveLink() {
-        const sections = ['services', 'about', 'contact'];
-        const scrollPosition = window.scrollY;
-
-        sections.forEach(section => {
-            const element = document.getElementById(section);
-            if (element) {
-                const rect = element.getBoundingClientRect();
-                if (rect.top <= 150 && rect.bottom >= 150) {
-                    navLinks.forEach(link => {
-                        if (link.getAttribute('href') === `#${section}`) {
-                            link.classList.add('active');
-                        } else {
-                            link.classList.remove('active');
-                        }
-                    });
-                }
-            }
-        });
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
     }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-link');
 
-    window.addEventListener('scroll', setActiveLink);
-    setActiveLink(); // Set initial state
-});
+        // Handle active state on click
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Set active state based on current section
+        function setActiveLink() {
+            const sections = ['services', 'about', 'contact'];
+            const scrollPosition = window.scrollY;
+
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 150 && rect.bottom >= 150) {
+                        navLinks.forEach(link => {
+                            if (link.getAttribute('href') === `#${section}`) {
+                                link.classList.add('active');
+                            } else {
+                                link.classList.remove('active');
+                            }
+                        });
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', setActiveLink);
+        setActiveLink(); // Set initial state
+    });
 </script>
 </body>
 </html>

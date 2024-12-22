@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="changed contact section structure">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed illegal characters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
