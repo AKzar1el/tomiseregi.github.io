@@ -2,7 +2,9 @@
 <html lang="sl">
 <head>
     <!-- Google Tag Manager (with nonce) -->
-    <script nonce="abc123">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-XXXX');</script>
+    <script nonce="abc123">
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-XXXX');
+    </script>
 
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -1034,14 +1036,64 @@
     <link href="/icons/icon-192x192.webp" rel="apple-touch-icon">
 
     <!-- Structured Data -->
-  <script nonce="abc123" type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Tomi Šeregi","url":"https://tomiseregi.si/","logo":"https://tomiseregi.si/logo.webp","description":"AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions.","contactPoint":{"@type":"ContactPoint","telephone":"+386 123 456 789","contactType":"Customer Service","email":"tomi.seregi99@gmail.com"},"sameAs":["https://www.linkedin.com/in/tomi-seregi/"]}
+    <script nonce="abc123" type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Tomi Šeregi",
+            "url": "https://tomiseregi.si/",
+            "logo": "https://tomiseregi.si/logo.webp",
+            "description": "AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions.",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+386 123 456 789",
+                "contactType": "Customer Service",
+                "email": "tomi.seregi99@gmail.com"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/tomi-seregi/"
+            ]
+        }
     </script>
     <script nonce="abc123" type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Brezplačne spletne strani","description":"Profesionalne spletne strani, izdelane s pomočjo AI tehnologije, brezplačno za vaše podjetje.","provider":{"@type":"Organization","name":"Tomi Šeregi","url":"https://tomiseregi.si/","logo":"https://tomiseregi.si/logo.webp"}}
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Brezplačne spletne strani",
+            "description": "Profesionalne spletne strani, izdelane s pomočjo AI tehnologije, brezplačno za vaše podjetje.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Tomi Šeregi",
+                "url": "https://tomiseregi.si/",
+                "logo": "https://tomiseregi.si/logo.webp"
+            }
+        }
     </script>
     <script nonce="abc123" type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tomiseregi.si/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://tomiseregi.si/#services"},{"@type":"ListItem","position":3,"name":"Contact","item":"https://tomiseregi.si/#contact"}]}
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://tomiseregi.si/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://tomiseregi.si/#services"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Contact",
+                    "item": "https://tomiseregi.si/#contact"
+                }
+            ]
+        }
     </script>
 
     <!-- Google Analytics (async) -->
@@ -1069,8 +1121,8 @@
                     class="logo-image"
                     fetchpriority="high"
                     height="100%"
-                    src="https://tomiseregi.si/logo.webp"
                     loading="lazy"
+                    src="https://tomiseregi.si/logo.webp"
                     width="100%"
             >
             <div class="name-container">
@@ -1329,10 +1381,14 @@
     <i class="fas fa-arrow-up"></i>
 </button>
 
- <!-- Google Analytics - Minified -->
-    <script nonce="abc123">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-EM9CVPCXYC',{'transport_url':'https://ssl.google-analytics.com','transport_type':'beacon'});</script>
+<!-- Google Analytics - Minified -->
+<script nonce="abc123">
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-EM9CVPCXYC',{'transport_url':'https://ssl.google-analytics.com','transport_type':'beacon'});
+</script>
 
-    <!-- Main JavaScript - Minified -->
-    <script nonce="abc123">document.addEventListener('DOMContentLoaded',()=>{const o=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add('active')})},{threshold:.1});['.services-grid','.portfolio-grid','.contact-grid','.service-card','.portfolio-item'].forEach(e=>{document.querySelectorAll(e).forEach(t=>{t.classList.add('reveal'),o.observe(t)})});document.querySelectorAll('.service-card').forEach((e,t)=>{e.style.animationDelay=`${.2*t}s`});const r=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add('visible')})},{threshold:.2});document.querySelectorAll('.services, .about, .vision, .contact').forEach(e=>{r.observe(e)}),'serviceWorker'in navigator&&window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').then(e=>{console.log('ServiceWorker registration successful')}).catch(e=>{console.log('ServiceWorker registration failed: ',e)})});const s=document.querySelectorAll('.nav-link');function a(){const e=['services','about','contact'],t=window.scrollY;e.forEach(n=>{const i=document.getElementById(n);if(i){const c=i.getBoundingClientRect();c.top<=150&&c.bottom>=150&&s.forEach(l=>{l.getAttribute('href')===`#${n}`?l.classList.add('active'):l.classList.remove('active')})}})}s.forEach(e=>{e.addEventListener('click',function(){s.forEach(t=>t.classList.remove('active')),this.classList.add('active')})}),window.addEventListener('scroll',a),a();const d=document.querySelector('.scroll-to-top');window.addEventListener('scroll',()=>{window.scrollY>200?d.classList.add('show'):d.classList.remove('show')}),d.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})});</script>
+<!-- Main JavaScript - Minified -->
+<script nonce="abc123">
+    document.addEventListener('DOMContentLoaded',()=>{const o=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add('active')})},{threshold:.1});['.services-grid','.portfolio-grid','.contact-grid','.service-card','.portfolio-item'].forEach(e=>{document.querySelectorAll(e).forEach(t=>{t.classList.add('reveal'),o.observe(t)})});document.querySelectorAll('.service-card').forEach((e,t)=>{e.style.animationDelay=`${.2*t}s`});const r=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add('visible')})},{threshold:.2});document.querySelectorAll('.services, .about, .vision, .contact').forEach(e=>{r.observe(e)}),'serviceWorker'in navigator&&window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').then(e=>{console.log('ServiceWorker registration successful')}).catch(e=>{console.log('ServiceWorker registration failed: ',e)})});const s=document.querySelectorAll('.nav-link');function a(){const e=['services','about','contact'],t=window.scrollY;e.forEach(n=>{const i=document.getElementById(n);if(i){const c=i.getBoundingClientRect();c.top<=150&&c.bottom>=150&&s.forEach(l=>{l.getAttribute('href')===`#${n}`?l.classList.add('active'):l.classList.remove('active')})}})}s.forEach(e=>{e.addEventListener('click',function(){s.forEach(t=>t.classList.remove('active')),this.classList.add('active')})}),window.addEventListener('scroll',a),a();const d=document.querySelector('.scroll-to-top');window.addEventListener('scroll',()=>{window.scrollY>200?d.classList.add('show'):d.classList.remove('show')}),d.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})});
+</script>
 </body>
 </html>
