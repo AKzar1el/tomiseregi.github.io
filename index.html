@@ -79,12 +79,13 @@
     >
 
     <!-- Tailwind CSS with SRI -->
-    <script
+       <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+            rel="stylesheet"
+            integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
             crossorigin="anonymous"
-            defer
-            integrity="sha256-9JN2LaAw+Nrgz5Pc9zD1XaB/ZZkOQFErnTbR3iagTWs="
-            src="https://cdn.tailwindcss.com"
-    ></script>
+            referrerpolicy="no-referrer"
+    />
 
     <style nonce="abc123">
         :root {
@@ -1286,7 +1287,28 @@
             property="og:description"
     />
     <meta content="https://tomiseregi.si/ts-initial.webp" property="og:image"/>
+    <meta content="#2563eb" name="theme-color">
+    <link href="icons/icon-192x192.webp" rel="apple-touch-icon">
 
+    <!-- Inline Web App Manifest -->
+    <script type="application/manifest+json" nonce="abc123">
+    {
+      "name": "Tomi Šeregi",
+      "short_name": "Tomi Šeregi",
+      "description": "AI Solutions for Slovenian Businesses",
+      "start_url": "/",
+      "display": "standalone",
+      "background_color": "#ffffff",
+      "theme_color": "#2563eb",
+      "icons": [
+        {
+          "src": "icons/icon-192x192.webp",
+          "sizes": "192x192",
+          "type": "image/webp"
+        }
+      ]
+    }
+    </script>
     <meta content="AI Solutions Illustration by Tomi Šeregi" name="twitter:image:alt"/>
     <meta content="summary" name="twitter:card"/>
     <meta content="@tomiseregi" name="twitter:site"/>
