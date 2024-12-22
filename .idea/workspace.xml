@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="test">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added new logo">
+      <change afterPath="$PROJECT_DIR$/background.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,13 +82,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00042" summary="fixed hero image rounding">
-      <option name="closed" value="true" />
-      <created>1734804066996</created>
-      <option name="number" value="LOCAL−00042" />
-      <option name="presentableId" value="LOCAL−00042" />
-      <updated>1734804066996</updated>
     </task>
     <task id="LOCAL−00043" summary="added about me section">
       <option name="closed" value="true" />
@@ -424,7 +419,14 @@
       <option name="presentableId" value="LOCAL−00090" />
       <updated>1734904327734</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL−00091" summary="added new logo">
+      <option name="closed" value="true" />
+      <created>1734904413439</created>
+      <option name="number" value="LOCAL−00091" />
+      <option name="presentableId" value="LOCAL−00091" />
+      <updated>1734904413439</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -461,9 +463,9 @@
     <MESSAGE value="added faq" />
     <MESSAGE value="fixed footer structure" />
     <MESSAGE value="added new nav" />
-    <MESSAGE value="added new logo" />
     <MESSAGE value="added new logo again" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="added new logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new logo" />
   </component>
 </project>
