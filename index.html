@@ -1,891 +1,854 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    <!-- Google Tag Manager (with nonce) -->
+    <script nonce="abc123">
+        (function(w,d,s,l,i){
+          w[l]=w[l]||[];
+          w[l].push({'gtm.start':new Date().getTime(), event:'gtm.js'});
+          var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+          j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+          f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-XXXX');
     </script>
+
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Tomi Šeregi" name="description">
-    <!-- Security Headers -->
-    <!-- Content Security Policy -->
+
+    <!-- Refined Content Security Policy -->
     <meta content="
-        default-src 'self';
+            default-src 'self';
+            script-src
+              'self'
+              'nonce-abc123'
+              https://www.googletagmanager.com
+              https://ssl.google-analytics.com
+              https://www.google-analytics.com
+              https://*.googleapis.com
+              https://cdnjs.cloudflare.com;
+            style-src
+              'self'
+              'nonce-abc123'
+              https://cdnjs.cloudflare.com;
+            img-src
+              'self'
+              https://www.tomiseregi.si
+              https://www.google-analytics.com
+              https://ssl.google-analytics.com
+              https://*.google.com
+              https://*.googleapis.com
+              https://*.gstatic.com
+              data:;
+            font-src
+              'self'
+              https://cdnjs.cloudflare.com;
+            connect-src
+              'self'
+              https://www.google-analytics.com
+              https://ssl.google-analytics.com;
+            frame-src
+              'self'
+              https://calendly.com
+              https://www.google.com
+              https://www.google.com/maps/
+              https://maps.google.com/;
+            form-action
+              'self'
+              https://api.staticforms.xyz;
+            base-uri
+              'self';
+            object-src
+              'none';
+            frame-ancestors
+              'none';
+            upgrade-insecure-requests;
+            block-all-mixed-content;
+        "
+          http-equiv="Content-Security-Policy"
+    >
 
-        script-src
-            'self'
-            'unsafe-inline'
-            https://www.googletagmanager.com
-            https://ssl.google-analytics.com
-            https://www.google-analytics.com
-            https://*.googleapis.com
-            https://cdnjs.cloudflare.com;
-
-        style-src
-            'self'
-            'unsafe-inline'
-            https://cdnjs.cloudflare.com;
-
-        img-src
-            'self'
-            https://www.tomiseregi.si
-            https://www.google-analytics.com
-            https://ssl.google-analytics.com
-            https://*.google.com
-            https://*.googleapis.com
-            https://*.gstatic.com
-            data:;
-
-        font-src
-            'self'
-            https://cdnjs.cloudflare.com;
-
-        connect-src
-            'self'
-            https://www.google-analytics.com
-            https://ssl.google-analytics.com;
-
-        frame-src
-            'self'
-            https://calendly.com
-            https://www.google.com
-            https://www.google.com/maps/
-            https://maps.google.com/;
-
-        form-action
-            'self'
-            https://api.staticforms.xyz;
-
-        base-uri
-            'self';
-
-        object-src
-            'none';
-
-        frame-ancestors
-            'none';
-
-        upgrade-insecure-requests;
-
-        block-all-mixed-content;
-    " http-equiv="Content-Security-Policy">
     <meta content="DENY" http-equiv="X-Frame-Options">
     <meta content="nosniff" http-equiv="X-Content-Type-Options">
     <meta content="1; mode=block" http-equiv="X-XSS-Protection">
     <meta content="strict-origin-when-cross-origin" http-equiv="Referrer-Policy">
     <meta content="geolocation=(), microphone=(), camera=()" http-equiv="Permissions-Policy">
+
     <title>Tomi Šeregi</title>
     <link href="favicon.svg" rel="icon" type="image/svg+xml">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Font Awesome with SRI -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    >
+            crossorigin="anonymous"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-c1IoD2TZBv0k+pK39gffI5LWpYr841Dg1ZjG8nzEf7OBYz6ZfZp/a+KYc6UfFsN13jARgBg4wT57ouELftm+/Q=="
+            rel="stylesheet"
+    />
 
-    <style>
-      :root {
-        --primary: #2563eb;
-        --secondary: #1e40af;
-        --text: #1f2937;
-        --light: #f3f4f6;
-        --accent: #dbeafe;
-        --font-heading: 'Space Grotesk', sans-serif;
-        --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-      }
+    <!-- Google Fonts (Manually Fallback included in CSS variables) -->
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <!-- Tailwind CSS with SRI (version-specific; example hash only) -->
+    <script
+            crossorigin="anonymous"
+            defer
+            integrity="sha256-9JN2LaAw+Nrgz5Pc9zD1XaB/ZZkOQFErnTbR3iagTWs="
+            src="https://cdn.tailwindcss.com"
+    ></script>
 
-      body {
-        font-family: var(--font-body);
-        line-height: 1.6;
-        color: var(--text);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-
-      /* Global heading styles */
-      h1, h2, h3, h4, h5, h6 {
-        font-family: var(--font-heading);
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        line-height: 1.2;
-      }
-
-      /* Fade Animations */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
+    <!-- Inline style block with nonce to avoid unsafe-inline -->
+    <style nonce="abc123">
+        :root {
+          /* Updated fallback font stacks */
+          --primary: #2563eb;
+          --secondary: #1e40af;
+          --text: #1f2937;
+          --light: #f3f4f6;
+          --accent: #dbeafe;
+          --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+          --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
-        to {
-          opacity: 1;
-          transform: translateY(0);
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
         }
-      }
-
-      @keyframes fadeInRight {
-        from {
-          opacity: 0;
-          transform: translateX(-20px);
+        body {
+          font-family: var(--font-body);
+          line-height: 1.6;
+          color: var(--text);
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
         }
-        to {
-          opacity: 1;
-          transform: translateX(0);
+
+        /* SKIP LINK */
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 0;
+          background: #2563eb;
+          color: #fff;
+          padding: 8px 16px;
+          z-index: 999;
+          text-decoration: none;
+          transition: top 0.3s ease;
         }
-      }
+        .skip-link:focus {
+          top: 0;
+          outline: 2px solid #fff;
+        }
+        .logo-image {
+          height: 48px;
+          width: auto;
+        }
+        /* HEADINGS (global) */
+        h1, h2, h3, h4, h5, h6 {
+          font-family: var(--font-heading);
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          line-height: 1.2;
+        }
 
-      /* Scroll reveal animations */
-      .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease;
-      }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
+        /* FOCUS STATE FOR NAV LINKS */
+        .nav-link:focus {
+          outline: 2px solid var(--primary);
+          outline-offset: 2px;
+        }
 
-      /* Container utility */
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1.5rem;
-      }
-
-      /* Header */
-      header {
-        background: white;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-      }
-
-      /* .header-content consolidated */
-      .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.75rem 1rem;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      /* Logo Base Styles */
-      .logo {
-        font-size: clamp(1.25rem, 4vw, 1.5rem);
-        font-weight: 700;
-        color: var(--primary);
-        text-decoration: none;
-        padding: 0.5rem;
-        letter-spacing: -0.02em;
-        position: relative;
-        display: inline-block;
-        transition: all 0.3s ease;
-        /* Ensure proper touch target size */
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-      }
-      .logo:hover {
-        color: var(--secondary);
-        transform: translateY(-1px);
-      }
-      .logo::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: var(--primary);
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-        transform-origin: right;
-      }
-      .logo:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-
-      /* Navigation */
-      .nav-toggle {
-        display: none;
-      }
-      nav ul {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-      }
-      nav a {
-        text-decoration: none;
-        color: var(--text);
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-      nav a:hover {
-        color: var(--primary);
-      }
-
-      /* Enhanced navigation styling */
-      .main-nav .nav-list {
-        display: flex;
-        gap: 2.5rem;
-        margin-left: auto;
-        padding-left: 2rem;
-        list-style: none;
-        align-items: center;
-      }
-      .main-nav .nav-list li {
-        position: relative;
-      }
-      .main-nav .nav-link {
-        color: var(--text);
-        font-weight: 500;
-        font-size: 1.125rem;
-        padding: 0.5rem 0;
-        transition: color 0.3s ease;
-        position: relative;
-        display: inline-block;
-        text-decoration: none;
-      }
-      /* Underline hover effect */
-      .main-nav .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: var(--primary);
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.3s ease-out;
-      }
-      .main-nav .nav-link:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-      .main-nav .nav-link:hover {
-        color: var(--primary);
-      }
-      /* Active state */
-      .main-nav .nav-link.active {
-        color: var(--primary);
-      }
-      .main-nav .nav-link.active::after {
-        transform: scaleX(1);
-      }
-
-      /* Hero Section */
-      .hero {
-        --section-bg: var(--accent);
-        margin-bottom: 50px;
-        padding: 8rem 0 4rem;
-        background: linear-gradient(135deg, var(--accent), white);
-        min-height: 80vh; /* Reduced from 100vh for better proportions */
-        display: flex;
-        align-items: center;
-      }
-      .hero-content {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr; /* Adjusted ratio to give more space to text */
-        gap: 2rem;
-        align-items: center;
-      }
-      .hero-text {
-        max-width: 560px;
-        opacity: 0;
-        animation: fadeInRight 1s ease forwards;
-        padding-right: 2rem;
-      }
-      .hero-text h1 {
-        font-size: clamp(2.5rem, 4vw, 3.5rem);
-        line-height: 1.1;
-        margin-bottom: 1.5rem;
-      }
-      .hero-text p {
-        font-family: var(--font-body);
-        font-size: clamp(1.125rem, 2vw, 1.25rem);
-        color: #4b5563;
-        margin-bottom: 2rem;
-        font-weight: 400;
-      }
-
-      /* Shared image-section styles */
-      .image-section {
-        opacity: 0;
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: fadeInUp 1s ease 0.3s forwards;
-      }
-      /* Specific Hero image overrides */
-      .hero-image {
-        max-width: 500px; /* Control maximum width */
-        aspect-ratio: 16/9;
-        padding: 1.5rem;
-      }
-
-      /* Image styling */
-      .hero-image img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        border-radius: 1rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-        position: relative;
-        z-index: 1;
-      }
-      .hero-image::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-          135deg,
-          rgba(219, 234, 254, 0.3),
-          rgba(37, 99, 235, 0.1)
-        );
-        border-radius: 1rem;
-        z-index: 2;
-      }
-      .hero-image img:hover {
-        transform: translateY(-5px);
-      }
-
-      /* Reusable Button Styles */
-      .btn {
-        display: inline-block;
-        padding: 1rem 2rem;
-        border-radius: 0.5rem;
-        font-weight: 600;
-        position: relative;
-        overflow: hidden;
-        transform: translateY(0);
-        transition: all 0.3s ease;
-        text-decoration: none;
-        box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
-        cursor: pointer;
-        outline: none;
-        border: none;
-      }
-      .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
-      }
-      .btn:active {
-        transform: translateY(0);
-        box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
-      }
-      .btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0));
-        transition: opacity 0.3s ease;
-      }
-      .btn:hover::before {
-        opacity: 0.8;
-      }
-
-      /* Primary Button Variation */
-      .btn--primary {
-        background: var(--primary);
-        color: #fff;
-      }
-      .btn--primary:hover {
-        background: var(--secondary);
-      }
-      .btn--primary:focus {
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
-      }
-
-      /* Services Section */
-      .services {
-        --section-bg: white;
-        position: relative;
-        padding-top: 100px;
-        margin-top: -50px;
-        padding-bottom: 4rem;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      }
-      .services.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      /* Single .services-grid definition */
-      .services-grid {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-      }
-      .service-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        position: relative;
-      }
-      .service-card i {
-        font-size: 2.5rem;
-        color: var(--primary);
-        margin-bottom: 1rem;
-        transition: transform 0.3s ease;
-      }
-      .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      }
-      .service-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: var(--primary);
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-      }
-      .service-card:hover::before {
-        transform: scaleX(1);
-      }
-      .service-card:hover i {
-        transform: scale(1.2);
-      }
-      @keyframes serviceCardIn {
-        from {
+        /* Animations */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translateX(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        .reveal {
           opacity: 0;
           transform: translateY(30px);
+          transition: all 0.8s ease;
         }
-        to {
+        .reveal.active {
           opacity: 1;
           transform: translateY(0);
         }
-      }
-      .service-card.animate {
-        animation: serviceCardIn 0.6s ease forwards;
-      }
-      .service-card h3 {
-        font-size: 1.5rem;
-        margin: 1rem 0;
-      }
-      .service-card p {
-        font-family: var(--font-body);
-        font-size: 1rem;
-        line-height: 1.6;
-      }
 
-      /* Portfolio (if used) */
-      .portfolio {
-        background: var(--light);
-        padding: 4rem 0;
-      }
-      .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-      }
-      .portfolio-item {
-        background: white;
-        border-radius: 0.5rem;
-        overflow: hidden;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
-      .portfolio-item img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-      .portfolio-item-content {
-        padding: 1.5rem;
-      }
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1.5rem;
+        }
 
-      /* About Section */
-      .about {
-        --section-bg: var(--light);
-        position: relative;
-        padding-top: 100px;
-        margin-top: -50px;
-        padding-bottom: 6rem;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      }
-      .about.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .about-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
-        align-items: center;
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-      /* about-image extends .image-section */
-      .about-image {
-        max-width: 450px;
-        padding: 2.5rem;
-        border-radius: 1.5rem;
-      }
-      .about-image img {
-        width: 100%;
-        height: auto;
-        max-width: 450px;
-        border-radius: 1.5rem;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s ease;
-        position: relative;
-        z-index: 2;
-      }
-      .about-image::before {
-        content: '';
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        width: calc(100% - 4rem);
-        height: calc(100% - 4rem);
-        background: var(--accent);
-        border-radius: 2rem;
-        z-index: 1;
-        transform: rotate(3deg);
-      }
-      .about-text {
-        opacity: 0;
-        animation: fadeInRight 1s ease forwards;
-        padding: 2rem;
-      }
-      .about-text p {
-        font-family: var(--font-body);
-        font-size: 1.125rem;
-        line-height: 1.8;
-        margin-bottom: 1.5rem;
-      }
-
-      /* Contact Section */
-      .contact {
-        --section-bg: white;
-        position: relative;
-        padding-top: 100px;
-        margin-top: -50px;
-        padding-bottom: 4rem;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      }
-      .contact.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        margin-bottom: 4rem;
-      }
-      .map-container {
-        width: 100%;
-        height: 400px;
-        border-radius: 0.5rem;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-top: 2rem;
-      }
-      .map-container iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-
-      .contact-form {
-        display: grid;
-        gap: 1rem;
-      }
-      .form-group {
-        display: grid;
-        gap: 0.5rem;
-      }
-      input, textarea {
-        padding: 0.75rem;
-        border: 1px solid #d1d5db;
-        border-radius: 0.375rem;
-        width: 100%;
-        font-family: var(--font-body);
-        font-size: 1rem;
-      }
-
-      /* Footer */
-      footer {
-        background: var(--text);
-        color: white;
-        padding: 2rem 0;
-        margin-top: 4rem;
-        font-family: var(--font-body);
-      }
-      .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-      }
-      footer h3 {
-        font-family: var(--font-heading);
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-
-      /* Section Title (unified) */
-      .section-title {
-        font-family: var(--font-heading);
-        font-size: 2.25rem;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        margin-bottom: 3rem;
-        text-align: center;
-        position: relative;
-        color: var(--text);
-      }
-      .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background: var(--primary);
-        border-radius: 2px;
-      }
-
-      /* Section Separator */
-      .section-separator {
-        position: relative;
-        height: 100px;
-        margin-top: -100px; /* Pull up to overlap with previous section */
-        z-index: 1;
-      }
-      .separator-curve {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        clip-path: ellipse(70% 100% at 50% 0%);
-      }
-
-      /* Gradient overlays for smooth transitions */
-      .section-gradient {
-        position: relative;
-        overflow: hidden;
-      }
-      .section-gradient::before {
-        content: '';
-        position: absolute;
-        top: -100px;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: linear-gradient(to bottom, transparent, var(--section-bg));
-        z-index: 2;
-      }
-      .section-gradient::after {
-        content: '';
-        position: absolute;
-        bottom: -100px;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: linear-gradient(to top, transparent, var(--section-bg));
-        z-index: 2;
-      }
-
-      /* Wave pattern (optional) */
-      .wave-pattern {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        background:
-          radial-gradient(circle at 100% 50%, transparent 20%, var(--section-bg) 21%),
-          radial-gradient(circle at 0% 50%, transparent 20%, var(--section-bg) 21%);
-        background-size: 60px 120px;
-        background-position: 0 -60px;
-        z-index: 3;
-      }
-
-      /* MOBILE & RESPONSIVE */
-      @media (max-width: 768px) {
         /* Header */
-        .header-content {
-          padding: 0.5rem 1rem;
-        }
-        .nav-toggle {
-          display: block;
-          font-size: 1.5rem;
-          background: none;
-          border: none;
-          color: var(--text);
-          cursor: pointer;
-        }
-        .main-nav .nav-list {
-          flex-direction: column;
-          gap: 1.5rem;
-          padding: 1.5rem;
+        header {
           background: white;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000;
+        }
+        .header-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .logo {
+          font-size: clamp(1.25rem, 4vw, 1.5rem);
+          font-weight: 700;
+          color: var(--primary);
+          text-decoration: none;
+          padding: 0.5rem;
+          letter-spacing: -0.02em;
+          position: relative;
+          display: flex;
+          align-items: center;
+          transition: all 0.3s ease;
+          min-height: 44px;
+        }
+        .logo:hover {
+          color: var(--secondary);
+          transform: translateY(-1px);
+        }
+        .logo::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: var(--primary);
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+          transform-origin: right;
+        }
+        .logo:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+
+        /* NAVIGATION */
+        .nav-toggle {
           display: none;
         }
-        .main-nav .nav-list.active {
+        nav ul {
           display: flex;
+          gap: 2rem;
+          list-style: none;
+        }
+        .main-nav .nav-list {
+          display: flex;
+          gap: 2.5rem;
+          margin-left: auto;
+          padding-left: 2rem;
+          list-style: none;
+          align-items: center;
         }
         .main-nav .nav-link {
-          display: block;
-          padding: 0.75rem;
-          text-align: center;
+          color: var(--text);
+          font-weight: 500;
+          font-size: 1.125rem;
+          padding: 0.5rem 0;
+          transition: color 0.3s ease;
+          position: relative;
+          display: inline-block;
+          text-decoration: none;
+        }
+        .main-nav .nav-link::after {
+          content: '';
+          position: absolute;
           width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: var(--primary);
+          transform: scaleX(0);
+          transform-origin: bottom right;
+          transition: transform 0.3s ease-out;
+        }
+        .main-nav .nav-link:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+        .main-nav .nav-link:hover {
+          color: var(--primary);
+        }
+        .main-nav .nav-link.active {
+          color: var(--primary);
+        }
+        .main-nav .nav-link.active::after {
+          transform: scaleX(1);
         }
 
         /* Hero */
         .hero {
-          padding: 6rem 0 3rem;
-          min-height: auto;
+          --section-bg: var(--accent);
+          margin-bottom: 50px;
+          padding: 8rem 0 4rem;
+          background: linear-gradient(135deg, var(--accent), white);
+          min-height: 80vh;
+          display: flex;
+          align-items: center;
         }
         .hero-content {
-          grid-template-columns: 1fr;
+          display: grid;
+          grid-template-columns: 1.2fr 0.8fr;
           gap: 2rem;
-          text-align: center;
+          align-items: center;
         }
         .hero-text {
-          margin: 0 auto;
+          max-width: 560px;
+          opacity: 0;
+          animation: fadeInRight 1s ease forwards;
+          padding-right: 2rem;
+        }
+        .hero-text h1 {
+          font-size: clamp(2.5rem, 4vw, 3.5rem);
+          line-height: 1.1;
+          margin-bottom: 1.5rem;
+        }
+        .hero-text p {
+          font-size: clamp(1.125rem, 2vw, 1.25rem);
+          color: #4b5563;
+          margin-bottom: 2rem;
+          font-weight: 400;
+        }
+
+        /* Shared image-section */
+        .image-section {
+          opacity: 0;
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          animation: fadeInUp 1s ease 0.3s forwards;
         }
         .hero-image {
-          padding: 1rem;
-          margin: 0 auto;
+          max-width: 500px;
+          aspect-ratio: 16/9;
+          padding: 1.5rem;
         }
         .hero-image img {
-          max-height: 50vh;
+          width: 100%;
+          height: auto;
+          max-width: 100%;
           border-radius: 1rem;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+          position: relative;
+          z-index: 1;
+        }
+        .hero-image::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            135deg,
+            rgba(219, 234, 254, 0.3),
+            rgba(37, 99, 235, 0.1)
+          );
+          border-radius: 1rem;
+          z-index: 2;
+        }
+        .hero-image img:hover {
+          transform: translateY(-5px);
+        }
+
+        /* Buttons */
+        .btn {
+          display: inline-block;
+          padding: 1rem 2rem;
+          border-radius: 0.5rem;
+          font-weight: 600;
+          position: relative;
+          overflow: hidden;
+          transform: translateY(0);
+          transition: all 0.3s ease;
+          text-decoration: none;
+          box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+          cursor: pointer;
+          outline: none;
+          border: none;
+        }
+        .btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
+        }
+        .btn:active {
+          transform: translateY(0);
+          box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+        }
+        .btn::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0));
+          transition: opacity 0.3s ease;
+        }
+        .btn:hover::before {
+          opacity: 0.8;
+        }
+        .btn--primary {
+          background: var(--primary);
+          color: #fff;
+        }
+        .btn--primary:hover {
+          background: var(--secondary);
+        }
+        .btn--primary:focus {
+          box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
+        }
+
+        /* Services */
+        .services {
+          --section-bg: white;
+          position: relative;
+          padding-top: 100px;
+          margin-top: -50px;
+          padding-bottom: 4rem;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .services.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .services-grid {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+        }
+        .service-card {
+          background: white;
+          padding: 2rem;
+          border-radius: 0.5rem;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          position: relative;
+        }
+        .service-card i {
+          font-size: 2.5rem;
+          color: var(--primary);
+          margin-bottom: 1rem;
+          transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .service-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background: var(--primary);
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+        }
+        .service-card:hover::before {
+          transform: scaleX(1);
+        }
+        .service-card:hover i {
+          transform: scale(1.2);
+        }
+        @keyframes serviceCardIn {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .service-card.animate {
+          animation: serviceCardIn 0.6s ease forwards;
+        }
+        .service-card h3 {
+          font-size: 1.5rem;
+          margin: 1rem 0;
+        }
+        .service-card p {
+          font-size: 1rem;
+          line-height: 1.6;
         }
 
         /* About */
-        .about-content {
-          grid-template-columns: 1fr;
-          gap: 3rem;
-          padding: 0 1.5rem;
+        .about {
+          --section-bg: var(--light);
+          position: relative;
+          padding-top: 100px;
+          margin-top: -50px;
+          padding-bottom: 6rem;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        .about-text {
-          padding: 1.5rem;
-          text-align: left;
+        .about.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .about-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 5rem;
+          align-items: center;
+          max-width: 1100px;
+          margin: 0 auto;
         }
         .about-image {
-          padding: 1.5rem;
-          order: -1;
+          max-width: 450px;
+          padding: 2.5rem;
+          border-radius: 1.5rem;
+        }
+        .about-image img {
+          width: 100%;
+          height: auto;
+          max-width: 450px;
+          border-radius: 1.5rem;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+          transition: transform 0.3s ease;
+          position: relative;
+          z-index: 2;
         }
         .about-image::before {
-          top: 1rem;
-          right: 1rem;
-          width: calc(100% - 2rem);
-          height: calc(100% - 2rem);
+          content: '';
+          position: absolute;
+          top: 2rem;
+          right: 2rem;
+          width: calc(100% - 4rem);
+          height: calc(100% - 4rem);
+          background: var(--accent);
+          border-radius: 2rem;
+          z-index: 1;
+          transform: rotate(3deg);
         }
-        .section-title {
-          font-size: 2rem;
-          margin-bottom: 2.5rem;
+        .about-text {
+          opacity: 0;
+          animation: fadeInRight 1s ease forwards;
+          padding: 2rem;
+        }
+        .about-text p {
+          font-size: 1.125rem;
+          line-height: 1.8;
+          margin-bottom: 1.5rem;
         }
 
         /* Contact */
+        .contact {
+          --section-bg: white;
+          position: relative;
+          padding-top: 100px;
+          margin-top: -50px;
+          padding-bottom: 4rem;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .contact.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
         .contact-grid {
-          grid-template-columns: 1fr;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          margin-bottom: 4rem;
         }
         .map-container {
-          height: 300px;
+          width: 100%;
+          height: 400px;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           margin-top: 2rem;
         }
-      }
+        .map-container iframe {
+          width: 100%;
+          height: 100%;
+          border: 0;
+        }
+        .contact-form {
+          display: grid;
+          gap: 1rem;
+        }
+        .form-group {
+          display: grid;
+          gap: 0.5rem;
+        }
+        input, textarea {
+          padding: 0.75rem;
+          border: 1px solid #d1d5db;
+          border-radius: 0.375rem;
+          width: 100%;
+          font-family: var(--font-body);
+          font-size: 1rem;
+        }
 
-      /* High contrast mode support */
-      @media (prefers-contrast: more) {
-        .logo {
-          color: var(--secondary);
-          text-decoration: underline;
+        /* Footer */
+        footer {
+          background: var(--text);
+          color: white;
+          padding: 2rem 0;
+          margin-top: 4rem;
         }
-        .brand-name {
-          color: #1e40af;
+        .footer-content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
         }
-        .hero-text h1,
-        .hero-text p {
-          color: #000;
+        footer h3 {
+          font-family: var(--font-heading);
+          font-size: 1.25rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
         }
-      }
 
-      /* Reduced motion support */
-      @media (prefers-reduced-motion: reduce) {
-        .logo, .btn, .brand-container, .hero-image img {
-          transition: none;
+        /* Section Title */
+        .section-title {
+          font-family: var(--font-heading);
+          font-size: 2.25rem;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          margin-bottom: 3rem;
+          text-align: center;
+          position: relative;
+          color: var(--text);
         }
-        .logo:hover {
-          transform: none;
+        .section-title::after {
+          content: '';
+          position: absolute;
+          bottom: -1rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 3px;
+          background: var(--primary);
+          border-radius: 2px;
         }
-        .hero-image img:hover {
-          transform: none;
+
+        /* Section Separator */
+        .section-separator {
+          position: relative;
+          height: 100px;
+          margin-top: -100px;
+          z-index: 1;
         }
-      }
+        .separator-curve {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: inherit;
+          clip-path: ellipse(70% 100% at 50% 0%);
+        }
+
+        /* Gradient Overlays */
+        .section-gradient {
+          position: relative;
+          overflow: hidden;
+        }
+        .section-gradient::before {
+          content: '';
+          position: absolute;
+          top: -100px;
+          left: 0;
+          width: 100%;
+          height: 100px;
+          background: linear-gradient(to bottom, transparent, var(--section-bg));
+          z-index: 2;
+        }
+        .section-gradient::after {
+          content: '';
+          position: absolute;
+          bottom: -100px;
+          left: 0;
+          width: 100%;
+          height: 100px;
+          background: linear-gradient(to top, transparent, var(--section-bg));
+          z-index: 2;
+        }
+
+        /* SCROLL TO TOP BUTTON */
+        .scroll-to-top {
+          position: fixed;
+          bottom: 1rem;
+          right: 1rem;
+          display: none;
+          background-color: var(--primary);
+          color: #fff;
+          border: none;
+          border-radius: 50%;
+          width: 48px;
+          height: 48px;
+          font-size: 1.5rem;
+          cursor: pointer;
+          outline: none;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          transition: opacity 0.3s, transform 0.3s;
+          z-index: 9999;
+        }
+        .scroll-to-top:focus {
+          box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
+        }
+        .scroll-to-top.show {
+          display: flex;
+        }
+        .scroll-to-top:hover {
+          transform: translateY(-2px);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+          .logo-image {
+              height: 40px;
+          }
+          .header-content {
+            padding: 0.5rem 1rem;
+          }
+          .nav-toggle {
+            display: block;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+          }
+          .main-nav .nav-list {
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+          }
+          .main-nav .nav-list.active {
+            display: flex;
+          }
+          .main-nav .nav-link {
+            display: block;
+            padding: 0.75rem;
+            text-align: center;
+            width: 100%;
+          }
+
+          .hero {
+            padding: 6rem 0 3rem;
+            min-height: auto;
+          }
+          .hero-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+          }
+          .hero-text {
+            margin: 0 auto;
+          }
+          .hero-image {
+            padding: 1rem;
+            margin: 0 auto;
+          }
+          .hero-image img {
+            max-height: 50vh;
+            border-radius: 1rem;
+          }
+
+          .about-content {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            padding: 0 1.5rem;
+          }
+          .about-text {
+            padding: 1.5rem;
+            text-align: left;
+          }
+          .about-image {
+            padding: 1.5rem;
+            order: -1;
+          }
+          .about-image::before {
+            top: 1rem;
+            right: 1rem;
+            width: calc(100% - 2rem);
+            height: calc(100% - 2rem);
+          }
+          .section-title {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+          }
+
+          .contact-grid {
+            grid-template-columns: 1fr;
+          }
+          .map-container {
+            height: 300px;
+            margin-top: 2rem;
+          }
+        }
+
+        @media (prefers-contrast: more) {
+          .logo {
+            color: var(--secondary);
+            text-decoration: underline;
+          }
+          .brand-name {
+            color: #1e40af;
+          }
+          .hero-text h1,
+          .hero-text p {
+            color: #000;
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .logo, .btn, .brand-container, .hero-image img, .service-card i {
+            transition: none;
+          }
+          .logo:hover, .hero-image img:hover, .service-card:hover {
+            transform: none;
+          }
+        }
     </style>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#2563eb',
-              secondary: '#1e40af',
-              text: '#1f2937',
-              light: '#f3f4f6',
-              accent: '#dbeafe',
-            },
-            fontFamily: {
-              heading: ['Space Grotesk', 'sans-serif'],
-              body: ['Inter', 'sans-serif'],
-            },
-          },
-        },
-      };
-    </script>
-
+    <!-- SEO, Open Graph, Twitter, Manifest, etc. -->
     <meta content="e0ffd662b00b87bc969e23beba35c048" name="seobility">
-    <!-- Canonical Link -->
     <link href="https://tomiseregi.si/" rel="canonical"/>
     <link href="https://tomiseregi.si/amp/" rel="amphtml">
-    <!-- Open Graph / Facebook -->
     <meta content="sl_SI" property="og:locale"/>
     <meta content="Tomi Šeregi" property="og:site_name"/>
     <meta content="AI Solutions Illustration by Tomi Šeregi" property="og:image:alt"/>
@@ -893,444 +856,453 @@
     <meta content="https://tomiseregi.si/" property="og:url"/>
     <meta content="Tomi Šeregi" property="og:title"/>
     <meta
-      content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
-      property="og:description"
+            content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
+            property="og:description"
     />
     <meta content="https://tomiseregi.si/logo.webp" property="og:image"/>
 
-    <!-- Twitter -->
     <meta content="AI Solutions Illustration by Tomi Šeregi" name="twitter:image:alt"/>
     <meta content="summary" name="twitter:card"/>
     <meta content="@tomiseregi" name="twitter:site"/>
     <meta content="https://tomiseregi.si/" name="twitter:url"/>
     <meta content="Tomi Šeregi" name="twitter:title"/>
     <meta
-      content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
-      name="twitter:description"
+            content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
+            name="twitter:description"
     />
     <meta content="https://tomiseregi.si/logo.webp" name="twitter:image"/>
 
-    <!-- Additional SEO Tags -->
     <meta content="index, follow" name="robots"/>
     <meta content="Tomi Šeregi" name="author"/>
     <meta
-      content="AI Solutions, Slovenian Businesses, Free Website Creation, Automated Workflow, Tomi Šeregi"
-      name="keywords"
+            content="AI Solutions, Slovenian Businesses, Free Website Creation, Automated Workflow, Tomi Šeregi"
+            name="keywords"
     />
 
     <link href="/manifest.json" rel="manifest">
     <meta content="#2563eb" name="theme-color">
     <link href="/icons/icon-192x192.webp" rel="apple-touch-icon">
 
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Tomi Šeregi",
-        "url": "https://tomiseregi.si/",
-        "logo": "https://tomiseregi.si/logo.webp",
-        "description": "AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+386 123 456 789",
-          "contactType": "Customer Service",
-          "email": "tomi.seregi99@gmail.com"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/tomi-seregi/"
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Brezplačne spletne strani",
-        "description": "Profesionalne spletne strani, izdelane s pomočjo AI tehnologije, brezplačno za vaše podjetje.",
-        "provider": {
-          "@type": "Organization",
-          "name": "Tomi Šeregi",
-          "url": "https://tomiseregi.si/",
-          "logo": "https://tomiseregi.si/logo.webp"
+    <!-- Structured Data -->
+    <script nonce="abc123" type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Tomi Šeregi",
+            "url": "https://tomiseregi.si/",
+            "logo": "https://tomiseregi.si/logo.webp",
+            "description": "AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions.",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+386 123 456 789",
+                "contactType": "Customer Service",
+                "email": "tomi.seregi99@gmail.com"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/tomi-seregi/"
+            ]
         }
-      }
     </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://tomiseregi.si/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Services",
-            "item": "https://tomiseregi.si/#services"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Contact",
-            "item": "https://tomiseregi.si/#contact"
-          }
-        ]
-      }
+    <script nonce="abc123" type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Brezplačne spletne strani",
+            "description": "Profesionalne spletne strani, izdelane s pomočjo AI tehnologije, brezplačno za vaše podjetje.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Tomi Šeregi",
+                "url": "https://tomiseregi.si/",
+                "logo": "https://tomiseregi.si/logo.webp"
+            }
+        }
+    </script>
+    <script nonce="abc123" type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://tomiseregi.si/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://tomiseregi.si/#services"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Contact",
+                    "item": "https://tomiseregi.si/#contact"
+                }
+            ]
+        }
     </script>
 
-    <!-- Google Analytics -->
+    <!-- Google Analytics (async) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EM9CVPCXYC"></script>
-    <!-- Check if working 23.12.24 Analytics -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-EM9CVPCXYC', {
-        'transport_url': 'https://ssl.google-analytics.com',
-        'transport_type': 'beacon'
-      });
-    </script>
-    <!--   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-EM9CVPCXYC');
-    </script>-->
 </head>
 
 <body>
 <noscript>
-  <iframe
-    height="0"
-    src="https://www.googletagmanager.com/ns.html?id=G-EM9CVPCXYC"
-    style="display:none;visibility:hidden"
-    width="0"
-  ></iframe>
+    <iframe
+            height="0"
+            src="https://www.googletagmanager.com/ns.html?id=G-EM9CVPCXYC"
+            style="display:none;visibility:hidden"
+            width="0"
+    ></iframe>
 </noscript>
 
+<!-- Skip to main content link (A11y) -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header role="banner">
-  <div class="container header-content">
-    <div class="brand-container">
-      <img
-        alt="Tomi Šeregi Logo"
-        class="logo-image"
-        fetchpriority="high"
-        height="100%"
-        src="https://tomiseregi.si/logo.webp"
-        width="100%"
-      >
-      <div class="name-container">
-        <p class="brand-name">Tomi &Scaron;eregi</p>
-      </div>
+    <div class="container header-content">
+        <div class="brand-container">
+            <img
+                    alt="Tomi Šeregi Logo"
+                    class="logo-image"
+                    fetchpriority="high"
+                    height="100%"
+                    src="https://tomiseregi.si/logo.webp"
+                    width="100%"
+            >
+            <div class="name-container">
+                <p class="brand-name">Tomi &Scaron;eregi</p>
+            </div>
+        </div>
+        <nav aria-label="Main navigation" class="main-nav" role="navigation">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="#services">Storitve</a></li>
+                <li><a class="nav-link" href="#about">O meni</a></li>
+                <li><a class="nav-link" href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav aria-label="Main navigation" class="main-nav" role="navigation">
-      <ul class="nav-list">
-        <li><a class="nav-link" href="#services">Storitve</a></li>
-        <li><a class="nav-link" href="#about">O meni</a></li>
-        <li><a class="nav-link" href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
-  </div>
 </header>
 
 <main id="main-content" role="main">
-  <!-- Hero Section -->
-  <section aria-labelledby="hero-title" class="hero section-gradient" role="region">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1 id="hero-title">Profesionalne spletne strani za slovenska podjetja</h1>
-        <p>Preprosto, brezplačno, zaupanja vredno</p>
-        <!-- Replaced .cta-button with .btn.btn--primary -->
-        <a
-          class="btn btn--primary"
-          href="https://calendly.com/tomi-seregi99/30min"
-          rel="noopener noreferrer"
-          role="button"
-          target="_blank"
-        >
-          <strong>Pridobite stran zdaj!</strong>
-        </a>
-      </div>
-      <!-- hero-image now extends .image-section -->
-      <div class="hero-image image-section">
-        <img
-          alt="AI Solutions Illustration"
-          fetchpriority="high"
-          height="400"
-          loading="eager"
-          src="https://tomiseregi.si/hero-image.webp"
-          width="600"
-        >
-      </div>
-    </div>
-  </section>
-
-  <div class="section-separator">
-    <div class="separator-curve"></div>
-  </div>
-
-  <!-- Services Section -->
-  <section aria-labelledby="services-title" class="services section-gradient" id="services" role="region">
-    <div class="container">
-      <h2 class="section-title" id="services-title">Moje storitve</h2>
-      <ul class="services-grid">
-        <li class="service-card" role="option">
-          <i aria-hidden="true" class="fas fa-globe"></i>
-          <h3><strong>Brezplačne spletne strani</strong></h3>
-          <p>
-            Profesionalne spletne strani, popolnoma brezplačno za va&scaron;e podjetje. Zasnovane so tako, da
-            izbolj&scaron;ajo va&scaron;o spletno prisotnost in pomagajo pri rasti va&scaron;ega poslovanja brez
-            začetnih stro&scaron;kov.
-          </p>
-        </li>
-        <li class="service-card" role="option">
-          <i aria-hidden="true" class="fas fa-robot"></i>
-          <h3><strong>Avtomatizacija procesov</strong></h3>
-          <p>(kmalu na voljo)</p>
-        </li>
-        <li class="service-card" role="option">
-          <i aria-hidden="true" class="fas fa-handshake"></i>
-          <h3><strong>Partnerski program</strong></h3>
-          <p>
-            Pridružite se na&scaron;i rastoči mreži podjetij in izkoristite priložnost za medsebojno rast in
-            promocijo. Na&scaron; partnerski program omogoča sodelovanje, ki prina&scaron;a obojestranske koristi
-            ter spodbuja dolgoročno poslovno uspe&scaron;nost.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="section-separator">
-    <div class="separator-curve"></div>
-  </div>
-
-  <!-- About Section -->
-  <section aria-labelledby="about-title" class="about section-gradient" id="about" role="region">
-    <div class="container">
-      <h2 class="section-title" id="about-title">O meni</h2>
-      <div class="about-content">
-        <!-- about-image now extends .image-section -->
-        <div aria-label="Tomi Šeregi Profile" class="about-image image-section" role="img">
-          <img
-            alt="Tomi Šeregi"
-            height="500"
-            loading="lazy"
-            src="https://tomiseregi.si/tomi.webp"
-            width="400"
-          >
+    <!-- Hero -->
+    <section aria-labelledby="hero-title" class="hero section-gradient" role="region">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 id="hero-title">Profesionalne spletne strani za slovenska podjetja</h1>
+                <p>Preprosto, brezplačno, zaupanja vredno</p>
+                <!-- Primary button -->
+                <a
+                        class="btn btn--primary"
+                        href="https://calendly.com/tomi-seregi99/30min"
+                        rel="noopener noreferrer"
+                        role="button"
+                        target="_blank"
+                >
+                    <strong>Pridobite stran zdaj!</strong>
+                </a>
+            </div>
+            <div class="hero-image image-section">
+                <img
+                        alt="AI Solutions Illustration"
+                        fetchpriority="high"
+                        height="400"
+                        loading="eager"
+                        src="https://tomiseregi.si/hero-image.webp"
+                        width="600"
+                >
+            </div>
         </div>
-        <div class="about-text">
-          <p>
-            Sem Tomi &Scaron;eregi, sveže diplomirani strokovnjak na področju tehnologije in umetne inteligence.
-            Z veliko strastjo do inovacij si prizadevam pomagati lokalnim slovenskim podjetjem
-            pri rasti in uspehu v digitalnem svetu.
-          </p>
-          <p>
-            Trenutno ponujam brezplačne profesionalne spletne strani za slovenska podjetja. Ta edinstvena storitev
-            omogoča podjetjem, da brez začetnih stro&scaron;kov vzpostavijo močno spletno prisotnost, medtem ko mi
-            omogoča pridobivanje dragocenih referenc in prikaz mojih strokovnih sposobnosti.
-          </p>
-          <p>
-            Z združevanjem najnovej&scaron;ih tehnolo&scaron;kih re&scaron;itev in osebnega pristopa si prizadevam
-            ustvariti trajnostne digitalne re&scaron;itve, ki bodo va&scaron;emu podjetju pomagale uspeti v dana&scaron;njem konkurenčnem poslovnem okolju.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="section-separator">
-    <div class="separator-curve"></div>
-  </div>
-
-  <!-- Contact Section -->
-  <section aria-labelledby="contact-title" class="contact section-gradient" id="contact" role="region">
-    <div class="container">
-      <h2 class="section-title" id="contact-title">Kontaktirajte me</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3><strong>Stopite v stik</strong></h3>
-          <p>Ste zainteresirani za brezplačno spletno stran?</p>
-          <br>
-          <p>
-            Ne odla&scaron;ajte &ndash; kontaktirajte me &scaron;e danes in naredimo prvi korak k izbolj&scaron;anju
-            va&scaron;e spletne prisotnosti. Skupaj lahko ustvarimo re&scaron;itev, ki bo ustrezala potrebam
-            va&scaron;ega podjetja.
-          </p>
-        </div>
-        <form
-          action="https://api.staticforms.xyz/submit"
-          aria-labelledby="contact-title"
-          class="contact-form"
-          id="staticform"
-          method="post"
-          role="form"
-          target="_blank"
-        >
-          <input name="accessKey" type="hidden" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
-          <input name="subject" type="hidden" value="Nova stranka na tomiseregi.si">
-          <input name="redirectTo" type="hidden" value="https://tomiseregi.si/thank-you">
-          <div class="form-group field">
-            <label for="name">Ime in priimek</label>
-            <input aria-required="true" id="name" name="name" required type="text">
-          </div>
-          <div class="form-group field">
-            <label for="email">E-po&scaron;ta</label>
-            <input aria-required="true" id="email" name="email" required type="email">
-          </div>
-          <div class="form-group field">
-            <label for="message">Sporočilo</label>
-            <textarea aria-required="true" id="message" name="message" required rows="5"></textarea>
-          </div>
-          <!-- Replaced the inline Tailwind classes with .btn.btn--primary -->
-          <button class="btn btn--primary" type="submit">
-            Po&scaron;lji sporočilo
-          </button>
-        </form>
-      </div>
-      <div class="map-container">
-        <iframe
-          allowfullscreen=""
-          height="450"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21329.226901059094!2d14.49124327117008!3d46.052978681585984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d635a05207f%3A0xe667d30acde6b278!2sLjubljanski%20grad!5e1!3m2!1ssl!2ssi!4v1734824006776!5m2!1ssl!2ssi"
-          style="border:0;"
-          width="600"
-        ></iframe>
-      </div>
+    <div class="section-separator">
+        <div class="separator-curve"></div>
     </div>
-  </section>
+
+    <!-- Services -->
+    <section aria-labelledby="services-title" class="services section-gradient" id="services" role="region">
+        <div class="container">
+            <h2 class="section-title" id="services-title">Moje storitve</h2>
+            <ul class="services-grid">
+                <li class="service-card" role="option">
+                    <i aria-hidden="true" class="fas fa-globe"></i>
+                    <h3><strong>Brezplačne spletne strani</strong></h3>
+                    <p>
+                        Profesionalne spletne strani, popolnoma brezplačno za va&scaron;e podjetje. Zasnovane so tako,
+                        da izbolj&scaron;ajo va&scaron;o spletno prisotnost in pomagajo pri rasti va&scaron;ega
+                        poslovanja
+                        brez začetnih stro&scaron;kov.
+                    </p>
+                </li>
+                <li class="service-card" role="option">
+                    <i aria-hidden="true" class="fas fa-robot"></i>
+                    <h3><strong>Avtomatizacija procesov</strong></h3>
+                    <p>(kmalu na voljo)</p>
+                </li>
+                <li class="service-card" role="option">
+                    <i aria-hidden="true" class="fas fa-handshake"></i>
+                    <h3><strong>Partnerski program</strong></h3>
+                    <p>
+                        Pridružite se na&scaron;i rastoči mreži podjetij in izkoristite priložnost za medsebojno rast
+                        in promocijo. Na&scaron; partnerski program omogoča sodelovanje, ki prina&scaron;a obojestranske
+                        koristi ter spodbuja dolgoročno poslovno uspe&scaron;nost.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="section-separator">
+        <div class="separator-curve"></div>
+    </div>
+
+    <!-- About -->
+    <section aria-labelledby="about-title" class="about section-gradient" id="about" role="region">
+        <div class="container">
+            <h2 class="section-title" id="about-title">O meni</h2>
+            <div class="about-content">
+                <div aria-label="Tomi Šeregi Profile" class="about-image image-section" role="img">
+                    <img
+                            alt="Tomi Šeregi"
+                            height="500"
+                            loading="lazy"
+                            src="https://tomiseregi.si/tomi.webp"
+                            width="400"
+                    >
+                </div>
+                <div class="about-text">
+                    <p>
+                        Sem Tomi &Scaron;eregi, sveže diplomirani strokovnjak na področju tehnologije in umetne
+                        inteligence.
+                        Z veliko strastjo do inovacij si prizadevam pomagati lokalnim slovenskim podjetjem pri rasti
+                        in uspehu v digitalnem svetu.
+                    </p>
+                    <p>
+                        Trenutno ponujam brezplačne profesionalne spletne strani za slovenska podjetja. Ta edinstvena
+                        storitev
+                        omogoča podjetjem, da brez začetnih stro&scaron;kov vzpostavijo močno spletno prisotnost,
+                        medtem ko mi omogoča pridobivanje dragocenih referenc in prikaz mojih strokovnih sposobnosti.
+                    </p>
+                    <p>
+                        Z združevanjem najnovej&scaron;ih tehnolo&scaron;kih re&scaron;itev in osebnega pristopa
+                        si prizadevam ustvariti trajnostne digitalne re&scaron;itve, ki bodo va&scaron;emu podjetju
+                        pomagale uspeti v dana&scaron;njem konkurenčnem poslovnem okolju.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator">
+        <div class="separator-curve"></div>
+    </div>
+
+    <!-- Contact -->
+    <section aria-labelledby="contact-title" class="contact section-gradient" id="contact" role="region">
+        <div class="container">
+            <h2 class="section-title" id="contact-title">Kontaktirajte me</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3><strong>Stopite v stik</strong></h3>
+                    <p>Ste zainteresirani za brezplačno spletno stran?</p>
+                    <br>
+                    <p>
+                        Ne odla&scaron;ajte &ndash; kontaktirajte me &scaron;e danes in naredimo prvi korak
+                        k izbolj&scaron;anju va&scaron;e spletne prisotnosti. Skupaj lahko ustvarimo re&scaron;itev,
+                        ki bo ustrezala potrebam va&scaron;ega podjetja.
+                    </p>
+                </div>
+                <form
+                        action="https://api.staticforms.xyz/submit"
+                        aria-labelledby="contact-title"
+                        class="contact-form"
+                        id="staticform"
+                        method="post"
+                        role="form"
+                        target="_blank"
+                >
+                    <input name="accessKey" type="hidden" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
+                    <input name="subject" type="hidden" value="Nova stranka na tomiseregi.si">
+                    <input name="redirectTo" type="hidden" value="https://tomiseregi.si/thank-you">
+
+                    <div class="form-group field">
+                        <label for="name">Ime in priimek</label>
+                        <input aria-required="true" id="name" name="name" required type="text">
+                    </div>
+                    <div class="form-group field">
+                        <label for="email">E-po&scaron;ta</label>
+                        <input aria-required="true" id="email" name="email" required type="email">
+                    </div>
+                    <div class="form-group field">
+                        <label for="message">Sporočilo</label>
+                        <textarea aria-required="true" id="message" name="message" required rows="5"></textarea>
+                    </div>
+                    <button class="btn btn--primary" type="submit">
+                        Po&scaron;lji sporočilo
+                    </button>
+                </form>
+            </div>
+            <div class="map-container">
+                <iframe
+                        allowfullscreen=""
+                        height="450"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21329.226901059094!2d14.49124327117008!3d46.052978681585984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d635a05207f%3A0xe667d30acde6b278!2sLjubljanski%20grad!5e1!3m2!1ssl!2ssi!4v1734824006776!5m2!1ssl!2ssi"
+                        style="border:0;"
+                        width="600"
+                ></iframe>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer role="contentinfo">
-  <div class="container footer-content">
-    <div>
-      <h3>Tomi &Scaron;eregi</h3>
-      <p>Re&scaron;itve za rast va&scaron;ega podjetja</p>
+    <div class="container footer-content">
+        <div>
+            <h3>Tomi &Scaron;eregi</h3>
+            <p>Re&scaron;itve za rast va&scaron;ega podjetja</p>
+        </div>
+        <div>
+            <h3>Kontakt</h3>
+            <p>tomi.seregi99@gmail.com</p>
+            <a
+                    aria-label="Visit LinkedIn profile"
+                    href="https://www.linkedin.com/in/tomi-seregi/"
+                    rel="noopener noreferrer"
+                    style="color:white"
+                    target="_blank"
+            >
+                LinkedIn: Tomi &Scaron;eregi
+            </a>
+        </div>
     </div>
-    <div>
-      <h3>Kontakt</h3>
-      <p>tomi.seregi99@gmail.com</p>
-      <a
-        aria-label="Visit LinkedIn profile"
-        href="https://www.linkedin.com/in/tomi-seregi/"
-        style="color:white"
-      >
-        LinkedIn: Tomi &Scaron;eregi
-      </a>
-    </div>
-  </div>
 </footer>
 
-<script>
-  // Your existing JavaScript with added security measures
-  document.addEventListener('DOMContentLoaded', () => {
-    // Use Intersection Observer for scroll animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, {
-      threshold: 0.1
+<!-- SCROLL TO TOP BUTTON -->
+<button aria-label="Scroll to top" class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Inline scripts with nonce to avoid 'unsafe-inline' -->
+
+<!-- Google Analytics config -->
+<script nonce="abc123">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EM9CVPCXYC', {
+      'transport_url': 'https://ssl.google-analytics.com',
+      'transport_type': 'beacon'
     });
+</script>
 
-    // Add reveal class to elements
-    const sections = [
-      '.services-grid',
-      '.portfolio-grid',
-      '.contact-grid',
-      '.service-card',
-      '.portfolio-item'
-    ];
-    sections.forEach(section => {
-      document.querySelectorAll(section).forEach(element => {
-        element.classList.add('reveal');
-        observer.observe(element);
-      });
-    });
-
-    // Progressive loading for service cards
-    document.querySelectorAll('.service-card').forEach((card, index) => {
-      card.style.animationDelay = `${index * 0.2}s`;
-    });
-  });
-
-  // Intersection Observer for section animations
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
-
-  // Observe all sections
-  document.querySelectorAll('.services, .about, .contact').forEach(section => {
-    sectionObserver.observe(section);
-  });
-
-  // Service Worker
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('ServiceWorker registration successful');
-        })
-        .catch(err => {
-          console.log('ServiceWorker registration failed: ', err);
-        });
-    });
-  }
-
-  // Navigation active link logic
-  document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    // Handle active state on click
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        navLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-
-    // Set active state based on current section
-    function setActiveLink() {
-      const sections = ['services', 'about', 'contact'];
-      const scrollPosition = window.scrollY;
-
-      sections.forEach(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
-            navLinks.forEach(link => {
-              if (link.getAttribute('href') === `#${section}`) {
-                link.classList.add('active');
-              } else {
-                link.classList.remove('active');
-              }
-            });
+<!-- Main script for IntersectionObserver, scroll-to-top, etc. -->
+<script nonce="abc123">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Use Intersection Observer for scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
           }
+        });
+      }, { threshold: 0.1 });
+
+      // Add reveal class to elements
+      const sections = [
+        '.services-grid',
+        '.portfolio-grid',
+        '.contact-grid',
+        '.service-card',
+        '.portfolio-item'
+      ];
+      sections.forEach(section => {
+        document.querySelectorAll(section).forEach(element => {
+          element.classList.add('reveal');
+          observer.observe(element);
+        });
+      });
+
+      // Progressive loading for service cards
+      document.querySelectorAll('.service-card').forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.2}s`;
+      });
+
+      // Intersection Observer for big sections
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.services, .about, .contact').forEach(section => {
+        sectionObserver.observe(section);
+      });
+
+      // Service Worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+
+      // Navigation active link logic
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      function setActiveLink() {
+        const sections = ['services', 'about', 'contact'];
+        const scrollPosition = window.scrollY;
+
+        sections.forEach(section => {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= 150 && rect.bottom >= 150) {
+              navLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${section}`) {
+                  link.classList.add('active');
+                } else {
+                  link.classList.remove('active');
+                }
+              });
+            }
+          }
+        });
+      }
+
+      window.addEventListener('scroll', setActiveLink);
+      setActiveLink(); // initial
+
+      // Scroll-to-top button
+      const scrollBtn = document.querySelector('.scroll-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+          scrollBtn.classList.add('show');
+        } else {
+          scrollBtn.classList.remove('show');
         }
       });
-    }
-
-    window.addEventListener('scroll', setActiveLink);
-    setActiveLink(); // Set initial state
-  });
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
 </script>
 </body>
 </html>

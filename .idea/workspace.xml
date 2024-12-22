@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed amp structure and optimized">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="optimized structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -72,13 +72,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00014" summary="added new robots.txt">
-      <option name="closed" value="true" />
-      <created>1734791243003</created>
-      <option name="number" value="LOCAL−00014" />
-      <option name="presentableId" value="LOCAL−00014" />
-      <updated>1734791243003</updated>
     </task>
     <task id="LOCAL−00015" summary="added aria roles and landmarks">
       <option name="closed" value="true" />
@@ -416,11 +409,17 @@
       <option name="presentableId" value="LOCAL−00062" />
       <updated>1734866763680</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL−00063" summary="optimized structure">
+      <option name="closed" value="true" />
+      <created>1734868111552</created>
+      <option name="number" value="LOCAL−00063" />
+      <option name="presentableId" value="LOCAL−00063" />
+      <updated>1734868111552</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented google tag manager" />
     <MESSAGE value="added amp version of website" />
     <MESSAGE value="implemented pwa" />
     <MESSAGE value="optimized loading time" />
@@ -445,6 +444,7 @@
     <MESSAGE value="refactored index.html formating" />
     <MESSAGE value="fixed broken js code" />
     <MESSAGE value="fixed amp structure and optimized" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed amp structure and optimized" />
+    <MESSAGE value="optimized structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimized structure" />
   </component>
 </project>
