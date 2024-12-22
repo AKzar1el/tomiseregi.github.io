@@ -4,7 +4,7 @@ const urlsToCache = [
   '/index.html',
   '/logo.webp',
   '/tomi.webp',
-  '/icons/icon-192x192.png',
+  '/icons/icon-192x192.webp',
   '/icons/icon-512x512.png'
 ];
 
