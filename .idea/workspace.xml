@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="removed redundancies and added tailwin">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="changed contact section structure">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,16 +37,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tomi/Documents/GitHub/tomis&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Tomi/Documents/GitHub/tomis",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tomi\Documents\GitHub\tomis" />
@@ -67,13 +68,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00010" summary="contact me typo fix">
-      <option name="closed" value="true" />
-      <created>1734789677989</created>
-      <option name="number" value="LOCAL−00010" />
-      <option name="presentableId" value="LOCAL−00010" />
-      <updated>1734789677989</updated>
     </task>
     <task id="LOCAL−00011" summary="added seo">
       <option name="closed" value="true" />
@@ -411,11 +405,17 @@
       <option name="presentableId" value="LOCAL−00058" />
       <updated>1734863693510</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL−00059" summary="changed contact section structure">
+      <option name="closed" value="true" />
+      <created>1734863930978</created>
+      <option name="number" value="LOCAL−00059" />
+      <option name="presentableId" value="LOCAL−00059" />
+      <updated>1734863930978</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed page has no list markdown" />
     <MESSAGE value="fixed pages has no strong importance elements" />
     <MESSAGE value="testing image" />
     <MESSAGE value="added next gen image format" />
@@ -440,6 +440,7 @@
     <MESSAGE value="changed font and added seo" />
     <MESSAGE value="added google maps" />
     <MESSAGE value="removed redundancies and added tailwin" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed redundancies and added tailwin" />
+    <MESSAGE value="changed contact section structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed contact section structure" />
   </component>
 </project>
