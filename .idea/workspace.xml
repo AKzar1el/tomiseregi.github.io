@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added google maps">
-      <change afterPath="$PROJECT_DIR$/hero-image.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handshake.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/handshake.webp" beforeDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="removed redundancies and added tailwin">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,13 +67,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00009" summary="updated form sending">
-      <option name="closed" value="true" />
-      <created>1734789245811</created>
-      <option name="number" value="LOCAL−00009" />
-      <option name="presentableId" value="LOCAL−00009" />
-      <updated>1734789245811</updated>
     </task>
     <task id="LOCAL−00010" summary="contact me typo fix">
       <option name="closed" value="true" />
@@ -415,11 +404,17 @@
       <option name="presentableId" value="LOCAL−00057" />
       <updated>1734824289918</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL−00058" summary="removed redundancies and added tailwin">
+      <option name="closed" value="true" />
+      <created>1734863693510</created>
+      <option name="number" value="LOCAL−00058" />
+      <option name="presentableId" value="LOCAL−00058" />
+      <updated>1734863693510</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed twitter card incomplete" />
     <MESSAGE value="fixed page has no list markdown" />
     <MESSAGE value="fixed pages has no strong importance elements" />
     <MESSAGE value="testing image" />
@@ -444,6 +439,7 @@
     <MESSAGE value="added section separators" />
     <MESSAGE value="changed font and added seo" />
     <MESSAGE value="added google maps" />
-    <option name="LAST_COMMIT_MESSAGE" value="added google maps" />
+    <MESSAGE value="removed redundancies and added tailwin" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed redundancies and added tailwin" />
   </component>
 </project>
