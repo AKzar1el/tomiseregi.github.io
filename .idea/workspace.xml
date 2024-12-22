@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed brand-name css">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed brand-name css again">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,13 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00030" summary="testing image">
-      <option name="closed" value="true" />
-      <created>1734797043824</created>
-      <option name="number" value="LOCAL−00030" />
-      <option name="presentableId" value="LOCAL−00030" />
-      <updated>1734797043824</updated>
     </task>
     <task id="LOCAL−00031" summary="added next gen image format">
       <option name="closed" value="true" />
@@ -423,7 +416,14 @@
       <option name="presentableId" value="LOCAL−00078" />
       <updated>1734889382236</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL−00079" summary="fixed brand-name css again">
+      <option name="closed" value="true" />
+      <created>1734889583436</created>
+      <option name="number" value="LOCAL−00079" />
+      <option name="presentableId" value="LOCAL−00079" />
+      <updated>1734889583436</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -438,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improved first cta button css" />
     <MESSAGE value="improved about me section" />
     <MESSAGE value="added section separators" />
     <MESSAGE value="changed font and added seo" />
@@ -463,6 +462,7 @@
     <MESSAGE value="added contact image" />
     <MESSAGE value="changed heading divider" />
     <MESSAGE value="fixed brand-name css" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed brand-name css" />
+    <MESSAGE value="fixed brand-name css again" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed brand-name css again" />
   </component>
 </project>
