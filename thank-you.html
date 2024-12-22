@@ -82,16 +82,27 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .brand-container {
+       .brand-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-link {
             display: flex;
             align-items: center;
             gap: 1rem;
+            text-decoration: none;
             transition: transform 0.3s ease;
+        }
+
+        .brand-link:hover {
+            transform: translateY(-1px);
         }
 
         .logo-image {
             height: 48px;
             width: auto;
+            display: block;
         }
 
         .name-container {
@@ -306,10 +317,6 @@
                                     <i class="fas fa-external-link-alt"></i>
                                     Gospodarska zbornica Slovenije
                                 </a>
-                                <a class="resource-link" href="https://spot.gov.si/" rel="noopener" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    SPOT - Slovenska poslovna točka
-                                </a>
                             </div>
                         </div>
 
@@ -335,11 +342,6 @@
                                    target="_blank">
                                     <i class="fas fa-calendar"></i>
                                     Rezervirajte sestanek
-                                </a>
-                                <a class="resource-link" href="https://business.google.com/" rel="noopener"
-                                   target="_blank">
-                                    <i class="fas fa-building"></i>
-                                    Google My Business
                                 </a>
                                 <a class="resource-link" href="https://www.linkedin.com/in/tomi-seregi/" rel="noopener"
                                    target="_blank">

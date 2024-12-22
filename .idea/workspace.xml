@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added moja vizija section">
-      <change afterPath="$PROJECT_DIR$/icons/tq-badge.avif" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added new badge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thank-you.html" beforeDir="false" afterPath="$PROJECT_DIR$/thank-you.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,13 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00023" summary="changed thank you page avoiding duplicate headers seo error">
-      <option name="closed" value="true" />
-      <created>1734794990695</created>
-      <option name="number" value="LOCAL−00023" />
-      <option name="presentableId" value="LOCAL−00023" />
-      <updated>1734794990695</updated>
     </task>
     <task id="LOCAL−00024" summary="added outgoing links for seo">
       <option name="closed" value="true" />
@@ -425,7 +417,14 @@
       <option name="presentableId" value="LOCAL−00071" />
       <updated>1734872485420</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL−00072" summary="added new badge">
+      <option name="closed" value="true" />
+      <created>1734879761242</created>
+      <option name="number" value="LOCAL−00072" />
+      <option name="presentableId" value="LOCAL−00072" />
+      <updated>1734879761242</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added about me section again" />
     <MESSAGE value="updated max strong tags (6)" />
     <MESSAGE value="fixed ai buzz word appearence" />
     <MESSAGE value="added seobility SEO score widget" />
@@ -465,6 +463,7 @@
     <MESSAGE value="changed section styling" />
     <MESSAGE value="reformat code for thank you page" />
     <MESSAGE value="added moja vizija section" />
-    <option name="LAST_COMMIT_MESSAGE" value="added moja vizija section" />
+    <MESSAGE value="added new badge" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new badge" />
   </component>
 </project>
