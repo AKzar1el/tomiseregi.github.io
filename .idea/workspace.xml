@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed mobile design">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed mobile hero and nav section">
+      <change afterPath="$PROJECT_DIR$/icons/ssl-badge.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -12,6 +14,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,19 +48,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Tomi/Documents/GitHub/tomis",
+    "last_opened_file_path": "C:/Users/Tomi/Documents/GitHub/tomis/icons",
     "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Tomi\Documents\GitHub\tomis" />
       <recent name="C:\Users\Tomi\Documents\GitHub\tomis\icons" />
+      <recent name="C:\Users\Tomi\Documents\GitHub\tomis" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tomi\Documents\GitHub\tomis\amp" />
@@ -72,13 +82,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00017" summary="implemented cdn">
-      <option name="closed" value="true" />
-      <created>1734793066838</created>
-      <option name="number" value="LOCAL−00017" />
-      <option name="presentableId" value="LOCAL−00017" />
-      <updated>1734793066838</updated>
     </task>
     <task id="LOCAL−00018" summary="removed to many h1 seo problem">
       <option name="closed" value="true" />
@@ -416,11 +419,17 @@
       <option name="presentableId" value="LOCAL−00065" />
       <updated>1734869098107</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL−00066" summary="fixed mobile hero and nav section">
+      <option name="closed" value="true" />
+      <created>1734869427095</created>
+      <option name="number" value="LOCAL−00066" />
+      <option name="presentableId" value="LOCAL−00066" />
+      <updated>1734869427095</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="optimized loading time" />
     <MESSAGE value="fixed hero section image" />
     <MESSAGE value="updated url redirects" />
     <MESSAGE value="fixed hero image rounding" />
@@ -445,6 +454,7 @@
     <MESSAGE value="optimized structure" />
     <MESSAGE value="optimized structure again" />
     <MESSAGE value="fixed mobile design" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed mobile design" />
+    <MESSAGE value="fixed mobile hero and nav section" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed mobile hero and nav section" />
   </component>
 </project>
