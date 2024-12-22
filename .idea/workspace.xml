@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="reformat code for thank you page">
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added moja vizija section">
+      <change afterPath="$PROJECT_DIR$/icons/tq-badge.avif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -45,18 +45,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Tomi/Documents/GitHub/tomis/icons",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tomi/Documents/GitHub/tomis/icons&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tomi\Documents\GitHub\tomis\icons" />
@@ -81,13 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00022" summary="fixed seo problem not starting with h1">
-      <option name="closed" value="true" />
-      <created>1734794652565</created>
-      <option name="number" value="LOCAL−00022" />
-      <option name="presentableId" value="LOCAL−00022" />
-      <updated>1734794652565</updated>
     </task>
     <task id="LOCAL−00023" summary="changed thank you page avoiding duplicate headers seo error">
       <option name="closed" value="true" />
@@ -425,11 +418,28 @@
       <option name="presentableId" value="LOCAL−00070" />
       <updated>1734871427925</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL−00071" summary="added moja vizija section">
+      <option name="closed" value="true" />
+      <created>1734872485420</created>
+      <option name="number" value="LOCAL−00071" />
+      <option name="presentableId" value="LOCAL−00071" />
+      <updated>1734872485420</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added about me section" />
     <MESSAGE value="added about me section again" />
     <MESSAGE value="updated max strong tags (6)" />
     <MESSAGE value="fixed ai buzz word appearence" />
@@ -454,6 +464,7 @@
     <MESSAGE value="fixed css link not loading" />
     <MESSAGE value="changed section styling" />
     <MESSAGE value="reformat code for thank you page" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformat code for thank you page" />
+    <MESSAGE value="added moja vizija section" />
+    <option name="LAST_COMMIT_MESSAGE" value="added moja vizija section" />
   </component>
 </project>
