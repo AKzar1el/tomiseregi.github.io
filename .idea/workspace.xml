@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added new nav">
-      <change afterPath="$PROJECT_DIR$/ts-initial.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added new logo again">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,20 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00038" summary="fixed hero section image">
-      <option name="closed" value="true" />
-      <created>1734800545302</created>
-      <option name="number" value="LOCAL−00038" />
-      <option name="presentableId" value="LOCAL−00038" />
-      <updated>1734800545302</updated>
-    </task>
-    <task id="LOCAL−00039" summary="fixed hero section image">
-      <option name="closed" value="true" />
-      <created>1734800562948</created>
-      <option name="number" value="LOCAL−00039" />
-      <option name="presentableId" value="LOCAL−00039" />
-      <updated>1734800562948</updated>
     </task>
     <task id="LOCAL−00040" summary="updated url redirects">
       <option name="closed" value="true" />
@@ -424,7 +409,21 @@
       <option name="presentableId" value="LOCAL−00086" />
       <updated>1734900072430</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL−00087" summary="added new logo">
+      <option name="closed" value="true" />
+      <created>1734902389246</created>
+      <option name="number" value="LOCAL−00087" />
+      <option name="presentableId" value="LOCAL−00087" />
+      <updated>1734902389246</updated>
+    </task>
+    <task id="LOCAL−00088" summary="added new logo again">
+      <option name="closed" value="true" />
+      <created>1734902998745</created>
+      <option name="number" value="LOCAL−00088" />
+      <option name="presentableId" value="LOCAL−00088" />
+      <updated>1734902998745</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,8 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed broken js code" />
-    <MESSAGE value="fixed amp structure and optimized" />
     <MESSAGE value="optimized structure" />
     <MESSAGE value="optimized structure again" />
     <MESSAGE value="fixed mobile design" />
@@ -464,6 +461,8 @@
     <MESSAGE value="added faq" />
     <MESSAGE value="fixed footer structure" />
     <MESSAGE value="added new nav" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new nav" />
+    <MESSAGE value="added new logo" />
+    <MESSAGE value="added new logo again" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new logo again" />
   </component>
 </project>
