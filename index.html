@@ -19,8 +19,7 @@
 
     <!-- Refined Content Security Policy -->
     <meta
-      http-equiv="Content-Security-Policy"
-      content="
+            content="
         default-src 'self';
         script-src
           'self'
@@ -68,6 +67,7 @@
         upgrade-insecure-requests;
         block-all-mixed-content;
       "
+            http-equiv="Content-Security-Policy"
     >
 
     <meta content="DENY" http-equiv="X-Frame-Options">
@@ -81,880 +81,908 @@
 
     <!-- Font Awesome with SRI -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            rel="stylesheet"
     >
 
     <!-- Tailwind CSS with SRI -->
     <script
-      crossorigin="anonymous"
-      defer
-      integrity="sha256-9JN2LaAw+Nrgz5Pc9zD1XaB/ZZkOQFErnTbR3iagTWs="
-      src="https://cdn.tailwindcss.com"
+            crossorigin="anonymous"
+            defer
+            integrity="sha256-9JN2LaAw+Nrgz5Pc9zD1XaB/ZZkOQFErnTbR3iagTWs="
+            src="https://cdn.tailwindcss.com"
     ></script>
 
     <style nonce="abc123">
-      :root {
-        --primary: #2563eb;
-        --secondary: #1e40af;
-        --text: #1f2937;
-        --light: #f3f4f6;
-        --accent: #dbeafe;
-        --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      }
+        :root {
+          --primary: #2563eb;
+          --secondary: #1e40af;
+          --text: #1f2937;
+          --light: #f3f4f6;
+          --accent: #dbeafe;
+          --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+          --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: var(--font-body);
-        line-height: 1.6;
-        color: var(--text);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-/* Moja vizija section */
-.vision {
-  /* Keep it shorter than the other sections */
-  --section-bg: #f8f9fa; /* You can change this if you'd like */
-  position: relative;
-  padding-top: 60px;
-  margin-top: -30px;
-  padding-bottom: 3rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-
-  /* Subtle box shadow & border for a slight pop */
-  background: linear-gradient(135deg, #ffffff, #f8f9fa);
-  border: 1px solid #ebeff5;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.vision.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Make the heading stand out a bit */
-.vision h3 {
-  font-size: 1.75rem;
-  color: var(--secondary); /* or var(--primary) if you prefer */
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-/* Center the text, add comfortable line spacing */
-.vision p {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  color: #4b5563;
-  margin: 0 auto 1.5rem; /* auto left/right to center, extra bottom margin */
-  max-width: 700px;      /* keeps it nicely contained on larger screens */
-  text-align: center;
-}
-
-/* Center the badge row and give them a bit of spacing */
-.vision .trust-badges {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.vision .trust-badges img {
-  width: 60px;
-  height: auto;
-  object-fit: contain;
-  /* Optional: subtle drop shadow or border */
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-
-      .brand-container {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 0;
-        background: #2563eb;
-        color: #fff;
-        padding: 8px 16px;
-        z-index: 999;
-        text-decoration: none;
-        transition: top 0.3s ease;
-      }
-      .skip-link:focus {
-        top: 0;
-        outline: 2px solid #fff;
-      }
-      .logo-image {
-        height: 48px;
-        width: auto;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: var(--font-heading);
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        line-height: 1.2;
-      }
-      .nav-link:focus {
-        outline: 2px solid var(--primary);
-        outline-offset: 2px;
-      }
-
-      @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
-      @keyframes fadeInRight {
-        from { opacity: 0; transform: translateX(-20px); }
-        to   { opacity: 1; transform: translateX(0); }
-      }
-      .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease;
-      }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1.5rem;
-      }
-
-      header {
-        background: white;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-      }
-      .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.75rem 1rem;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .logo {
-        font-size: clamp(1.25rem, 4vw, 1.5rem);
-        font-weight: 700;
-        color: var(--primary);
-        text-decoration: none;
-        padding: 0.5rem;
-        letter-spacing: -0.02em;
-        position: relative;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s ease;
-        min-height: 44px;
-      }
-      .logo:hover {
-        color: var(--secondary);
-        transform: translateY(-1px);
-      }
-      .logo::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: var(--primary);
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-        transform-origin: right;
-      }
-      .logo:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-
-      .nav-toggle {
-        display: none;
-      }
-      nav ul {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-      }
-      .main-nav .nav-list {
-        display: flex;
-        gap: 2.5rem;
-        margin-left: auto;
-        padding-left: 2rem;
-        list-style: none;
-        align-items: center;
-      }
-      .main-nav .nav-link {
-        color: var(--text);
-        font-weight: 500;
-        font-size: 1.125rem;
-        padding: 0.5rem 0;
-        transition: color 0.3s ease;
-        position: relative;
-        display: inline-block;
-        text-decoration: none;
-      }
-      .main-nav .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: var(--primary);
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.3s ease-out;
-      }
-      .main-nav .nav-link:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-      .main-nav .nav-link:hover {
-        color: var(--primary);
-      }
-      .main-nav .nav-link.active {
-        color: var(--primary);
-      }
-      .main-nav .nav-link.active::after {
-        transform: scaleX(1);
-      }
-
-      .hero {
-        --section-bg: var(--accent);
-        margin-bottom: 50px;
-        padding: 8rem 0 4rem;
-        background: linear-gradient(135deg, var(--accent), white);
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-      }
-      .hero-content {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 2rem;
-        align-items: center;
-      }
-      .hero-text {
-        max-width: 560px;
-        opacity: 0;
-        animation: fadeInRight 1s ease forwards;
-        padding-right: 2rem;
-      }
-      .hero-text h1 {
-        font-size: clamp(2.5rem, 4vw, 3.5rem);
-        line-height: 1.1;
-        margin-bottom: 1.5rem;
-      }
-      .hero-text p {
-        font-size: clamp(1.125rem, 2vw, 1.25rem);
-        color: #4b5563;
-        margin-bottom: 2rem;
-        font-weight: 400;
-      }
-
-      .image-section {
-        opacity: 0;
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: fadeInUp 1s ease 0.3s forwards;
-      }
-      .hero-image {
-        max-width: 500px;
-        aspect-ratio: 16/9;
-        padding: 1.5rem;
-      }
-      .hero-image img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        border-radius: 1rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-        position: relative;
-        z-index: 1;
-      }
-      .hero-image::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-          135deg,
-          rgba(219, 234, 254, 0.3),
-          rgba(37, 99, 235, 0.1)
-        );
-        border-radius: 1rem;
-        z-index: 2;
-      }
-      .hero-image img:hover {
-        transform: translateY(-5px);
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 1rem 2rem;
-        border-radius: 0.5rem;
-        font-weight: 600;
-        position: relative;
-        overflow: hidden;
-        transform: translateY(0);
-        transition: all 0.3s ease;
-        text-decoration: none;
-        box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
-        cursor: pointer;
-        outline: none;
-        border: none;
-      }
-      .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
-      }
-      .btn:active {
-        transform: translateY(0);
-        box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
-      }
-      .btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0));
-        transition: opacity 0.3s ease;
-      }
-      .btn:hover::before {
-        opacity: 0.8;
-      }
-      .btn--primary {
-        background: var(--primary);
-        color: #fff;
-      }
-      .btn--primary:hover {
-        background: var(--secondary);
-      }
-      .btn--primary:focus {
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
-      }
-
-      /*
-        SERVICES SECTION
-        Now has a light gray background
-      */
-      .services {
-        --section-bg: #f8f9fa;
-        position: relative;
-        padding-top: 100px;
-        margin-top: -50px;
-        padding-bottom: 4rem;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        background: var(--section-bg);
-      }
-      .services.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .services-grid {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-      }
-      .service-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        position: relative;
-      }
-      .service-card i {
-        font-size: 2.5rem;
-        color: var(--primary);
-        margin-bottom: 1rem;
-        transition: transform 0.3s ease;
-      }
-      .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      }
-      .service-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: var(--primary);
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-      }
-      .service-card:hover::before {
-        transform: scaleX(1);
-      }
-      .service-card:hover i {
-        transform: scale(1.2);
-      }
-      @keyframes serviceCardIn {
-        from { opacity: 0; transform: translateY(30px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
-      .service-card.animate {
-        animation: serviceCardIn 0.6s ease forwards;
-      }
-      .service-card h3 {
-        font-size: 1.5rem;
-        margin: 1rem 0;
-      }
-      .service-card p {
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-
-      /*
-        ABOUT SECTION
-        Now has a soft gradient in the background
-      */
-      .about {
-        --section-bg: var(--light);
-        position: relative;
-        padding-top: 100px;
-        margin-top: -50px;
-        padding-bottom: 6rem;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        background: linear-gradient(135deg, #f0f5ff, #ffffff);
-      }
-      .about.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .about-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
-        align-items: center;
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-      .about-image {
-        max-width: 450px;
-        padding: 2.5rem;
-        border-radius: 1.5rem;
-        position: relative;
-      }
-      .about-image img {
-        width: 100%;
-        height: auto;
-        max-width: 450px;
-        border-radius: 1.5rem;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s ease;
-        position: relative;
-        z-index: 2;
-      }
-      .about-image::before {
-        content: '';
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        width: calc(100% - 4rem);
-        height: calc(100% - 4rem);
-        background: var(--accent);
-        border-radius: 2rem;
-        z-index: 1;
-        transform: rotate(3deg);
-      }
-      .about-text {
-        opacity: 0;
-        animation: fadeInRight 1s ease forwards;
-        padding: 2rem;
-      }
-      .hr-divider {
-        width: 50%;
-        margin: 1.5rem auto;
-        border: 0;
-        border-top: 1px solid #e5e7eb;
-        opacity: 0.8;
-      }
-      .read-more-btn {
-        background: var(--primary);
-        color: #fff;
-        padding: 0.5rem 1rem;
-        border-radius: 0.375rem;
-        border: none;
-        cursor: pointer;
-        margin-top: 1rem;
-      }
-      .read-more-btn:hover {
-        background: var(--secondary);
-      }
-      .trust-badges {
-        display: flex;
-        gap: 1rem;
-        margin: 1rem 0;
-      }
-      .trust-badges img {
-        width: 60px;
-        height: auto;
-        object-fit: contain;
-      }
-      .about-text h3 {
-        font-size: 1.25rem;
-        color: var(--primary);
-        margin: 1rem 0 0.5rem 0;
-      }
-      .about-text p {
-        font-size: 1.125rem;
-        line-height: 1.8;
-        margin-bottom: 1.25rem;
-      }
-      .about-text ul {
-        list-style: disc;
-        margin-left: 1.5rem;
-        margin-bottom: 1.25rem;
-      }
-      .about-text li {
-        margin-bottom: 0.5rem;
-      }
-
-      /*
-        CONTACT SECTION
-        Explicit white background
-      */
-      .contact {
-        --section-bg: #ffffff;
-        position: relative;
-        padding-top: 100px;
-        margin-top: -50px;
-        padding-bottom: 4rem;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        background: var(--section-bg);
-      }
-      .contact.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        margin-bottom: 4rem;
-      }
-      .map-container {
-        width: 100%;
-        height: 400px;
-        border-radius: 0.5rem;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-top: 2rem;
-      }
-      .map-container iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-      .contact-form {
-        display: grid;
-        gap: 1rem;
-      }
-      .form-group {
-        display: grid;
-        gap: 0.5rem;
-      }
-      input, textarea {
-        padding: 0.75rem;
-        border: 1px solid #d1d5db;
-        border-radius: 0.375rem;
-        width: 100%;
-        font-family: var(--font-body);
-        font-size: 1rem;
-      }
-
-      /*
-        FOOTER
-        Now a deeper blue for more contrast
-      */
-      footer {
-        background: var(--secondary); /* previously var(--text) */
-        color: white;
-        padding: 2rem 0;
-        margin-top: 4rem;
-      }
-      .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-      }
-      footer h3 {
-        font-family: var(--font-heading);
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-
-      .section-title {
-        font-family: var(--font-heading);
-        font-size: 2.25rem;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        margin-bottom: 3rem;
-        text-align: center;
-        position: relative;
-        color: var(--text);
-      }
-      .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background: var(--primary);
-        border-radius: 2px;
-      }
-
-      .section-separator {
-        position: relative;
-        height: 100px;
-        margin-top: -100px;
-        z-index: 1;
-      }
-      .separator-curve {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        clip-path: ellipse(70% 100% at 50% 0%);
-      }
-
-      .section-gradient {
-        position: relative;
-        overflow: hidden;
-      }
-      .section-gradient::before {
-        content: '';
-        position: absolute;
-        top: -100px;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: linear-gradient(to bottom, transparent, var(--section-bg));
-        z-index: 2;
-      }
-      .section-gradient::after {
-        content: '';
-        position: absolute;
-        bottom: -100px;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: linear-gradient(to top, transparent, var(--section-bg));
-        z-index: 2;
-      }
-
-      .scroll-to-top {
-        position: fixed;
-        bottom: 1rem;
-        right: 1rem;
-        display: none;
-        background-color: var(--primary);
-        color: #fff;
-        border: none;
-        border-radius: 50%;
-        width: 48px;
-        height: 48px;
-        font-size: 1.5rem;
-        cursor: pointer;
-        outline: none;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        transition: opacity 0.3s, transform 0.3s;
-        z-index: 9999;
-      }
-      .scroll-to-top:focus {
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
-      }
-      .scroll-to-top.show {
-        display: flex;
-      }
-      .scroll-to-top:hover {
-        transform: translateY(-2px);
-      }
-
-      /* Mobile (up to 768px) */
-      @media (max-width: 768px) {
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
         body {
-          padding-top: 50px;
+          font-family: var(--font-body);
+          line-height: 1.6;
+          color: var(--text);
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
         }
-        .hero {
-          padding: 4rem 1rem 3rem;
-          min-height: auto;
+
+        /* Moja vizija section */
+        .vision {
+          /* Keep it shorter than the other sections */
+          --section-bg: #f8f9fa; /* You can change this if you'd like */
+          position: relative;
+          padding-top: 60px;
+          margin-top: -30px;
+          padding-bottom: 3rem;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+          /* Subtle box shadow & border for a slight pop */
+          background: linear-gradient(135deg, #ffffff, #f8f9fa);
+          border: 1px solid #ebeff5;
+          border-radius: 0.5rem;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
-        .hero-content {
-          grid-template-columns: 1fr;
-          gap: 2rem;
+
+        .vision.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Make the heading stand out a bit */
+        .vision h3 {
+          font-size: 1.75rem;
+          color: var(--secondary); /* or var(--primary) if you prefer */
           text-align: center;
-          justify-items: center;
+          margin-bottom: 1.5rem;
         }
-        .hero-text {
-          margin: 0 auto;
-          padding-right: 0;
+
+        /* Center the text, add comfortable line spacing */
+        .vision p {
+          font-size: 1.125rem;
+          line-height: 1.8;
+          color: #4b5563;
+          margin: 0 auto 1.5rem; /* auto left/right to center, extra bottom margin */
+          max-width: 700px;      /* keeps it nicely contained on larger screens */
           text-align: center;
-          max-width: 100%;
+        }
+
+        /* Center the badge row and give them a bit of spacing */
+        .vision .trust-badges {
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          margin-top: 1.5rem;
+        }
+
+        .vision .trust-badges img {
+          width: 60px;
+          height: auto;
+          object-fit: contain;
+          /* Optional: subtle drop shadow or border */
+          border-radius: 4px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .brand-container {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 0;
+          background: #2563eb;
+          color: #fff;
+          padding: 8px 16px;
+          z-index: 999;
+          text-decoration: none;
+          transition: top 0.3s ease;
+        }
+        .skip-link:focus {
+          top: 0;
+          outline: 2px solid #fff;
         }
         .logo-image {
-          height: 40px;
+          height: 48px;
+          width: auto;
         }
-        .header-content {
-          padding: 0.5rem 1rem;
+        h1, h2, h3, h4, h5, h6 {
+          font-family: var(--font-heading);
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          line-height: 1.2;
         }
-        .nav-toggle {
-          display: block;
-          font-size: 1.5rem;
-          background: none;
-          border: none;
-          color: var(--text);
-          cursor: pointer;
+        .nav-link:focus {
+          outline: 2px solid var(--primary);
+          outline-offset: 2px;
         }
-        .main-nav .nav-list {
-          flex-direction: column;
-          gap: 1.5rem;
-          padding: 1.5rem;
-          background: white;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-          display: none;
+
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: translateY(0); }
         }
-        .main-nav .nav-list.active {
-          display: flex;
+        @keyframes fadeInRight {
+          from { opacity: 0; transform: translateX(-20px); }
+          to   { opacity: 1; transform: translateX(0); }
         }
-        .main-nav .nav-link {
-          display: block;
-          padding: 0.75rem;
-          text-align: center;
-          width: 100%;
+        .reveal {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: all 0.8s ease;
         }
-        .about-content {
-          grid-template-columns: 1fr;
-          gap: 2rem;
+        .reveal.active {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
           padding: 0 1.5rem;
         }
-        .about-text p {
+
+        header {
+          background: white;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000;
+        }
+        .header-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .logo {
+          font-size: clamp(1.25rem, 4vw, 1.5rem);
+          font-weight: 700;
+          color: var(--primary);
+          text-decoration: none;
+          padding: 0.5rem;
+          letter-spacing: -0.02em;
+          position: relative;
+          display: flex;
+          align-items: center;
+          transition: all 0.3s ease;
+          min-height: 44px;
+        }
+        .logo:hover {
+          color: var(--secondary);
+          transform: translateY(-1px);
+        }
+        .logo::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: var(--primary);
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+          transform-origin: right;
+        }
+        .logo:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+
+        .nav-toggle {
+          display: none;
+        }
+        nav ul {
+          display: flex;
+          gap: 2rem;
+          list-style: none;
+        }
+        .main-nav .nav-list {
+          display: flex;
+          gap: 2.5rem;
+          margin-left: auto;
+          padding-left: 2rem;
+          list-style: none;
+          align-items: center;
+        }
+        .main-nav .nav-link {
+          color: var(--text);
+          font-weight: 500;
+          font-size: 1.125rem;
+          padding: 0.5rem 0;
+          transition: color 0.3s ease;
+          position: relative;
+          display: inline-block;
+          text-decoration: none;
+        }
+        .main-nav .nav-link::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: var(--primary);
+          transform: scaleX(0);
+          transform-origin: bottom right;
+          transition: transform 0.3s ease-out;
+        }
+        .main-nav .nav-link:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+        .main-nav .nav-link:hover {
+          color: var(--primary);
+        }
+        .main-nav .nav-link.active {
+          color: var(--primary);
+        }
+        .main-nav .nav-link.active::after {
+          transform: scaleX(1);
+        }
+
+        .hero {
+          --section-bg: var(--accent);
+          margin-bottom: 50px;
+          padding: 8rem 0 4rem;
+          background: linear-gradient(135deg, var(--accent), white);
+          min-height: 80vh;
+          display: flex;
+          align-items: center;
+        }
+        .hero-content {
+          display: grid;
+          grid-template-columns: 1.2fr 0.8fr;
+          gap: 2rem;
+          align-items: center;
+        }
+        .hero-text {
+          max-width: 560px;
+          opacity: 0;
+          animation: fadeInRight 1s ease forwards;
+          padding-right: 2rem;
+        }
+        .hero-text h1 {
+          font-size: clamp(2.5rem, 4vw, 3.5rem);
+          line-height: 1.1;
+          margin-bottom: 1.5rem;
+        }
+        .hero-text p {
+          font-size: clamp(1.125rem, 2vw, 1.25rem);
+          color: #4b5563;
+          margin-bottom: 2rem;
+          font-weight: 400;
+        }
+
+        .image-section {
+          opacity: 0;
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          animation: fadeInUp 1s ease 0.3s forwards;
+        }
+        .hero-image {
+          max-width: 500px;
+          aspect-ratio: 16/9;
+          padding: 1.5rem;
+        }
+        .hero-image img {
+          width: 100%;
+          height: auto;
+          max-width: 100%;
+          border-radius: 1rem;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+          position: relative;
+          z-index: 1;
+        }
+        .hero-image::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            135deg,
+            rgba(219, 234, 254, 0.3),
+            rgba(37, 99, 235, 0.1)
+          );
+          border-radius: 1rem;
+          z-index: 2;
+        }
+        .hero-image img:hover {
+          transform: translateY(-5px);
+        }
+
+        .btn {
+          display: inline-block;
+          padding: 1rem 2rem;
+          border-radius: 0.5rem;
+          font-weight: 600;
+          position: relative;
+          overflow: hidden;
+          transform: translateY(0);
+          transition: all 0.3s ease;
+          text-decoration: none;
+          box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+          cursor: pointer;
+          outline: none;
+          border: none;
+        }
+        .btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
+        }
+        .btn:active {
+          transform: translateY(0);
+          box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+        }
+        .btn::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0));
+          transition: opacity 0.3s ease;
+        }
+        .btn:hover::before {
+          opacity: 0.8;
+        }
+        .btn--primary {
+          background: var(--primary);
+          color: #fff;
+        }
+        .btn--primary:hover {
+          background: var(--secondary);
+        }
+        .btn--primary:focus {
+          box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
+        }
+
+        /*
+          SERVICES SECTION
+          Now has a light gray background
+        */
+        .services {
+          --section-bg: #f8f9fa;
+          position: relative;
+          padding-top: 100px;
+          margin-top: -50px;
+          padding-bottom: 4rem;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+          background: var(--section-bg);
+        }
+        .services.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .services-grid {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+        }
+        .service-card {
+          background: white;
+          padding: 2rem;
+          border-radius: 0.5rem;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          position: relative;
+        }
+        .service-card i {
+          font-size: 2.5rem;
+          color: var(--primary);
+          margin-bottom: 1rem;
+          transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .service-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background: var(--primary);
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+        }
+        .service-card:hover::before {
+          transform: scaleX(1);
+        }
+        .service-card:hover i {
+          transform: scale(1.2);
+        }
+        @keyframes serviceCardIn {
+          from { opacity: 0; transform: translateY(30px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .service-card.animate {
+          animation: serviceCardIn 0.6s ease forwards;
+        }
+        .service-card h3 {
+          font-size: 1.5rem;
+          margin: 1rem 0;
+        }
+        .service-card p {
           font-size: 1rem;
           line-height: 1.6;
-          margin-bottom: 1rem;
         }
-        .about-image {
-          padding: 1.5rem;
-          order: -1;
-        }
-        .about-image img {
-          max-height: 200px;
-          object-fit: cover;
-          border-radius: 50%;
-        }
-        .about-image::before {
-          top: 1rem;
-          right: 1rem;
-          width: calc(100% - 2rem);
-          height: calc(100% - 2rem);
-        }
-        .section-title {
-          font-size: 2rem;
-          margin-bottom: 2.5rem;
-        }
-        .contact-grid {
-          grid-template-columns: 1fr;
-        }
-        .map-container {
-          height: 300px;
-          margin-top: 2rem;
-        }
-      }
 
-      /* Desktop improvements for 'O meni' section spacing */
-      @media (min-width: 1024px) {
-        .section-title {
-          margin-bottom: 2rem; /* was 3rem */
-        }
+        /*
+          ABOUT SECTION
+          Now has a soft gradient in the background
+        */
         .about {
-          margin-top: -30px;   /* was -50px */
-          padding-top: 80px;   /* was 100px */
-          padding-bottom: 4rem;/* was 6rem */
+          --section-bg: var(--light);
+          position: relative;
+          padding-top: 100px;
+          margin-top: -50px;
+          padding-bottom: 6rem;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+          background: linear-gradient(135deg, #f0f5ff, #ffffff);
+        }
+        .about.visible {
+          opacity: 1;
+          transform: translateY(0);
         }
         .about-content {
-          gap: 3rem; /* was 5rem */
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 5rem;
+          align-items: center;
+          max-width: 1100px;
+          margin: 0 auto;
+        }
+        .about-image {
+          max-width: 450px;
+          padding: 2.5rem;
+          border-radius: 1.5rem;
+          position: relative;
+        }
+        .about-image img {
+          width: 100%;
+          height: auto;
+          max-width: 450px;
+          border-radius: 1.5rem;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+          transition: transform 0.3s ease;
+          position: relative;
+          z-index: 2;
+        }
+        .about-image::before {
+          content: '';
+          position: absolute;
+          top: 2rem;
+          right: 2rem;
+          width: calc(100% - 4rem);
+          height: calc(100% - 4rem);
+          background: var(--accent);
+          border-radius: 2rem;
+          z-index: 1;
+          transform: rotate(3deg);
         }
         .about-text {
-          padding: 1.5rem; /* was 2rem */
+          opacity: 0;
+          animation: fadeInRight 1s ease forwards;
+          padding: 2rem;
         }
-      }
+        .hr-divider {
+          width: 50%;
+          margin: 1.5rem auto;
+          border: 0;
+          border-top: 1px solid #e5e7eb;
+          opacity: 0.8;
+        }
+        .read-more-btn {
+          background: var(--primary);
+          color: #fff;
+          padding: 0.5rem 1rem;
+          border-radius: 0.375rem;
+          border: none;
+          cursor: pointer;
+          margin-top: 1rem;
+        }
+        .read-more-btn:hover {
+          background: var(--secondary);
+        }
+        .trust-badges {
+          display: flex;
+          gap: 1rem;
+          margin: 1rem 0;
+        }
+        .trust-badges img {
+          width: 60px;
+          height: auto;
+          object-fit: contain;
+        }
+        .about-text h3 {
+          font-size: 1.25rem;
+          color: var(--primary);
+          margin: 1rem 0 0.5rem 0;
+        }
+        .about-text p {
+          font-size: 1.125rem;
+          line-height: 1.8;
+          margin-bottom: 1.25rem;
+        }
+        .about-text ul {
+          list-style: disc;
+          margin-left: 1.5rem;
+          margin-bottom: 1.25rem;
+        }
+        .about-text li {
+          margin-bottom: 0.5rem;
+        }
 
-      @media (prefers-contrast: more) {
-        .logo {
-          color: var(--secondary);
-          text-decoration: underline;
+        /*
+          CONTACT SECTION
+          Explicit white background
+        */
+        .contact {
+          --section-bg: #ffffff;
+          position: relative;
+          padding-top: 100px;
+          margin-top: -50px;
+          padding-bottom: 4rem;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+          background: var(--section-bg);
         }
-        .brand-name {
-          color: #1e40af;
+        .contact.visible {
+          opacity: 1;
+          transform: translateY(0);
         }
-        .hero-text h1,
-        .hero-text p {
-          color: #000;
-        }
-      }
 
-      @media (prefers-reduced-motion: reduce) {
-        .logo,
-        .btn,
-        .brand-container,
-        .hero-image img,
-        .service-card i {
-          transition: none;
+        /* ↓↓↓ UPDATED: Reduced gap & margin-bottom, top-aligned items ↓↓↓ */
+        .contact-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem; /* was 4rem */
+          margin-bottom: 2rem; /* was 4rem */
+          align-items: start; /* ensure top alignment */
         }
-        .logo:hover,
-        .hero-image img:hover,
-        .service-card:hover {
-          transform: none;
+
+        .map-container {
+          width: 100%;
+          height: 400px;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          margin-top: 2rem;
         }
-      }
+        .map-container iframe {
+          width: 100%;
+          height: 100%;
+          border: 0;
+        }
+        .contact-form {
+          display: grid;
+          gap: 1rem;
+        }
+
+        /* Contact image styling */
+        .contact-image {
+          margin-top: 0; /* was 2rem */
+          margin-bottom: 2rem;
+        }
+
+        /*
+          FOOTER
+          Now a deeper blue for more contrast
+        */
+        footer {
+          background: var(--secondary); /* previously var(--text) */
+          color: white;
+          padding: 2rem 0;
+          margin-top: 4rem;
+        }
+        .footer-content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+        }
+        footer h3 {
+          font-family: var(--font-heading);
+          font-size: 1.25rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+
+        .section-title {
+          font-family: var(--font-heading);
+          font-size: 2.25rem;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          margin-bottom: 3rem;
+          text-align: center;
+          position: relative;
+          color: var(--text);
+        }
+        .section-title::after {
+          content: '';
+          position: absolute;
+          bottom: -1rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 50%;
+          height: 3px;
+          background: var(--primary);
+          border-radius: 2px;
+        }
+
+        .section-separator {
+          position: relative;
+          height: 100px;
+          margin-top: -100px;
+          z-index: 1;
+        }
+        .separator-curve {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: inherit;
+          clip-path: ellipse(70% 100% at 50% 0%);
+        }
+
+        .section-gradient {
+          position: relative;
+          overflow: hidden;
+        }
+        .section-gradient::before {
+          content: '';
+          position: absolute;
+          top: -100px;
+          left: 0;
+          width: 100%;
+          height: 100px;
+          background: linear-gradient(to bottom, transparent, var(--section-bg));
+          z-index: 2;
+        }
+        .section-gradient::after {
+          content: '';
+          position: absolute;
+          bottom: -100px;
+          left: 0;
+          width: 100%;
+          height: 100px;
+          background: linear-gradient(to top, transparent, var(--section-bg));
+          z-index: 2;
+        }
+
+        .scroll-to-top {
+          position: fixed;
+          bottom: 1rem;
+          right: 1rem;
+          display: none;
+          background-color: var(--primary);
+          color: #fff;
+          border: none;
+          border-radius: 50%;
+          width: 48px;
+          height: 48px;
+          font-size: 1.5rem;
+          cursor: pointer;
+          outline: none;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          transition: opacity 0.3s, transform 0.3s;
+          z-index: 9999;
+        }
+        .scroll-to-top:focus {
+          box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
+        }
+        .scroll-to-top.show {
+          display: flex;
+        }
+        .scroll-to-top:hover {
+          transform: translateY(-2px);
+        }
+
+        /* Mobile (up to 768px) */
+        @media (max-width: 768px) {
+          body {
+            padding-top: 50px;
+          }
+          .hero {
+            padding: 4rem 1rem 3rem;
+            min-height: auto;
+          }
+          .hero-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+            justify-items: center;
+          }
+          .hero-text {
+            margin: 0 auto;
+            padding-right: 0;
+            text-align: center;
+            max-width: 100%;
+          }
+          .logo-image {
+            height: 40px;
+          }
+          .header-content {
+            padding: 0.5rem 1rem;
+          }
+          .nav-toggle {
+            display: block;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+          }
+          .main-nav .nav-list {
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+          }
+          .main-nav .nav-list.active {
+            display: flex;
+          }
+          .main-nav .nav-link {
+            display: block;
+            padding: 0.75rem;
+            text-align: center;
+            width: 100%;
+          }
+          .about-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 0 1.5rem;
+          }
+          .about-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+          }
+          .about-image {
+            padding: 1.5rem;
+            order: -1;
+          }
+          .about-image img {
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+          .about-image::before {
+            top: 1rem;
+            right: 1rem;
+            width: calc(100% - 2rem);
+            height: calc(100% - 2rem);
+          }
+          .section-title {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+          }
+          .contact-grid {
+            grid-template-columns: 1fr;
+          }
+          .map-container {
+            height: 300px;
+            margin-top: 2rem;
+          }
+        }
+
+        /* Desktop improvements for 'O meni' section spacing */
+        @media (min-width: 1024px) {
+          .section-title {
+            margin-bottom: 2rem; /* was 3rem */
+          }
+          .about {
+            margin-top: -30px;   /* was -50px */
+            padding-top: 80px;   /* was 100px */
+            padding-bottom: 4rem;/* was 6rem */
+          }
+          .about-content {
+            gap: 3rem; /* was 5rem */
+          }
+          .about-text {
+            padding: 1.5rem; /* was 2rem */
+          }
+        }
+
+        @media (prefers-contrast: more) {
+          .logo {
+            color: var(--secondary);
+            text-decoration: underline;
+          }
+          .brand-name {
+            color: #1e40af;
+          }
+          .hero-text h1,
+          .hero-text p {
+            color: #000;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .logo,
+          .btn,
+          .brand-container,
+          .hero-image img,
+          .service-card i {
+            transition: none;
+          }
+          .logo:hover,
+          .hero-image img:hover,
+          .service-card:hover {
+            transform: none;
+          }
+        }
+
+        /* Form improvements */
+        .form-group input,
+        .form-group textarea {
+          width: 100%;
+          padding: 0.75rem;
+          border: 1px solid #d1d5db;
+          border-radius: 0.375rem;
+          font-family: var(--font-body);
+          font-size: 1rem;
+          transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+          outline: none;
+          border-color: var(--primary);
+          box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-group label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+          color: #9ca3af;
+        }
     </style>
 
     <!-- SEO, Open Graph, Twitter, etc. -->
@@ -968,8 +996,8 @@
     <meta content="https://tomiseregi.si/" property="og:url"/>
     <meta content="Tomi Šeregi" property="og:title"/>
     <meta
-      content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
-      property="og:description"
+            content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
+            property="og:description"
     />
     <meta content="https://tomiseregi.si/logo.webp" property="og:image"/>
 
@@ -979,16 +1007,16 @@
     <meta content="https://tomiseregi.si/" name="twitter:url"/>
     <meta content="Tomi Šeregi" name="twitter:title"/>
     <meta
-      content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
-      name="twitter:description"
+            content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
+            name="twitter:description"
     />
     <meta content="https://tomiseregi.si/logo.webp" name="twitter:image"/>
 
     <meta content="index, follow" name="robots"/>
     <meta content="Tomi Šeregi" name="author"/>
     <meta
-      content="AI Solutions, Slovenian Businesses, Free Website Creation, Automated Workflow, Tomi Šeregi"
-      name="keywords"
+            content="AI Solutions, Slovenian Businesses, Free Website Creation, Automated Workflow, Tomi Šeregi"
+            name="keywords"
     />
 
     <link href="/manifest.json" rel="manifest">
@@ -997,63 +1025,63 @@
 
     <!-- Structured Data -->
     <script nonce="abc123" type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Tomi Šeregi",
-        "url": "https://tomiseregi.si/",
-        "logo": "https://tomiseregi.si/logo.webp",
-        "description": "AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+386 123 456 789",
-          "contactType": "Customer Service",
-          "email": "tomi.seregi99@gmail.com"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/tomi-seregi/"
-        ]
-      }
-    </script>
-    <script nonce="abc123" type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Brezplačne spletne strani",
-        "description": "Profesionalne spletne strani, izdelane s pomočjo AI tehnologije, brezplačno za vaše podjetje.",
-        "provider": {
-          "@type": "Organization",
-          "name": "Tomi Šeregi",
-          "url": "https://tomiseregi.si/",
-          "logo": "https://tomiseregi.si/logo.webp"
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Tomi Šeregi",
+            "url": "https://tomiseregi.si/",
+            "logo": "https://tomiseregi.si/logo.webp",
+            "description": "AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions.",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+386 123 456 789",
+                "contactType": "Customer Service",
+                "email": "tomi.seregi99@gmail.com"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/tomi-seregi/"
+            ]
         }
-      }
     </script>
     <script nonce="abc123" type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://tomiseregi.si/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Services",
-            "item": "https://tomiseregi.si/#services"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Contact",
-            "item": "https://tomiseregi.si/#contact"
-          }
-        ]
-      }
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Brezplačne spletne strani",
+            "description": "Profesionalne spletne strani, izdelane s pomočjo AI tehnologije, brezplačno za vaše podjetje.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Tomi Šeregi",
+                "url": "https://tomiseregi.si/",
+                "logo": "https://tomiseregi.si/logo.webp"
+            }
+        }
+    </script>
+    <script nonce="abc123" type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://tomiseregi.si/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://tomiseregi.si/#services"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Contact",
+                    "item": "https://tomiseregi.si/#contact"
+                }
+            ]
+        }
     </script>
 
     <!-- Google Analytics (async) -->
@@ -1062,361 +1090,396 @@
 
 <body>
 <noscript>
-  <iframe
-    height="0"
-    src="https://www.googletagmanager.com/ns.html?id=G-EM9CVPCXYC"
-    style="display:none;visibility:hidden"
-    width="0"
-  ></iframe>
+    <iframe
+            height="0"
+            src="https://www.googletagmanager.com/ns.html?id=G-EM9CVPCXYC"
+            style="display:none;visibility:hidden"
+            width="0"
+    ></iframe>
 </noscript>
 
 <!-- Skip to main content link (A11y) -->
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header role="banner">
-  <div class="container header-content">
-    <div class="brand-container">
-      <img
-        alt="Tomi Šeregi Logo"
-        class="logo-image"
-        fetchpriority="high"
-        height="100%"
-        src="https://tomiseregi.si/logo.webp"
-        width="100%"
-      >
-      <div class="name-container">
-        <p class="brand-name">Tomi &Scaron;eregi</p>
-      </div>
+    <div class="container header-content">
+        <div class="brand-container">
+            <img
+                    alt="Tomi Šeregi Logo"
+                    class="logo-image"
+                    fetchpriority="high"
+                    height="100%"
+                    src="https://tomiseregi.si/logo.webp"
+                    width="100%"
+            >
+            <div class="name-container">
+                <p class="brand-name">Tomi &Scaron;eregi</p>
+            </div>
+        </div>
+        <nav aria-label="Main navigation" class="main-nav" role="navigation">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="#services">Storitve</a></li>
+                <li><a class="nav-link" href="#about">O meni</a></li>
+                <li><a class="nav-link" href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav aria-label="Main navigation" class="main-nav" role="navigation">
-      <ul class="nav-list">
-        <li><a class="nav-link" href="#services">Storitve</a></li>
-        <li><a class="nav-link" href="#about">O meni</a></li>
-        <li><a class="nav-link" href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
-  </div>
 </header>
 
 <main id="main-content" role="main">
-  <!-- Hero -->
-  <section aria-labelledby="hero-title" class="hero section-gradient" role="region">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1 id="hero-title">Profesionalne spletne strani za slovenska podjetja</h1>
-        <p>Preprosto, brezplačno, zaupanja vredno</p>
-        <a
-          class="btn btn--primary"
-          href="https://calendly.com/tomi-seregi99/30min"
-          rel="noopener noreferrer"
-          role="button"
-          target="_blank"
-        >
-          <strong>Pridobite stran zdaj!</strong>
-        </a>
-      </div>
-      <div class="hero-image image-section">
-        <img
-          alt="AI Solutions Illustration"
-          fetchpriority="high"
-          height="400"
-          loading="eager"
-          src="https://tomiseregi.si/hero-image.webp"
-          width="600"
-        >
-      </div>
-    </div>
-  </section>
-
-  <div class="section-separator">
-    <div class="separator-curve"></div>
-  </div>
-
-  <!-- Services -->
-  <section aria-labelledby="services-title" class="services section-gradient" id="services" role="region">
-    <div class="container">
-      <h2 class="section-title" id="services-title">Moje storitve</h2>
-      <ul class="services-grid">
-        <li class="service-card" role="option">
-          <i aria-hidden="true" class="fas fa-globe"></i>
-          <h3><strong>Brezplačne spletne strani</strong></h3>
-          <p>
-            Profesionalne spletne strani, popolnoma brezplačno za va&scaron;e podjetje. Zasnovane so tako,
-            da izbolj&scaron;ajo va&scaron;o spletno prisotnost in pomagajo pri rasti va&scaron;ega poslovanja
-            brez začetnih stro&scaron;kov.
-          </p>
-        </li>
-        <li class="service-card" role="option">
-          <i aria-hidden="true" class="fas fa-robot"></i>
-          <h3><strong>Avtomatizacija procesov</strong></h3>
-          <p>(kmalu na voljo)</p>
-        </li>
-        <li class="service-card" role="option">
-          <i aria-hidden="true" class="fas fa-handshake"></i>
-          <h3><strong>Partnerski program</strong></h3>
-          <p>
-            Pridružite se na&scaron;i rastoči mreži podjetij in izkoristite priložnost za medsebojno rast
-            in promocijo. Na&scaron; partnerski program omogoča sodelovanje, ki prina&scaron;a obojestranske
-            koristi ter spodbuja dolgoročno poslovno uspe&scaron;nost.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="section-separator">
-    <div class="separator-curve"></div>
-  </div>
-
-  <!-- About -->
-  <section aria-labelledby="about-title" class="about section-gradient" id="about" role="region">
-    <div class="container">
-      <h2 class="section-title" id="about-title">O meni</h2>
-      <div class="about-content">
-        <div aria-label="Tomi Šeregi Profile" class="about-image image-section" role="img">
-          <img
-            alt="Tomi Šeregi"
-            height="500"
-            loading="lazy"
-            src="https://tomiseregi.si/tomi.webp"
-            width="400"
-          >
+    <!-- Hero -->
+    <section aria-labelledby="hero-title" class="hero section-gradient" role="region">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 id="hero-title">Profesionalne spletne strani za slovenska podjetja</h1>
+                <p>Preprosto, brezplačno, zaupanja vredno</p>
+                <a
+                        class="btn btn--primary"
+                        href="https://calendly.com/tomi-seregi99/30min"
+                        rel="noopener noreferrer"
+                        role="button"
+                        target="_blank"
+                >
+                    <strong>Pridobite stran zdaj!</strong>
+                </a>
+            </div>
+            <div class="hero-image image-section">
+                <img
+                        alt="AI Solutions Illustration"
+                        fetchpriority="high"
+                        height="400"
+                        loading="eager"
+                        src="https://tomiseregi.si/hero-image.webp"
+                        width="600"
+                >
+            </div>
         </div>
-        <div class="about-text">
-          <h3>Kdo sem?</h3>
-          <p>
-            Sem Tomi &Scaron;eregi, sveže diplomirani strokovnjak na področju tehnologije in umetne
-            inteligence. Z veliko strastjo do inovacij pomagam lokalnim slovenskim podjetjem pri rasti
-            in uspehu v digitalnem svetu.
-          </p>
+    </section>
 
-          <hr class="hr-divider" />
-
-          <h3>Kaj ponujam?</h3>
-          <p>Trenutno ponujam brezplačne profesionalne spletne strani za slovenska podjetja:</p>
-          <ul>
-            <li>Brez začetnih stro&scaron;kov</li>
-            <li>Hitro vzpostavljanje spletne prisotnosti</li>
-            <li>Možnost personalizacije za va&scaron;e podjetje</li>
-          </ul>
-
-          <hr class="hr-divider" />
-        </div>
-      </div>
+    <div class="section-separator">
+        <div class="separator-curve"></div>
     </div>
-  </section>
-<!-- New "Moja vizija" short section -->
-<section aria-labelledby="vision-title" class="vision section-gradient" id="vision" role="region">
-  <div class="container">
-    <h3 id="vision-title">Moja vizija</h3>
-    <p>
-      Z združevanjem najnovej&scaron;ih tehnolo&scaron;kih re&scaron;itev in osebnega pristopa
-      si prizadevam ustvariti trajnostne digitalne re&scaron;itve, ki bodo va&scaron;emu podjetju
-      pomagale uspeti v dana&scaron;njem konkurenčnem poslovnem okolju.
-    </p>
-  </div>
-</section>
-  <div class="section-separator">
-    <div class="separator-curve"></div>
-  </div>
 
-  <!-- Contact -->
-  <section aria-labelledby="contact-title" class="contact section-gradient" id="contact" role="region">
-    <div class="container">
-      <h2 class="section-title" id="contact-title">Kontaktirajte me</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3><strong>Stopite v stik</strong></h3>
-          <p>Ste zainteresirani za brezplačno spletno stran?</p>
-          <br>
-          <p>
-            Ne odla&scaron;ajte &ndash; kontaktirajte me &scaron;e danes in naredimo prvi korak
-            k izbolj&scaron;anju va&scaron;e spletne prisotnosti. Skupaj lahko ustvarimo re&scaron;itev,
-            ki bo ustrezala potrebam va&scaron;ega podjetja.
-          </p>
+    <!-- Services -->
+    <section aria-labelledby="services-title" class="services section-gradient" id="services" role="region">
+        <div class="container">
+            <h2 class="section-title" id="services-title">Moje storitve</h2>
+            <ul class="services-grid">
+                <li class="service-card" role="option">
+                    <i aria-hidden="true" class="fas fa-globe"></i>
+                    <h3><strong>Brezplačne spletne strani</strong></h3>
+                    <p>
+                        Profesionalne spletne strani, popolnoma brezplačno za va&scaron;e podjetje. Zasnovane so tako,
+                        da izbolj&scaron;ajo va&scaron;o spletno prisotnost in pomagajo pri rasti va&scaron;ega
+                        poslovanja
+                        brez začetnih stro&scaron;kov.
+                    </p>
+                </li>
+                <li class="service-card" role="option">
+                    <i aria-hidden="true" class="fas fa-robot"></i>
+                    <h3><strong>Avtomatizacija procesov</strong></h3>
+                    <p>(kmalu na voljo)</p>
+                </li>
+                <li class="service-card" role="option">
+                    <i aria-hidden="true" class="fas fa-handshake"></i>
+                    <h3><strong>Partnerski program</strong></h3>
+                    <p>
+                        Pridružite se na&scaron;i rastoči mreži podjetij in izkoristite priložnost za medsebojno rast
+                        in promocijo. Na&scaron; partnerski program omogoča sodelovanje, ki prina&scaron;a obojestranske
+                        koristi ter spodbuja dolgoročno poslovno uspe&scaron;nost.
+                    </p>
+                </li>
+            </ul>
         </div>
-        <form
-          action="https://api.staticforms.xyz/submit"
-          aria-labelledby="contact-title"
-          class="contact-form"
-          id="staticform"
-          method="post"
-          role="form"
-          target="_blank"
-        >
-          <input name="accessKey" type="hidden" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
-          <input name="subject" type="hidden" value="Nova stranka na tomiseregi.si">
-          <input name="redirectTo" type="hidden" value="https://tomiseregi.si/thank-you">
-          <div class="form-group field">
-            <label for="name">Ime in priimek</label>
-            <input aria-required="true" id="name" name="name" required type="text">
-          </div>
-          <div class="form-group field">
-            <label for="email">E-po&scaron;ta</label>
-            <input aria-required="true" id="email" name="email" required type="email">
-          </div>
-          <div class="form-group field">
-            <label for="message">Sporočilo</label>
-            <textarea aria-required="true" id="message" name="message" required rows="5"></textarea>
-          </div>
-          <button class="btn btn--primary" type="submit">
-            Po&scaron;lji sporočilo
-          </button>
-        </form>
-      </div>
-      <div class="map-container">
-        <iframe
-          allowfullscreen=""
-          height="450"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21329.226901059094!2d14.49124327117008!3d46.052978681585984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d635a05207f%3A0xe667d30acde6b278!2sLjubljanski%20grad!5e1!3m2!1ssl!2ssi!4v1734824006776!5m2!1ssl!2ssi"
-          style="border:0;"
-          width="600"
-        ></iframe>
-      </div>
+    </section>
+
+    <div class="section-separator">
+        <div class="separator-curve"></div>
     </div>
-  </section>
+
+    <!-- About -->
+    <section aria-labelledby="about-title" class="about section-gradient" id="about" role="region">
+        <div class="container">
+            <h2 class="section-title" id="about-title">O meni</h2>
+            <div class="about-content">
+                <div aria-label="Tomi Šeregi Profile" class="about-image image-section" role="img">
+                    <img
+                            alt="Tomi Šeregi"
+                            height="500"
+                            loading="lazy"
+                            src="https://tomiseregi.si/tomi.webp"
+                            width="400"
+                    >
+                </div>
+                <div class="about-text">
+                    <h3>Kdo sem?</h3>
+                    <p>
+                        Sem Tomi &Scaron;eregi, sveže diplomirani strokovnjak na področju tehnologije in umetne
+                        inteligence. Z veliko strastjo do inovacij pomagam lokalnim slovenskim podjetjem pri rasti
+                        in uspehu v digitalnem svetu.
+                    </p>
+
+                    <hr class="hr-divider"/>
+
+                    <h3>Kaj ponujam?</h3>
+                    <p>Trenutno ponujam brezplačne profesionalne spletne strani za slovenska podjetja:</p>
+                    <ul>
+                        <li>Brez začetnih stro&scaron;kov</li>
+                        <li>Hitro vzpostavljanje spletne prisotnosti</li>
+                        <li>Možnost personalizacije za va&scaron;e podjetje</li>
+                    </ul>
+
+                    <hr class="hr-divider"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New "Moja vizija" short section -->
+    <section aria-labelledby="vision-title" class="vision section-gradient" id="vision" role="region">
+        <div class="container">
+            <h3 id="vision-title">Moja vizija</h3>
+            <p>
+                Z združevanjem najnovej&scaron;ih tehnolo&scaron;kih re&scaron;itev in osebnega pristopa
+                si prizadevam ustvariti trajnostne digitalne re&scaron;itve, ki bodo va&scaron;emu podjetju
+                pomagale uspeti v dana&scaron;njem konkurenčnem poslovnem okolju.
+            </p>
+        </div>
+    </section>
+
+    <div class="section-separator">
+        <div class="separator-curve"></div>
+    </div>
+
+    <!-- Contact -->
+    <section aria-labelledby="contact-title" class="contact section-gradient" id="contact" role="region">
+        <div class="container">
+            <h2 class="section-title" id="contact-title">Pridobite svojo brezplačno spletno stran – kontaktirajte me
+                danes!</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3><strong>Izkoristite priložnost za rast</strong></h3>
+                    <p>Želite profesionalno spletno stran brez začetnih stro&scaron;kov?</p>
+                    <p>
+                        Skupaj bomo ustvarili re&scaron;itev, ki bo pomagala va&scaron;i spletni prisotnosti rasti in
+                        pritegniti več strank.
+                    </p>
+                    <p>
+                        Ne odla&scaron;ajte – va&scaron;a nova spletna stran je le nekaj korakov stran.
+                    </p>
+                    <div class="contact-image">
+                        <img
+                                alt="Digitalne rešitve ilustracija"
+                                class="contact-illustration"
+                                height="250"
+                                loading="lazy"
+                                src="tomi.png"
+                                width="250"
+                        >
+                    </div>
+                </div>
+                <form
+                        action="https://api.staticforms.xyz/submit"
+                        aria-labelledby="contact-title"
+                        class="contact-form"
+                        id="staticform"
+                        method="post"
+                        role="form"
+                        target="_blank"
+                >
+                    <input name="accessKey" type="hidden" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
+                    <input name="subject" type="hidden" value="Nova stranka na tomiseregi.si">
+                    <input name="redirectTo" type="hidden" value="https://tomiseregi.si/thank-you">
+
+                    <div class="form-group field">
+                        <label for="name">Ime in priimek</label>
+                        <input
+                                aria-required="true"
+                                id="name"
+                                name="name"
+                                placeholder="Vnesite vaše ime in priimek"
+                                required
+                                type="text"
+                        >
+                    </div>
+                    <div class="form-group field">
+                        <label for="email">E-pošta</label>
+                        <input
+                                aria-required="true"
+                                id="email"
+                                name="email"
+                                placeholder="vase.ime@email.com"
+                                required
+                                type="email"
+                        >
+                    </div>
+                    <div class="form-group field">
+                        <label for="message">Sporočilo (neobvezno)</label>
+                        <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Opišite vaše potrebe ali vprašanja..."
+                                rows="4"
+                        ></textarea>
+                    </div>
+                    <button class="btn btn--primary" type="submit">
+                        Začnite z brezplačno spletno stranjo
+                    </button>
+                </form>
+            </div>
+            <div class="map-container">
+                <iframe
+                        allowfullscreen=""
+                        height="450"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21329.226901059094!2d14.49124327117008!3d46.052978681585984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d635a05207f%3A0xe667d30acde6b278!2sLjubljanski%20grad!5e1!3m2!1ssl!2ssi!4v1734824006776!5m2!1ssl!2ssi"
+                        style="border:0;"
+                        width="600"
+                ></iframe>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer role="contentinfo">
-  <div class="container footer-content">
-    <div>
-      <h3>Tomi &Scaron;eregi</h3>
-      <p>Re&scaron;itve za rast va&scaron;ega podjetja</p>
+    <div class="container footer-content">
+        <div>
+            <h3>Tomi &Scaron;eregi</h3>
+            <p>Re&scaron;itve za rast va&scaron;ega podjetja</p>
+        </div>
+        <div>
+            <h3>Kontakt</h3>
+            <p>tomi.seregi99@gmail.com</p>
+            <a
+                    aria-label="Visit LinkedIn profile"
+                    href="https://www.linkedin.com/in/tomi-seregi/"
+                    rel="noopener noreferrer"
+                    style="color:white"
+                    target="_blank"
+            >
+                LinkedIn: Tomi &Scaron;eregi
+            </a>
+        </div>
     </div>
-    <div>
-      <h3>Kontakt</h3>
-      <p>tomi.seregi99@gmail.com</p>
-      <a
-        aria-label="Visit LinkedIn profile"
-        href="https://www.linkedin.com/in/tomi-seregi/"
-        rel="noopener noreferrer"
-        style="color:white"
-        target="_blank"
-      >
-        LinkedIn: Tomi &Scaron;eregi
-      </a>
-    </div>
-  </div>
 </footer>
 
 <button aria-label="Scroll to top" class="scroll-to-top">
-  <i class="fas fa-arrow-up"></i>
+    <i class="fas fa-arrow-up"></i>
 </button>
 
 <script nonce="abc123">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-EM9CVPCXYC', {
-    'transport_url': 'https://ssl.google-analytics.com',
-    'transport_type': 'beacon'
-  });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EM9CVPCXYC', {
+      'transport_url': 'https://ssl.google-analytics.com',
+      'transport_type': 'beacon'
+    });
 </script>
 
 <script nonce="abc123">
-document.addEventListener('DOMContentLoaded', () => {
-  // Intersection Observer for reveal animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  // Add reveal class to elements
-  const sections = [
-    '.services-grid',
-    '.portfolio-grid',
-    '.contact-grid',
-    '.service-card',
-    '.portfolio-item'
-  ];
-  sections.forEach(section => {
-    document.querySelectorAll(section).forEach(element => {
-      element.classList.add('reveal');
-      observer.observe(element);
-    });
-  });
-
-  // Progressive loading for service cards
-  document.querySelectorAll('.service-card').forEach((card, index) => {
-    card.style.animationDelay = `${index * 0.2}s`;
-  });
-
-  // Intersection Observer for big sections
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('.services, .about, .vision, .contact').forEach(section => {
-    sectionObserver.observe(section);
-  });
-
-  // Service Worker
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('ServiceWorker registration successful');
-        })
-        .catch(err => {
-          console.log('ServiceWorker registration failed: ', err);
+    document.addEventListener('DOMContentLoaded', () => {
+      // Intersection Observer for reveal animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
         });
-    });
-  }
+      }, { threshold: 0.1 });
 
-  // Nav active link logic
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      navLinks.forEach(l => l.classList.remove('active'));
-      this.classList.add('active');
-    });
-  });
+      // Add reveal class to elements
+      const sections = [
+        '.services-grid',
+        '.portfolio-grid',
+        '.contact-grid',
+        '.service-card',
+        '.portfolio-item'
+      ];
+      sections.forEach(section => {
+        document.querySelectorAll(section).forEach(element => {
+          element.classList.add('reveal');
+          observer.observe(element);
+        });
+      });
 
-  function setActiveLink() {
-    const sections = ['services', 'about', 'contact'];
-    const scrollPosition = window.scrollY;
+      // Progressive loading for service cards
+      document.querySelectorAll('.service-card').forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.2}s`;
+      });
 
-    sections.forEach(section => {
-      const element = document.getElementById(section);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= 150 && rect.bottom >= 150) {
-          navLinks.forEach(link => {
-            if (link.getAttribute('href') === `#${section}`) {
-              link.classList.add('active');
-            } else {
-              link.classList.remove('active');
-            }
-          });
-        }
+      // Intersection Observer for big sections
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.services, .about, .vision, .contact').forEach(section => {
+        sectionObserver.observe(section);
+      });
+
+      // Service Worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
       }
-    });
-  }
-  window.addEventListener('scroll', setActiveLink);
-  setActiveLink();
 
-  // Scroll-to-top button
-  const scrollBtn = document.querySelector('.scroll-to-top');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-      scrollBtn.classList.add('show');
-    } else {
-      scrollBtn.classList.remove('show');
-    }
-  });
-  scrollBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-});
+      // Nav active link logic
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      function setActiveLink() {
+        const sections = ['services', 'about', 'contact'];
+        const scrollPosition = window.scrollY;
+
+        sections.forEach(section => {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= 150 && rect.bottom >= 150) {
+              navLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${section}`) {
+                  link.classList.add('active');
+                } else {
+                  link.classList.remove('active');
+                }
+              });
+            }
+          }
+        });
+      }
+      window.addEventListener('scroll', setActiveLink);
+      setActiveLink();
+
+      // Scroll-to-top button
+      const scrollBtn = document.querySelector('.scroll-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+          scrollBtn.classList.add('show');
+        } else {
+          scrollBtn.classList.remove('show');
+        }
+      });
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
 </script>
 </body>
 </html>
