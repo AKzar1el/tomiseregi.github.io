@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added new logo again">
-      <change afterPath="$PROJECT_DIR$/file.webp" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,13 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00041" summary="fixed hero image rounding">
-      <option name="closed" value="true" />
-      <created>1734803972464</created>
-      <option name="number" value="LOCAL−00041" />
-      <option name="presentableId" value="LOCAL−00041" />
-      <updated>1734803972464</updated>
     </task>
     <task id="LOCAL−00042" summary="fixed hero image rounding">
       <option name="closed" value="true" />
@@ -425,7 +417,14 @@
       <option name="presentableId" value="LOCAL−00089" />
       <updated>1734903968760</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL−00090" summary="test">
+      <option name="closed" value="true" />
+      <created>1734904327734</created>
+      <option name="number" value="LOCAL−00090" />
+      <option name="presentableId" value="LOCAL−00090" />
+      <updated>1734904327734</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="optimized structure" />
     <MESSAGE value="optimized structure again" />
     <MESSAGE value="fixed mobile design" />
     <MESSAGE value="fixed mobile hero and nav section" />
@@ -465,6 +463,7 @@
     <MESSAGE value="added new nav" />
     <MESSAGE value="added new logo" />
     <MESSAGE value="added new logo again" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new logo again" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
