@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="changed heading divider">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed brand-name css">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,13 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00029" summary="fixed pages has no strong importance elements">
-      <option name="closed" value="true" />
-      <created>1734796880776</created>
-      <option name="number" value="LOCAL−00029" />
-      <option name="presentableId" value="LOCAL−00029" />
-      <updated>1734796880776</updated>
     </task>
     <task id="LOCAL−00030" summary="testing image">
       <option name="closed" value="true" />
@@ -424,7 +416,14 @@
       <option name="presentableId" value="LOCAL−00077" />
       <updated>1734888990446</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL−00078" summary="fixed brand-name css">
+      <option name="closed" value="true" />
+      <created>1734889382236</created>
+      <option name="number" value="LOCAL−00078" />
+      <option name="presentableId" value="LOCAL−00078" />
+      <updated>1734889382236</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improved nav" />
     <MESSAGE value="improved first cta button css" />
     <MESSAGE value="improved about me section" />
     <MESSAGE value="added section separators" />
@@ -464,6 +462,7 @@
     <MESSAGE value="added new contact content" />
     <MESSAGE value="added contact image" />
     <MESSAGE value="changed heading divider" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed heading divider" />
+    <MESSAGE value="fixed brand-name css" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed brand-name css" />
   </component>
 </project>
