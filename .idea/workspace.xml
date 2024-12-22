@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added defering img and fixed incomplete twitter card for thank you page">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="reformated code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -80,20 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00033" summary="added amp version of website">
-      <option name="closed" value="true" />
-      <created>1734798056785</created>
-      <option name="number" value="LOCAL−00033" />
-      <option name="presentableId" value="LOCAL−00033" />
-      <updated>1734798056785</updated>
-    </task>
-    <task id="LOCAL−00034" summary="implemented pwa">
-      <option name="closed" value="true" />
-      <created>1734799058302</created>
-      <option name="number" value="LOCAL−00034" />
-      <option name="presentableId" value="LOCAL−00034" />
-      <updated>1734799058302</updated>
     </task>
     <task id="LOCAL−00035" summary="optimized loading time">
       <option name="closed" value="true" />
@@ -424,7 +410,21 @@
       <option name="presentableId" value="LOCAL−00081" />
       <updated>1734892017139</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL−00082" summary="minified js">
+      <option name="closed" value="true" />
+      <created>1734892395434</created>
+      <option name="number" value="LOCAL−00082" />
+      <option name="presentableId" value="LOCAL−00082" />
+      <updated>1734892395434</updated>
+    </task>
+    <task id="LOCAL−00083" summary="reformated code">
+      <option name="closed" value="true" />
+      <created>1734892432009</created>
+      <option name="number" value="LOCAL−00083" />
+      <option name="presentableId" value="LOCAL−00083" />
+      <updated>1734892432009</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,8 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed font and added seo" />
-    <MESSAGE value="added google maps" />
     <MESSAGE value="removed redundancies and added tailwin" />
     <MESSAGE value="changed contact section structure" />
     <MESSAGE value="refactored index.html formating" />
@@ -464,6 +462,8 @@
     <MESSAGE value="fixed brand-name css again" />
     <MESSAGE value="updated sitemap.xml" />
     <MESSAGE value="added defering img and fixed incomplete twitter card for thank you page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added defering img and fixed incomplete twitter card for thank you page" />
+    <MESSAGE value="minified js" />
+    <MESSAGE value="reformated code" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformated code" />
   </component>
 </project>
