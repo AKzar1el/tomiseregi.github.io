@@ -545,7 +545,7 @@
         .services-grid {
           list-style: none;
           margin: 0;
-          padding: 0;
+          padding-top: 2rem;
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           gap: 2rem;
@@ -723,6 +723,7 @@
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 2rem;
+          padding: 2rem;
           margin-bottom: 2rem;
           align-items: start;
         }
@@ -744,8 +745,13 @@
           gap: 1rem;
         }
         .contact-image {
+            position: relative;
+    z-index: 2;
+          border-radius: 2rem;
           margin-top: 0;
           margin-bottom: 2rem;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
         }
         .highlight-blue {
           color: #0043e1;
@@ -962,7 +968,7 @@
             margin-bottom: 2rem;
           }
           .about {
-            margin-top: -30px;
+            margin-top: 0px;
             padding-top: 80px;
             padding-bottom: 4rem;
           }
@@ -1593,7 +1599,7 @@
         </div>
         <div>
             <h3>Kontakt</h3>
-            <p>tomi.seregi99@gmail.com</p>
+            <p>info@tomiseregi.si</p>
             <a
                 aria-label="Visit LinkedIn profile"
                 href="https://www.linkedin.com/in/tomi-seregi/"

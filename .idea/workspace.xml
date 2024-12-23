@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed highligh blue">
-      <change afterPath="$PROJECT_DIR$/service-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-3.png" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="changed moje storitve section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -84,13 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00061" summary="fixed broken js code">
-      <option name="closed" value="true" />
-      <created>1734865943535</created>
-      <option name="number" value="LOCAL−00061" />
-      <option name="presentableId" value="LOCAL−00061" />
-      <updated>1734865943535</updated>
     </task>
     <task id="LOCAL−00062" summary="fixed amp structure and optimized">
       <option name="closed" value="true" />
@@ -428,7 +418,14 @@
       <option name="presentableId" value="LOCAL−00109" />
       <updated>1734919081624</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL−00110" summary="changed moje storitve section">
+      <option name="closed" value="true" />
+      <created>1734920487495</created>
+      <option name="number" value="LOCAL−00110" />
+      <option name="presentableId" value="LOCAL−00110" />
+      <updated>1734920487495</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -443,7 +440,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added defering img and fixed incomplete twitter card for thank you page" />
     <MESSAGE value="minified js" />
     <MESSAGE value="reformated code" />
     <MESSAGE value="added faq" />
@@ -468,6 +464,7 @@
     <MESSAGE value="fixed title" />
     <MESSAGE value="added jelly buttons" />
     <MESSAGE value="fixed highligh blue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed highligh blue" />
+    <MESSAGE value="changed moje storitve section" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed moje storitve section" />
   </component>
 </project>
