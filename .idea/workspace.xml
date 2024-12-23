@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed x-frame-options may only be set via an http header sent along with a document. it may not be set inside meta" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="cleaned dir">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,13 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00056" summary="changed font and added seo">
-      <option name="closed" value="true" />
-      <created>1734823280793</created>
-      <option name="number" value="LOCAL−00056" />
-      <option name="presentableId" value="LOCAL−00056" />
-      <updated>1734823280793</updated>
     </task>
     <task id="LOCAL−00057" summary="added google maps">
       <option name="closed" value="true" />
@@ -422,7 +418,14 @@
       <option name="presentableId" value="LOCAL−00104" />
       <updated>1734914816403</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL−00105" summary="cleaned dir">
+      <option name="closed" value="true" />
+      <created>1734915166774</created>
+      <option name="number" value="LOCAL−00105" />
+      <option name="presentableId" value="LOCAL−00105" />
+      <updated>1734915166774</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,7 +440,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added contact image" />
     <MESSAGE value="changed heading divider" />
     <MESSAGE value="fixed brand-name css" />
     <MESSAGE value="fixed brand-name css again" />
@@ -462,6 +464,7 @@
     <MESSAGE value="fixed sw.js again" />
     <MESSAGE value="fixed frame-ancestor ignored when delivered via a meta element" />
     <MESSAGE value="fixed x-frame-options may only be set via an http header sent along with a document. it may not be set inside meta" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed x-frame-options may only be set via an http header sent along with a document. it may not be set inside meta" />
+    <MESSAGE value="cleaned dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned dir" />
   </component>
 </project>
