@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed typo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed failed to load resource gtm 408">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,13 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00067" summary="fixed mobile hero and nav section">
-      <option name="closed" value="true" />
-      <created>1734870714740</created>
-      <option name="number" value="LOCAL−00067" />
-      <option name="presentableId" value="LOCAL−00067" />
-      <updated>1734870714740</updated>
     </task>
     <task id="LOCAL−00068" summary="fixed css link not loading">
       <option name="closed" value="true" />
@@ -424,7 +417,14 @@
       <option name="presentableId" value="LOCAL−00115" />
       <updated>1734925638554</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL−00116" summary="fixed failed to load resource gtm 408">
+      <option name="closed" value="true" />
+      <created>1734950118561</created>
+      <option name="number" value="LOCAL−00116" />
+      <option name="presentableId" value="LOCAL−00116" />
+      <updated>1734950118561</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added new logo again" />
     <MESSAGE value="test" />
     <MESSAGE value="added new logo" />
     <MESSAGE value="changed background video" />
@@ -464,6 +463,7 @@
     <MESSAGE value="fixed mobile fuked up version" />
     <MESSAGE value="fixed thank u page" />
     <MESSAGE value="fixed typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed typo" />
+    <MESSAGE value="fixed failed to load resource gtm 408" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed failed to load resource gtm 408" />
   </component>
 </project>
