@@ -15,25 +15,31 @@ const INITIAL_CACHE_URLS = [
 
 // Function to check if a request should be cached
 function shouldCache(request) {
-  // Only cache GET requests
-  if (request.method !== 'GET') return false;
+  try {
+    // Return early if request is undefined
+    if (!request || !request.url) return false;
 
-  const url = new URL(request.url);
+    // Only cache GET requests
+    if (request.method !== 'GET') return false;
 
-  // Only cache supported schemes (http or https)
-  if (!['http:', 'https:'].includes(url.protocol)) return false;
+    const url = new URL(request.url);
 
-  // Only cache requests from your domain or specific CDNs
-  const allowedDomains = [
-    'tomiseregi.si',
-    'cdnjs.cloudflare.com',
-    'www.googletagmanager.com',
-    'www.google-analytics.com'
-  ];
+    // Early exit for non-HTTP(S) schemes
+    if (!['http:', 'https:'].includes(url.protocol)) return false;
 
-  if (!allowedDomains.some(domain => url.hostname.includes(domain))) return false;
+    // Only cache requests from your domain or specific CDNs
+    const allowedDomains = [
+      'tomiseregi.si',
+      'cdnjs.cloudflare.com',
+      'www.googletagmanager.com',
+      'www.google-analytics.com'
+    ];
 
-  return true;
+    return allowedDomains.some(domain => url.hostname.includes(domain));
+  } catch (error) {
+    console.log('Error in shouldCache:', error);
+    return false;
+  }
 }
 
 // Install event handler
@@ -65,14 +71,15 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
+    }).then(() => {
+      return clients.claim();
     })
   );
-  event.waitUntil(clients.claim());
 });
 
 // Fetch event handler with network-first strategy
 self.addEventListener('fetch', (event) => {
-  // Only handle supported requests
+  // Immediately return for non-cacheable requests
   if (!shouldCache(event.request)) {
     return;
   }
@@ -80,28 +87,27 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     fetch(event.request)
       .then((response) => {
-        // Clone the response before caching it
-        const responseToCache = response.clone();
+        // Only cache if we should and response is valid
+        if (response.status === 200 && shouldCache(event.request)) {
+          const responseToCache = response.clone();
 
-        // Only cache successful responses
-        if (response.status === 200) {
           caches.open(CACHE_NAME)
-            .then((cache) => {
-              // Double-check shouldCache before putting
-              if (shouldCache(event.request)) {
-                cache.put(event.request, responseToCache)
-                  .catch(error => console.log('Cache put failed:', error));
-              }
+            .then(cache => cache.put(event.request, responseToCache))
+            .catch(error => {
+              console.log('Cache put failed:', error);
             });
         }
 
         return response;
       })
       .catch(() => {
-        // If network request fails, try to get it from cache
         return caches.match(event.request)
           .then((response) => {
-            return response || new Response('Network error happened', {
+            if (response) {
+              return response;
+            }
+
+            return new Response('Network error happened', {
               status: 408,
               headers: new Headers({
                 'Content-Type': 'text/plain'

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed sw.js error" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed sw.js error again" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,13 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00048" summary="added seobility SEO score widget">
-      <option name="closed" value="true" />
-      <created>1734816646458</created>
-      <option name="number" value="LOCAL−00048" />
-      <option name="presentableId" value="LOCAL−00048" />
-      <updated>1734816646458</updated>
     </task>
     <task id="LOCAL−00049" summary="added seobility SEO score widget">
       <option name="closed" value="true" />
@@ -422,7 +415,14 @@
       <option name="presentableId" value="LOCAL−00096" />
       <updated>1734912279121</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL−00097" summary="fixed sw.js error again">
+      <option name="closed" value="true" />
+      <created>1734912461601</created>
+      <option name="number" value="LOCAL−00097" />
+      <option name="presentableId" value="LOCAL−00097" />
+      <updated>1734912461601</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,7 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reformat code for thank you page" />
     <MESSAGE value="added moja vizija section" />
     <MESSAGE value="added new badge" />
     <MESSAGE value="added thank you page" />
@@ -462,6 +461,7 @@
     <MESSAGE value="fixed some js errors" />
     <MESSAGE value="embeded manifest.json" />
     <MESSAGE value="fixed sw.js error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed sw.js error" />
+    <MESSAGE value="fixed sw.js error again" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed sw.js error again" />
   </component>
 </project>
