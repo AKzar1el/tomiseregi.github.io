@@ -24,7 +24,7 @@ function shouldCache(request) {
 
     const url = new URL(request.url);
 
-    // Early exit for non-HTTP(S) schemes
+    // Early exit for non-HTTP(S) schemes (chrome-extension://, data:, etc.)
     if (!['http:', 'https:'].includes(url.protocol)) return false;
 
     // Only cache requests from your domain or specific CDNs
@@ -79,41 +79,47 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event handler with network-first strategy
 self.addEventListener('fetch', (event) => {
-  // Immediately return for non-cacheable requests
+  // If this request should NOT be cached, respond with the network fetch immediately.
   if (!shouldCache(event.request)) {
-    return;
+    event.respondWith(
+      fetch(event.request).catch(() => {
+        // If fetch fails for some reason, at least fail gracefully
+        return new Response('Network request failed and not in cache.', {
+          status: 408,
+          headers: new Headers({ 'Content-Type': 'text/plain' })
+        });
+      })
+    );
+    return; // Stop here.
   }
 
+  // Otherwise, use a network-first approach and attempt to cache the result.
   event.respondWith(
     fetch(event.request)
       .then((response) => {
-        // Only cache if we should and response is valid
-        if (response.status === 200 && shouldCache(event.request)) {
+        // Only cache valid responses
+        if (response.ok) {
           const responseToCache = response.clone();
-
           caches.open(CACHE_NAME)
-            .then(cache => cache.put(event.request, responseToCache))
+            .then(cache => {
+              cache.put(event.request, responseToCache);
+            })
             .catch(error => {
               console.log('Cache put failed:', error);
             });
         }
-
         return response;
       })
       .catch(() => {
-        return caches.match(event.request)
-          .then((response) => {
-            if (response) {
-              return response;
-            }
-
-            return new Response('Network error happened', {
-              status: 408,
-              headers: new Headers({
-                'Content-Type': 'text/plain'
-              })
-            });
+        return caches.match(event.request).then((response) => {
+          if (response) {
+            return response;
+          }
+          return new Response('Network error happened', {
+            status: 408,
+            headers: new Headers({ 'Content-Type': 'text/plain' })
           });
+        });
       })
   );
 });

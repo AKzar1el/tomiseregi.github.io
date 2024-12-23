@@ -79,13 +79,6 @@
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
     </task>
-    <task id="LOCAL−00049" summary="added seobility SEO score widget">
-      <option name="closed" value="true" />
-      <created>1734816832965</created>
-      <option name="number" value="LOCAL−00049" />
-      <option name="presentableId" value="LOCAL−00049" />
-      <updated>1734816832965</updated>
-    </task>
     <task id="LOCAL−00050" summary="added seobility metatag">
       <option name="closed" value="true" />
       <created>1734816926111</created>
@@ -422,7 +415,14 @@
       <option name="presentableId" value="LOCAL−00097" />
       <updated>1734912461601</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL−00098" summary="fixed sw.js error again">
+      <option name="closed" value="true" />
+      <created>1734912768972</created>
+      <option name="number" value="LOCAL−00098" />
+      <option name="presentableId" value="LOCAL−00098" />
+      <updated>1734912768972</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
