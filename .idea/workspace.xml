@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added jelly buttons">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed highligh blue">
+      <change afterPath="$PROJECT_DIR$/service-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,13 +84,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00060" summary="refactored index.html formating">
-      <option name="closed" value="true" />
-      <created>1734865641239</created>
-      <option name="number" value="LOCAL−00060" />
-      <option name="presentableId" value="LOCAL−00060" />
-      <updated>1734865641240</updated>
     </task>
     <task id="LOCAL−00061" summary="fixed broken js code">
       <option name="closed" value="true" />
@@ -424,7 +421,14 @@
       <option name="presentableId" value="LOCAL−00108" />
       <updated>1734918619314</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL−00109" summary="fixed highligh blue">
+      <option name="closed" value="true" />
+      <created>1734919081624</created>
+      <option name="number" value="LOCAL−00109" />
+      <option name="presentableId" value="LOCAL−00109" />
+      <updated>1734919081624</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +443,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated sitemap.xml" />
     <MESSAGE value="added defering img and fixed incomplete twitter card for thank you page" />
     <MESSAGE value="minified js" />
     <MESSAGE value="reformated code" />
@@ -464,6 +467,7 @@
     <MESSAGE value="fixed hero section title styling" />
     <MESSAGE value="fixed title" />
     <MESSAGE value="added jelly buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="added jelly buttons" />
+    <MESSAGE value="fixed highligh blue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed highligh blue" />
   </component>
 </project>

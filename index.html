@@ -3,25 +3,25 @@
 <head>
     <!-- Google Tag Manager (with nonce) -->
     <script nonce="abc123">
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-XXXX');
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+         var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+         j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-XXXX');
     </script>
 
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Tomi Šeregi" name="description">
-
-
-
     <title>Tomi Šeregi</title>
     <link href="favicon.svg" rel="icon" type="image/svg+xml">
 
-    <!-- Font Awesome with SRI -->
+    <!-- Font Awesome -->
     <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-            rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        rel="stylesheet"
     >
 
-    <!-- Tailwind CSS with SRI -->
+    <!-- Tailwind CSS -->
     <link
         href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
         rel="stylesheet"
@@ -40,7 +40,6 @@
           --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
           --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
-
         * {
           margin: 0;
           padding: 0;
@@ -58,19 +57,16 @@
             max-width: 800px;
             padding: 0 1.5rem;
         }
-
         .faq-grid {
             display: grid;
             gap: 1.5rem;
         }
-
         .faq-item {
             background: white;
             border-radius: 0.5rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }
-
         .faq-item summary {
             padding: 1.5rem;
             cursor: pointer;
@@ -79,11 +75,9 @@
             list-style: none;
             color: var(--text);
         }
-
         .faq-item summary::-webkit-details-marker {
             display: none;
         }
-
         .faq-item summary::after {
             content: '+';
             position: absolute;
@@ -94,42 +88,31 @@
             color: var(--primary);
             transition: transform 0.3s ease;
         }
-
         .faq-item[open] summary::after {
             transform: translateY(-50%) rotate(45deg);
         }
-
         .faq-item p {
             padding: 0 1.5rem 1.5rem;
             margin: 0;
             color: #4b5563;
             line-height: 1.6;
         }
-
         .faq-item:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-
-        /* Add to the existing media query for mobile devices */
         @media (max-width: 768px) {
             .faq-container {
                 margin: 2rem auto;
             }
-
             .faq-item summary {
                 padding: 1.25rem;
             }
-
             .faq-item p {
                 padding: 0 1.25rem 1.25rem;
             }
         }
-
-        /* Moja vizija section */
         .vision {
-          /* Keep it shorter than the other sections */
-          --section-bg: #f8f9fa; /* You can change this if you'd like */
           position: relative;
           padding-top: 60px;
           margin-top: -30px;
@@ -137,54 +120,42 @@
           opacity: 0;
           transform: translateY(20px);
           transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-
-          /* Subtle box shadow & border for a slight pop */
           background: linear-gradient(135deg, #ffffff, #f8f9fa);
           border: 1px solid #ebeff5;
           border-radius: 0.5rem;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
-
         .vision.visible {
           opacity: 1;
           transform: translateY(0);
         }
-
-        /* Make the heading stand out a bit */
         .vision h3 {
           font-size: 1.75rem;
-          color: var(--primary); /* or var(--primary) if you prefer */
+          color: var(--primary);
           text-align: center;
           margin-bottom: 1.5rem;
         }
-
-        /* Center the text, add comfortable line spacing */
         .vision p {
           font-size: 1.125rem;
           line-height: 1.8;
           color: #4b5563;
-          margin: 0 auto 1.5rem; /* auto left/right to center, extra bottom margin */
-          max-width: 700px;      /* keeps it nicely contained on larger screens */
+          margin: 0 auto 1.5rem;
+          max-width: 700px;
           text-align: center;
         }
-
-        /* Center the badge row and give them a bit of spacing */
         .vision .trust-badges {
           display: flex;
           justify-content: center;
           gap: 1rem;
           margin-top: 1.5rem;
         }
-
         .vision .trust-badges img {
           width: 60px;
           height: auto;
           object-fit: contain;
-          /* Optional: subtle drop shadow or border */
           border-radius: 4px;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
-
         .brand-container {
           display: flex;
           align-items: center;
@@ -219,7 +190,6 @@
           outline: 2px solid var(--primary);
           outline-offset: 2px;
         }
-
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(20px); }
           to   { opacity: 1; transform: translateY(0); }
@@ -249,7 +219,6 @@
           margin: 0 auto;
           padding: 0 1.5rem;
         }
-
         header {
           background: white;
           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -299,7 +268,6 @@
           transform: scaleX(1);
           transform-origin: left;
         }
-
         .nav-toggle {
           display: none;
         }
@@ -360,9 +328,7 @@
         .main-nav .nav-link.active::after {
           transform: scaleX(1);
         }
-
         .hero {
-          --section-bg: var(--accent);
           margin-bottom: 0;
           padding: 0;
           min-height: 100vh;
@@ -380,15 +346,12 @@
           height: 100%;
           z-index: 0;
         }
-
         .video-background video {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(0.8); /* Slightly dim the video */
+            filter: brightness(0.8);
         }
-
-        /* Dark gradient overlay */
         .video-overlay {
             position: absolute;
             top: 0;
@@ -402,35 +365,31 @@
             );
             z-index: 1;
         }
-
-        /* REMOVED the .hero::before overlay to avoid multiple layers */
-
         .hero-content {
             position: relative;
             z-index: 2;
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
-            gap: 3rem; /* Increased from 2rem for more spacing */
+            gap: 3rem;
             align-items: center;
-            padding-top: 120px; /* Increased from 80px to push content down */
-            max-width: 1400px; /* Added max-width for better wide screen display */
+            padding-top: 120px;
+            max-width: 1400px;
             margin: 0 auto;
             padding-left: 2rem;
             padding-right: 2rem;
         }
         .hero-text {
-            max-width: 660px; /* Increased from 560px for better text flow */
+            max-width: 660px;
             opacity: 0;
             animation: fadeInRight 1s ease forwards;
-            padding-right: 3rem; /* Increased from 2rem */
+            padding-right: 3rem;
             color: #ffffff;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         .hero-text h1 {
-            font-size: clamp(2.75rem, 5vw, 4rem); /* Responsive font size */
+            font-size: clamp(2.75rem, 5vw, 4rem);
             font-weight: 700;
             line-height: 1.3;
-            /* Simplify to solid white + stronger shadow: */
             color: #ffffff;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
             letter-spacing: -0.02em;
@@ -439,9 +398,7 @@
         }
         .hero-section {
           position: relative;
-          /* ...other styles */
         }
-
         .hero-section::before {
           content: '';
           position: absolute;
@@ -449,13 +406,13 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(0, 0, 0, 0.6); /* or a black-to-transparent gradient */
+          background: rgba(0, 0, 0, 0.6);
           z-index: 1;
         }
         .hero-text h1 br {
             display: block;
             content: "";
-            margin-bottom: 0.5rem; /* Added spacing between title lines */
+            margin-bottom: 0.5rem;
         }
         @keyframes fadeInRight {
             from {
@@ -468,14 +425,13 @@
             }
         }
         .hero-text p {
-            font-size: clamp(1.25rem, 2.2vw, 1.5rem); /* Increased size range */
+            font-size: clamp(1.25rem, 2.2vw, 1.5rem);
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 3rem; /* Increased from 2rem */
+            margin-bottom: 3rem;
             font-weight: 400;
             line-height: 1.6;
-            max-width: 540px; /* Added max-width for better readability */
+            max-width: 540px;
         }
-
         .image-section {
           opacity: 0;
           position: relative;
@@ -518,7 +474,6 @@
         .hero-image img:hover {
           transform: translateY(-5px);
         }
-
         .btn {
           display: inline-block;
           padding: 1rem 2rem;
@@ -556,7 +511,7 @@
           opacity: 0.8;
         }
         .btn--primary {
-            background: #E91E63; /* Match your pink accent color */
+            background: #E91E63;
             border: none;
             padding: 1rem 2rem;
             font-size: 1.125rem;
@@ -572,10 +527,6 @@
           box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
         }
 
-        /*
-          SERVICES SECTION
-          Now has a light gray background
-        */
         .services {
           --section-bg: #f8f9fa;
           position: relative;
@@ -606,12 +557,6 @@
           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
           position: relative;
         }
-        .service-card i {
-          font-size: 2.5rem;
-          color: var(--primary);
-          margin-bottom: 1rem;
-          transition: transform 0.3s ease;
-        }
         .service-card:hover {
           transform: translateY(-10px);
           box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -630,9 +575,6 @@
         .service-card:hover::before {
           transform: scaleX(1);
         }
-        .service-card:hover i {
-          transform: scale(1.2);
-        }
         @keyframes serviceCardIn {
           from { opacity: 0; transform: translateY(30px); }
           to   { opacity: 1; transform: translateY(0); }
@@ -649,10 +591,16 @@
           line-height: 1.6;
         }
 
-        /*
-          ABOUT SECTION
-          Now has a soft gradient in the background
-        */
+        /* Make the service images bigger, add 3D-like shadow, and curve edges */
+        .service-icon {
+            width: 80px;
+            height: auto;
+            display: block;
+            margin: 0 auto 1rem auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
         .about {
           --section-bg: var(--light);
           position: relative;
@@ -756,11 +704,6 @@
         .about-text li {
           margin-bottom: 0.5rem;
         }
-
-        /*
-          CONTACT SECTION
-          Explicit white background
-        */
         .contact {
           --section-bg: #ffffff;
           position: relative;
@@ -776,16 +719,13 @@
           opacity: 1;
           transform: translateY(0);
         }
-
-        /* ↓↓↓ UPDATED: Reduced gap & margin-bottom, top-aligned items ↓↓↓ */
         .contact-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 2rem; /* was 4rem */
-          margin-bottom: 2rem; /* was 4rem */
-          align-items: start; /* ensure top alignment */
+          gap: 2rem;
+          margin-bottom: 2rem;
+          align-items: start;
         }
-
         .map-container {
           width: 100%;
           height: 400px;
@@ -803,21 +743,15 @@
           display: grid;
           gap: 1rem;
         }
-
-        /* Contact image styling */
         .contact-image {
-          margin-top: 0; /* was 2rem */
+          margin-top: 0;
           margin-bottom: 2rem;
         }
-.highlight-blue {
-  color: #0043e1;
-}
-        /*
-          FOOTER
-          Now a deeper blue for more contrast
-        */
+        .highlight-blue {
+          color: #0043e1;
+        }
         footer {
-          background: var(--text); /* previously var(--text) */
+          background: var(--text);
           color: white;
           padding: 2rem 0;
           margin-top: 0rem;
@@ -833,7 +767,6 @@
           font-weight: 700;
           margin-bottom: 1rem;
         }
-
         .section-title {
           font-family: var(--font-heading);
           font-size: 2.25rem;
@@ -855,7 +788,6 @@
           background: var(--primary);
           border-radius: 2px;
         }
-
         .section-separator {
           position: relative;
           height: 100px;
@@ -871,7 +803,6 @@
           background: inherit;
           clip-path: ellipse(70% 100% at 50% 0%);
         }
-
         .section-gradient {
           position: relative;
           overflow: hidden;
@@ -896,7 +827,6 @@
           background: linear-gradient(to top, transparent, var(--section-bg));
           z-index: 2;
         }
-
         .scroll-to-top {
           position: fixed;
           bottom: 1rem;
@@ -926,8 +856,6 @@
         .scroll-to-top:hover {
           transform: translateY(-2px);
         }
-
-        /* Mobile (up to 768px) */
         @media (max-width: 768px) {
           body {
             padding-top: 50px;
@@ -937,9 +865,8 @@
             min-height: auto;
           }
           .video-background {
-              display: none; /* Optional: hide video on mobile for better performance */
+              display: none;
           }
-
           .hero-content {
               grid-template-columns: 1fr;
               text-align: center;
@@ -947,16 +874,13 @@
               padding-left: 1.5rem;
               padding-right: 1.5rem;
           }
-
           .hero-text {
               padding-right: 0;
               margin: 0 auto;
           }
-
           .hero-text h1 {
               font-size: clamp(2.25rem, 4vw, 3rem);
           }
-
           .hero-text p {
               margin-left: auto;
               margin-right: auto;
@@ -1033,25 +957,22 @@
             margin-top: 2rem;
           }
         }
-
-        /* Desktop improvements for 'O meni' section spacing */
         @media (min-width: 1024px) {
           .section-title {
-            margin-bottom: 2rem; /* was 3rem */
+            margin-bottom: 2rem;
           }
           .about {
-            margin-top: -30px;   /* was -50px */
-            padding-top: 80px;   /* was 100px */
-            padding-bottom: 4rem;/* was 6rem */
+            margin-top: -30px;
+            padding-top: 80px;
+            padding-bottom: 4rem;
           }
           .about-content {
-            gap: 3rem; /* was 5rem */
+            gap: 3rem;
           }
           .about-text {
-            padding: 1.5rem; /* was 2rem */
+            padding: 1.5rem;
           }
         }
-
         @media (prefers-contrast: more) {
           .logo {
             color: var(--secondary);
@@ -1069,7 +990,6 @@
             color: #000;
           }
         }
-
         @media (prefers-reduced-motion: reduce) {
           .logo,
           .btn,
@@ -1084,8 +1004,6 @@
             transform: none;
           }
         }
-
-        /* Form improvements */
         .form-group input,
         .form-group textarea {
           width: 100%;
@@ -1096,26 +1014,21 @@
           font-size: 1rem;
           transition: border-color 0.3s ease;
         }
-
         .form-group input:focus,
         .form-group textarea:focus {
           outline: none;
           border-color: var(--primary);
           box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
         }
-
         .form-group label {
           display: block;
           margin-bottom: 0.5rem;
           font-weight: 500;
         }
-
         .form-group input::placeholder,
         .form-group textarea::placeholder {
           color: #9ca3af;
         }
-
-        /* NEW: Improved spacing in the contact info text */
         .contact-info h3 {
           margin-bottom: 1rem;
         }
@@ -1124,27 +1037,21 @@
           line-height: 1.7;
         }
         .modern-header {
-            background: transparent; /* Start with transparent background */
+            background: transparent;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: background-color 0.3s ease; /* Smooth transition for background color */
-        }
-
-        .modern-header.scrolled {
-            background: #0A1426; /* Dark background when scrolled */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
         }
         .modern-header.scrolled {
-            background: #0A1426; /* Dark background when scrolled */
+            background: #0A1426;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         .scrolled .nav-link {
             color: #B0B7C3;
             text-shadow: none;
         }
-
         .scrolled .nav-link:hover {
             color: #ffffff;
         }
@@ -1156,27 +1063,22 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-
         .brand-container {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-
-        /* Update the brand name to be more visible on transparent background */
         .brand-name {
             color: #ffffff;
             font-size: 1.25rem;
             font-weight: 600;
             margin: 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Add shadow for better visibility */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-
         .logo-image {
             height: 48px;
             width: auto;
         }
-
         .main-nav .nav-list {
             display: flex;
             gap: 2rem;
@@ -1185,7 +1087,6 @@
             padding: 0;
             list-style: none;
         }
-
         .nav-link {
             color: #B0B7C3;
             text-decoration: none;
@@ -1194,95 +1095,52 @@
             transition: color 0.3s ease;
             padding: 0.5rem;
         }
-
         .nav-link:hover {
             color: #ffffff;
         }
-
-/* Example "jelly button" styling */
-.contact-button {
-  /* Pill shape & overall sizing */
-  display: inline-block;
-  border: none;
-  border-radius: 9999px; /* big radius = pill shape */
-  padding: 0.75rem 1.75rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  /* “Jelly” 3D effect – top highlight + gradient */
-  background: linear-gradient(
-    to bottom,
-    #ff5fac, /* top color (lighter) */
-    #e91e63  /* bottom color (darker) */
-  );
-
-  /* A subtle highlight shimmer on the top edge */
-  box-shadow:
-    /* outer drop shadow: “pop” the button out a bit */
-    0 8px 16px rgba(233, 30, 99, 0.3),
-    /* highlight glare across top half of button */
-    inset 0 8px 12px rgba(255, 255, 255, 0.1);
-
-  /* Add a gentle text shadow to help the text pop */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Hover & Active States */
-.contact-button:hover {
-  transform: translateY(-2px);  /* “lift” slightly */
-  box-shadow:
-    0 12px 20px rgba(233, 30, 99, 0.4),
-    inset 0 6px 10px rgba(255, 255, 255, 0.15);
-}
-
-.contact-button:active {
-  transform: scale(0.97); /* press “down” look */
-  box-shadow:
-    0 4px 8px rgba(233, 30, 99, 0.2),
-    inset 0 4px 6px rgba(255, 255, 255, 0.2);
-}
-
-/* When header becomes solid on scroll */
-.scrolled .contact-button {
-    background: #E91E63;
-    box-shadow: 0 2px 8px rgba(233, 30, 99, 0.15);
-}
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-    .contact-button {
-        padding: 0.65rem 1.5rem;
-        font-size: 0.9rem;
-    }
-}
-
-        /* Mobile Styles */
+        .contact-button {
+          display: inline-block;
+          border: none;
+          border-radius: 9999px;
+          padding: 0.75rem 1.75rem;
+          font-size: 1rem;
+          font-weight: 600;
+          color: #fff;
+          cursor: pointer;
+          text-decoration: none;
+          text-align: center;
+          text-transform: uppercase;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          background: linear-gradient(
+            to bottom,
+            #ff5fac,
+            #e91e63
+          );
+          box-shadow:
+            0 8px 16px rgba(233, 30, 99, 0.3),
+            inset 0 8px 12px rgba(255, 255, 255, 0.1);
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .contact-button:hover {
+          transform: translateY(-2px);
+          box-shadow:
+            0 12px 20px rgba(233, 30, 99, 0.4),
+            inset 0 6px 10px rgba(255, 255, 255, 0.15);
+        }
+        .contact-button:active {
+          transform: scale(0.97);
+          box-shadow:
+            0 4px 8px rgba(233, 30, 99, 0.2),
+            inset 0 4px 6px rgba(255, 255, 255, 0.2);
+        }
+        .scrolled .contact-button {
+            background: #E91E63;
+            box-shadow: 0 2px 8px rgba(233, 30, 99, 0.15);
+        }
         @media (max-width: 768px) {
-            .header-content {
-                padding: 0.75rem 1rem;
-                justify-content: flex-start; /* Align to the left on mobile */
-            }
-
-            .main-nav {
-                display: none; /* Hide entire navigation on mobile */
-            }
-
-            .brand-container {
-                gap: 0.75rem; /* Slightly reduce gap on mobile */
-            }
-
-            .logo-image {
-                height: 40px; /* Slightly smaller logo on mobile */
-            }
-
-            .brand-name {
-                font-size: 1.125rem; /* Slightly smaller text on mobile */
+            .contact-button {
+                padding: 0.65rem 1.5rem;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -1298,8 +1156,8 @@
     <meta content="https://tomiseregi.si/" property="og:url"/>
     <meta content="Tomi Šeregi" property="og:title"/>
     <meta
-            content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
-            property="og:description"
+        content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
+        property="og:description"
     />
     <meta content="https://tomiseregi.si/ts-initial.webp" property="og:image"/>
     <meta content="#2563eb" name="theme-color">
@@ -1330,19 +1188,16 @@
     <meta content="https://tomiseregi.si/" name="twitter:url"/>
     <meta content="Tomi Šeregi" name="twitter:title"/>
     <meta
-            content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
-            name="twitter:description"
+        content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
+        name="twitter:description"
     />
     <meta content="https://tomiseregi.si/ts-initial.webp" name="twitter:image"/>
-
     <meta content="index, follow" name="robots"/>
     <meta content="Tomi Šeregi" name="author"/>
     <meta
-            content="AI Solutions, Slovenian Businesses, Free Website Creation, Automated Workflow, Tomi Šeregi"
-            name="keywords"
+        content="AI Solutions, Slovenian Businesses, Free Website Creation, Automated Workflow, Tomi Šeregi"
+        name="keywords"
     />
-
-
     <meta content="#2563eb" name="theme-color">
     <link href="/icons/icon-192x192.webp" rel="apple-touch-icon">
 
@@ -1410,14 +1265,13 @@
     <!-- Google Analytics (async) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EM9CVPCXYC"></script>
 </head>
-
 <body>
 <noscript>
     <iframe
-            height="0"
-            src="https://www.googletagmanager.com/ns.html?id=G-EM9CVPCXYC"
-            style="display:none;visibility:hidden"
-            width="0"
+        height="0"
+        src="https://www.googletagmanager.com/ns.html?id=G-EM9CVPCXYC"
+        style="display:none;visibility:hidden"
+        width="0"
     ></iframe>
 </noscript>
 
@@ -1463,20 +1317,34 @@
                 <source src="background.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <!-- Multiple overlay layers for better text visibility -->
             <div class="video-overlay"></div>
         </div>
 
         <div class="container hero-content">
             <div class="hero-text">
-                <h1 id="hero-title"><span class="highlight-blue">Profesionalne</span> spletne strani za slovenska podjetja</h1>
+                <h1 id="hero-title">
+                    <span class="highlight-blue">Profesionalne</span> spletne strani za slovenska podjetja
+                </h1>
                 <p>Preprosto, brezplačno, zaupanja vredno</p>
-                <a class="contact-button" href="https://calendly.com/tomi-seregi99/30min" rel="noopener noreferrer" role="button" target="_blank">
+                <a
+                    class="contact-button"
+                    href="https://calendly.com/tomi-seregi99/30min"
+                    rel="noopener noreferrer"
+                    role="button"
+                    target="_blank"
+                >
                     <strong>Pridobite stran zdaj!</strong>
                 </a>
             </div>
             <div class="hero-image image-section">
-                <img alt="AI Solutions Illustration" fetchpriority="high" height="400" loading="lazy" src="https://tomiseregi.si/hero-image.webp" width="600">
+                <img
+                    alt="AI Solutions Illustration"
+                    fetchpriority="high"
+                    height="400"
+                    loading="lazy"
+                    src="https://tomiseregi.si/hero-image.webp"
+                    width="600"
+                >
             </div>
         </div>
     </section>
@@ -1490,28 +1358,45 @@
         <div class="container">
             <h2 class="section-title" id="services-title">Moje storitve</h2>
             <ul class="services-grid">
+                <!-- First service card -->
                 <li class="service-card" role="option">
-                    <i aria-hidden="true" class="fas fa-globe"></i>
+                    <!-- Replace the old <i> with a new image -->
+                    <img
+                        src="service-1.png"
+                        alt="Futuristic hexagon-themed illustration"
+                        class="service-icon"
+                    />
                     <h3><strong>Brezplačne spletne strani</strong></h3>
                     <p>
                         Profesionalne spletne strani, popolnoma brezplačno za va&scaron;e podjetje. Zasnovane so tako,
                         da izbolj&scaron;ajo va&scaron;o spletno prisotnost in pomagajo pri rasti va&scaron;ega
-                        poslovanja
-                        brez začetnih stro&scaron;kov.
+                        poslovanja brez začetnih stro&scaron;kov.
                     </p>
                 </li>
+
+                <!-- Second service card -->
                 <li class="service-card" role="option">
-                    <i aria-hidden="true" class="fas fa-robot"></i>
+                    <img
+                        src="service-2.png"
+                        alt="Gear or process-themed illustration"
+                        class="service-icon"
+                    />
                     <h3><strong>Avtomatizacija procesov</strong></h3>
                     <p>(kmalu na voljo)</p>
                 </li>
+
+                <!-- Third service card -->
                 <li class="service-card" role="option">
-                    <i aria-hidden="true" class="fas fa-handshake"></i>
+                    <img
+                        src="service-3.png"
+                        alt="Neural network or partnership-themed illustration"
+                        class="service-icon"
+                    />
                     <h3><strong>Partnerski program</strong></h3>
                     <p>
                         Pridružite se na&scaron;i rastoči mreži podjetij in izkoristite priložnost za medsebojno rast
-                        in promocijo. Na&scaron; partnerski program omogoča sodelovanje, ki prina&scaron;a obojestranske
-                        koristi ter spodbuja dolgoročno poslovno uspe&scaron;nost.
+                        in promocijo. Na&scaron; partnerski program omogoča sodelovanje, ki prina&scaron;a
+                        obojestranske koristi ter spodbuja dolgoročno poslovno uspe&scaron;nost.
                     </p>
                 </li>
             </ul>
@@ -1529,11 +1414,11 @@
             <div class="about-content">
                 <div aria-label="Tomi Šeregi Profile" class="about-image image-section" role="img">
                     <img
-                            alt="Tomi Šeregi"
-                            height="500"
-                            loading="lazy"
-                            src="https://tomiseregi.si/tomi.webp"
-                            width="400"
+                        alt="Tomi Šeregi"
+                        height="500"
+                        loading="lazy"
+                        src="https://tomiseregi.si/tomi.webp"
+                        width="400"
                     >
                 </div>
                 <div class="about-text">
@@ -1560,7 +1445,7 @@
         </div>
     </section>
 
-    <!-- New "Moja vizija" short section -->
+    <!-- Moja vizija short section -->
     <section aria-labelledby="vision-title" class="vision section-gradient" id="vision" role="region">
         <div class="container">
             <h3 id="vision-title">Moja vizija</h3>
@@ -1579,8 +1464,9 @@
     <!-- Contact -->
     <section aria-labelledby="contact-title" class="contact section-gradient" id="contact" role="region">
         <div class="container">
-            <h2 class="section-title" id="contact-title">Pridobite svojo brezplačno spletno stran – kontaktirajte me
-                danes!</h2>
+            <h2 class="section-title" id="contact-title">
+                Pridobite svojo brezplačno spletno stran – kontaktirajte me danes!
+            </h2>
             <div class="contact-grid">
                 <div class="contact-info">
                     <h3><strong>Izkoristite priložnost za rast</strong></h3>
@@ -1594,23 +1480,22 @@
                     </p>
                     <div class="contact-image">
                         <img
-                                alt="Digitalne rešitve ilustracija"
-                                class="contact-illustration"
-                                height="200"
-                                loading="lazy"
-                                src="https://tomiseregi.si/icons/contact-image.webp"
-
+                            alt="Digitalne rešitve ilustracija"
+                            class="contact-illustration"
+                            height="200"
+                            loading="lazy"
+                            src="https://tomiseregi.si/icons/contact-image.webp"
                         >
                     </div>
                 </div>
                 <form
-                        action="https://api.staticforms.xyz/submit"
-                        aria-labelledby="contact-title"
-                        class="contact-form"
-                        id="staticform"
-                        method="post"
-                        role="form"
-                        target="_blank"
+                    action="https://api.staticforms.xyz/submit"
+                    aria-labelledby="contact-title"
+                    class="contact-form"
+                    id="staticform"
+                    method="post"
+                    role="form"
+                    target="_blank"
                 >
                     <input name="accessKey" type="hidden" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
                     <input name="subject" type="hidden" value="Nova stranka na tomiseregi.si">
@@ -1619,32 +1504,32 @@
                     <div class="form-group field">
                         <label for="name">Ime in priimek</label>
                         <input
-                                aria-required="true"
-                                id="name"
-                                name="name"
-                                placeholder="Vnesite vaše ime in priimek"
-                                required
-                                type="text"
+                            aria-required="true"
+                            id="name"
+                            name="name"
+                            placeholder="Vnesite vaše ime in priimek"
+                            required
+                            type="text"
                         >
                     </div>
                     <div class="form-group field">
                         <label for="email">E-pošta</label>
                         <input
-                                aria-required="true"
-                                id="email"
-                                name="email"
-                                placeholder="vase.ime@email.com"
-                                required
-                                type="email"
+                            aria-required="true"
+                            id="email"
+                            name="email"
+                            placeholder="vase.ime@email.com"
+                            required
+                            type="email"
                         >
                     </div>
                     <div class="form-group field">
                         <label for="message">Sporočilo (neobvezno)</label>
                         <textarea
-                                id="message"
-                                name="message"
-                                placeholder="Opišite vaše potrebe ali vprašanja..."
-                                rows="4"
+                            id="message"
+                            name="message"
+                            placeholder="Opišite vaše potrebe ali vprašanja..."
+                            rows="4"
                         ></textarea>
                     </div>
                     <button class="contact-button" type="submit">
@@ -1659,35 +1544,42 @@
                     <div class="faq-grid">
                         <details class="faq-item">
                             <summary>Kaj ponujate?</summary>
-                            <p>Ponujamo brezplačne profesionalne spletne strani za slovenska podjetja. Naše storitve
+                            <p>
+                                Ponujamo brezplačne profesionalne spletne strani za slovenska podjetja. Naše storitve
                                 vključujejo popolno postavitev, oblikovanje in optimizacijo spletne strani za vaše
-                                podjetje.</p>
+                                podjetje.
+                            </p>
                         </details>
                         <details class="faq-item">
                             <summary>Kako hitro dobim spletno stran?</summary>
-                            <p>Spletno stran lahko pričakujete v 7–10 delovnih dneh po oddaji zahtevka. V tem času bomo
-                                skupaj določili vse vaše potrebe in želje ter izdelali spletno stran po vaši meri.</p>
+                            <p>
+                                Spletno stran lahko pričakujete v 7–10 delovnih dneh po oddaji zahtevka. V tem času bomo
+                                skupaj določili vse vaše potrebe in želje ter izdelali spletno stran po vaši meri.
+                            </p>
                         </details>
                         <details class="faq-item">
                             <summary>Kaj je partnerski program?</summary>
-                            <p>Partnerski program je rastoča mreža slovenskih podjetij, ki omogoča medsebojno promocijo
+                            <p>
+                                Partnerski program je rastoča mreža slovenskih podjetij, ki omogoča medsebojno promocijo
                                 in sodelovanje. Vsa podjetja, ki sodelujejo z nami, so vključena v ta program, ki
-                                spodbuja skupno rast in nove poslovne priložnosti.</p>
+                                spodbuja skupno rast in nove poslovne priložnosti.
+                            </p>
                         </details>
                     </div>
                 </section>
             </div>
         </div>
     </section>
+
     <section aria-labelledby="location-title" class="location section-gradient" id="location" role="region">
         <div class="contentinfo map-container">
             <iframe
-                    allowfullscreen=""
-                    height="450"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21329.226901059094!2d14.49124327117008!3d46.052978681585984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d635a05207f%3A0xe667d30acde6b278!2sLjubljanski%20grad!5e1!3m2!1ssl!2ssi!4v1734824006776!5m2!1ssl!2ssi"
-                    width="600"
+                allowfullscreen=""
+                height="450"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21329.226901059094!2d14.49124327117008!3d46.052978681585984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d635a05207f%3A0xe667d30acde6b278!2sLjubljanski%20grad!5e1!3m2!1ssl!2ssi!4v1734824006776!5m2!1ssl!2ssi"
+                width="600"
             ></iframe>
         </div>
     </section>
@@ -1703,10 +1595,10 @@
             <h3>Kontakt</h3>
             <p>tomi.seregi99@gmail.com</p>
             <a
-                    aria-label="Visit LinkedIn profile"
-                    href="https://www.linkedin.com/in/tomi-seregi/"
-                    rel="noopener noreferrer"
-                    target="_blank"
+                aria-label="Visit LinkedIn profile"
+                href="https://www.linkedin.com/in/tomi-seregi/"
+                rel="noopener noreferrer"
+                target="_blank"
             >
                 LinkedIn: Tomi &Scaron;eregi
             </a>
@@ -1720,77 +1612,102 @@
 
 <!-- Google Analytics - Minified -->
 <script nonce="abc123">
-    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-EM9CVPCXYC',{'transport_url':'https://ssl.google-analytics.com','transport_type':'beacon'});
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EM9CVPCXYC', {
+        'transport_url': 'https://ssl.google-analytics.com',
+        'transport_type': 'beacon'
+    });
 </script>
 
 <!-- Main JavaScript - Minified -->
 <script nonce="abc123">
-    document.addEventListener('DOMContentLoaded',()=>{
-        const o=new IntersectionObserver(e=>{
-            e.forEach(t=>{
-                if(t.isIntersecting){t.target.classList.add('active')}
-            })
-        },{threshold:.1});
-        ['.services-grid','.portfolio-grid','.contact-grid','.service-card','.portfolio-item'].forEach(e=>{
-            document.querySelectorAll(e).forEach(t=>{
-                t.classList.add('reveal'),o.observe(t)
-            })
+document.addEventListener('DOMContentLoaded', () => {
+    const o = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('active');
+            }
         });
-        document.querySelectorAll('.service-card').forEach((e,t)=>{
-            e.style.animationDelay=`${.2*t}s`
-        });
-        const r=new IntersectionObserver(e=>{
-            e.forEach(t=>{
-                if(t.isIntersecting){t.target.classList.add('visible')}
-            })
-        },{threshold:.2});
-        document.querySelectorAll('.services, .about, .vision, .contact, .faq').forEach(e=>{
-            r.observe(e)
-        });
-        if('serviceWorker' in navigator){
-            window.addEventListener('load',()=>{
-                navigator.serviceWorker.register('/sw.js').then(e=>{
-                    console.log('ServiceWorker registration successful')
-                }).catch(e=>{
-                    console.log('ServiceWorker registration failed: ',e)
-                })
-            })
-        }
-        const s=document.querySelectorAll('.nav-link');
-        function a(){
-            const e=['services','about','contact'],t=window.scrollY;
-            e.forEach(n=>{
-                const i=document.getElementById(n);
-                if(i){
-                    const c=i.getBoundingClientRect();
-                    if(c.top<=150&&c.bottom>=150){
-                        s.forEach(l=>{l.getAttribute('href')===`#${n}`?l.classList.add('active'):l.classList.remove('active')})
-                    }
-                }
-            })
-        }
-        s.forEach(e=>{
-            e.addEventListener('click',function(){
-                s.forEach(t=>t.classList.remove('active'));
-                this.classList.add('active')
-            })
-        });
-        window.addEventListener('scroll',a);
-        a();
+    }, {threshold: 0.1});
 
-        const d=document.querySelector('.scroll-to-top');
-        window.addEventListener('scroll',()=>{
-            window.scrollY>200?d.classList.add('show'):d.classList.remove('show')
-        }),
-        d.addEventListener('click',()=>{
-            window.scrollTo({top:0,behavior:'smooth'})
-        })
+    ['.services-grid','.portfolio-grid','.contact-grid','.service-card','.portfolio-item']
+      .forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+            el.classList.add('reveal');
+            o.observe(el);
+        });
     });
+
+    document.querySelectorAll('.service-card').forEach((el, index) => {
+        el.style.animationDelay = `${0.2 * index}s`;
+    });
+
+    const r = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {threshold: 0.2});
+
+    document.querySelectorAll('.services, .about, .vision, .contact, .faq')
+      .forEach(section => {
+        r.observe(section);
+    });
+
+    if('serviceWorker' in navigator){
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').then(reg => {
+                console.log('ServiceWorker registration successful');
+            }).catch(err => {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    function highlightNav() {
+        const sections = ['services','about','contact'];
+        sections.forEach(sec => {
+            const sectionEl = document.getElementById(sec);
+            if(sectionEl){
+                const rect = sectionEl.getBoundingClientRect();
+                if(rect.top <= 150 && rect.bottom >= 150){
+                    navLinks.forEach(link => {
+                        link.getAttribute('href') === `#${sec}`
+                          ? link.classList.add('active')
+                          : link.classList.remove('active');
+                    });
+                }
+            }
+        });
+    }
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    window.addEventListener('scroll', highlightNav);
+    highlightNav();
+
+    const scrollBtn = document.querySelector('.scroll-to-top');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 200) scrollBtn.classList.add('show');
+        else scrollBtn.classList.remove('show');
+    });
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({top:0, behavior:'smooth'});
+    });
+});
 </script>
+
 <script nonce="abc123">
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.modern-header');
-    const scrollThreshold = 50; // Adjust this value to control when the header changes
+    const scrollThreshold = 50;
 
     function updateHeader() {
         if (window.scrollY > scrollThreshold) {
@@ -1801,14 +1718,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.addEventListener('scroll', updateHeader);
-    updateHeader(); // Initial check
+    updateHeader();
 });
 </script>
+
 <script nonce="abc123">
-    document.addEventListener('DOMContentLoaded', () => {
-        const video = document.querySelector('.video-background video');
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.querySelector('.video-background video');
+    if (video) {
         video.playbackRate = 0.9;
-    });
+    }
+});
 </script>
 </body>
 </html>
