@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed sw.js error again again">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed more js console errors" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,13 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00051" summary="fixed SEO problems">
-      <option name="closed" value="true" />
-      <created>1734817477389</created>
-      <option name="number" value="LOCAL−00051" />
-      <option name="presentableId" value="LOCAL−00051" />
-      <updated>1734817477389</updated>
     </task>
     <task id="LOCAL−00052" summary="improved nav">
       <option name="closed" value="true" />
@@ -425,7 +415,14 @@
       <option name="presentableId" value="LOCAL−00099" />
       <updated>1734912966075</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL−00100" summary="fixed more js console errors">
+      <option name="closed" value="true" />
+      <created>1734913846023</created>
+      <option name="number" value="LOCAL−00100" />
+      <option name="presentableId" value="LOCAL−00100" />
+      <updated>1734913846023</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added new badge" />
     <MESSAGE value="added thank you page" />
     <MESSAGE value="removed badges" />
     <MESSAGE value="added new contact content" />
@@ -465,6 +461,7 @@
     <MESSAGE value="fixed sw.js error" />
     <MESSAGE value="fixed sw.js error again" />
     <MESSAGE value="fixed sw.js error again again" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed sw.js error again again" />
+    <MESSAGE value="fixed more js console errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed more js console errors" />
   </component>
 </project>

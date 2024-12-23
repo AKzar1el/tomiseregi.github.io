@@ -16,18 +16,15 @@ const INITIAL_CACHE_URLS = [
 // Function to check if a request should be cached
 function shouldCache(request) {
   try {
-    // Return early if request is undefined
     if (!request || !request.url) return false;
-
     // Only cache GET requests
     if (request.method !== 'GET') return false;
 
     const url = new URL(request.url);
-
     // Early exit for non-HTTP(S) schemes (chrome-extension://, data:, etc.)
     if (!['http:', 'https:'].includes(url.protocol)) return false;
 
-    // Only cache requests from your domain or specific CDNs
+    // Only cache from certain domains
     const allowedDomains = [
       'tomiseregi.si',
       'cdnjs.cloudflare.com',
@@ -77,43 +74,66 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event handler with network-first strategy
+// Fetch event handler (network-first strategy)
 self.addEventListener('fetch', (event) => {
-  // If this request should NOT be cached, respond with the network fetch immediately.
+  // If we should NOT cache this request, just do a fetch pass-through
   if (!shouldCache(event.request)) {
     event.respondWith(
       fetch(event.request).catch(() => {
-        // If fetch fails for some reason, at least fail gracefully
+        // If fetch fails, fail gracefully
         return new Response('Network request failed and not in cache.', {
           status: 408,
           headers: new Headers({ 'Content-Type': 'text/plain' })
         });
       })
     );
-    return; // Stop here.
+    return;
   }
 
-  // Otherwise, use a network-first approach and attempt to cache the result.
+  // Step 1: Skip caching if it's a Range request (prevents partial responses).
+  if (event.request.headers.has('range')) {
+    event.respondWith(
+      fetch(event.request).catch(() => {
+        return new Response('Network request failed for ranged content.', {
+          status: 408,
+          headers: new Headers({ 'Content-Type': 'text/plain' })
+        });
+      })
+    );
+    return;
+  }
+
+  // Step 2: Network-first approach, but skip storing partial/invalid responses
   event.respondWith(
     fetch(event.request)
       .then((response) => {
-        // Only cache valid responses
-        if (response.ok) {
-          const responseToCache = response.clone();
-          caches.open(CACHE_NAME)
-            .then(cache => {
-              cache.put(event.request, responseToCache);
-            })
-            .catch(error => {
-              console.log('Cache put failed:', error);
-            });
+        // If response is partial (status 206) or not ok, do not cache it.
+        if (!response.ok || response.status !== 200) {
+          return response;
         }
+
+        // If you want extra safety, you can also check for Content-Range header:
+        // if (response.headers.has('Content-Range')) {
+        //   return response;
+        // }
+
+        // Otherwise, clone and store in the cache
+        const responseToCache = response.clone();
+        caches.open(CACHE_NAME)
+          .then(cache => {
+            cache.put(event.request, responseToCache);
+          })
+          .catch(error => {
+            console.log('Cache put failed:', error);
+          });
+
         return response;
       })
       .catch(() => {
-        return caches.match(event.request).then((response) => {
-          if (response) {
-            return response;
+        // If network fails, use the cache if available
+        return caches.match(event.request).then((cachedResponse) => {
+          if (cachedResponse) {
+            return cachedResponse;
           }
           return new Response('Network error happened', {
             status: 408,
