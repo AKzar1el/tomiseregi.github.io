@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed some js errors">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="embeded manifest.json">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/sw.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,13 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00046" summary="fixed ai buzz word appearence">
-      <option name="closed" value="true" />
-      <created>1734816116294</created>
-      <option name="number" value="LOCAL−00046" />
-      <option name="presentableId" value="LOCAL−00046" />
-      <updated>1734816116294</updated>
     </task>
     <task id="LOCAL−00047" summary="fixed ai buzz word appearence">
       <option name="closed" value="true" />
@@ -425,7 +418,14 @@
       <option name="presentableId" value="LOCAL−00094" />
       <updated>1734908793205</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL−00095" summary="embeded manifest.json">
+      <option name="closed" value="true" />
+      <created>1734911194806</created>
+      <option name="number" value="LOCAL−00095" />
+      <option name="presentableId" value="LOCAL−00095" />
+      <updated>1734911194806</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +440,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed css link not loading" />
     <MESSAGE value="changed section styling" />
     <MESSAGE value="reformat code for thank you page" />
     <MESSAGE value="added moja vizija section" />
@@ -465,6 +464,7 @@
     <MESSAGE value="changed background video" />
     <MESSAGE value="such wow" />
     <MESSAGE value="fixed some js errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some js errors" />
+    <MESSAGE value="embeded manifest.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="embeded manifest.json" />
   </component>
 </project>
