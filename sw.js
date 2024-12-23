@@ -13,24 +13,44 @@ const INITIAL_CACHE_URLS = [
   '/icons/icon-192x192.webp'
 ];
 
+// Function to check if a request should be cached
+function shouldCache(request) {
+  // Only cache GET requests
+  if (request.method !== 'GET') return false;
+
+  const url = new URL(request.url);
+
+  // Only cache supported schemes (http or https)
+  if (!['http:', 'https:'].includes(url.protocol)) return false;
+
+  // Only cache requests from your domain or specific CDNs
+  const allowedDomains = [
+    'tomiseregi.si',
+    'cdnjs.cloudflare.com',
+    'www.googletagmanager.com',
+    'www.google-analytics.com'
+  ];
+
+  if (!allowedDomains.some(domain => url.hostname.includes(domain))) return false;
+
+  return true;
+}
+
 // Install event handler
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        // Instead of cache.addAll, we'll use a more resilient approach
         return Promise.allSettled(
           INITIAL_CACHE_URLS.map(url =>
             cache.add(url).catch(error => {
               console.log(`Failed to cache ${url}: ${error}`);
-              // Continue even if individual items fail to cache
               return Promise.resolve();
             })
           )
         );
       })
   );
-  // Activate the worker immediately
   self.skipWaiting();
 });
 
@@ -47,12 +67,16 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
-  // Immediately claim clients
   event.waitUntil(clients.claim());
 });
 
 // Fetch event handler with network-first strategy
 self.addEventListener('fetch', (event) => {
+  // Only handle supported requests
+  if (!shouldCache(event.request)) {
+    return;
+  }
+
   event.respondWith(
     fetch(event.request)
       .then((response) => {
@@ -63,10 +87,11 @@ self.addEventListener('fetch', (event) => {
         if (response.status === 200) {
           caches.open(CACHE_NAME)
             .then((cache) => {
-              cache.put(event.request, responseToCache);
-            })
-            .catch((error) => {
-              console.log('Cache put failed:', error);
+              // Double-check shouldCache before putting
+              if (shouldCache(event.request)) {
+                cache.put(event.request, responseToCache)
+                  .catch(error => console.log('Cache put failed:', error));
+              }
             });
         }
 
