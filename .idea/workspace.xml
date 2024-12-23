@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed illegal use of eval in csp functions">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed amp broken version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,13 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00074" summary="removed badges">
-      <option name="closed" value="true" />
-      <created>1734880751260</created>
-      <option name="number" value="LOCAL−00074" />
-      <option name="presentableId" value="LOCAL−00074" />
-      <updated>1734880751260</updated>
     </task>
     <task id="LOCAL−00075" summary="added new contact content">
       <option name="closed" value="true" />
@@ -424,7 +418,14 @@
       <option name="presentableId" value="LOCAL−00122" />
       <updated>1734952478518</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL−00123" summary="fixed amp broken version">
+      <option name="closed" value="true" />
+      <created>1734953032236</created>
+      <option name="number" value="LOCAL−00123" />
+      <option name="presentableId" value="LOCAL−00123" />
+      <updated>1734953032236</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +440,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed sw.js error" />
     <MESSAGE value="fixed sw.js error again" />
     <MESSAGE value="fixed sw.js error again again" />
     <MESSAGE value="fixed more js console errors" />
@@ -464,6 +464,7 @@
     <MESSAGE value="fixed seo for meta even more" />
     <MESSAGE value="fixed google tag" />
     <MESSAGE value="fixed illegal use of eval in csp functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed illegal use of eval in csp functions" />
+    <MESSAGE value="fixed amp broken version" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed amp broken version" />
   </component>
 </project>
