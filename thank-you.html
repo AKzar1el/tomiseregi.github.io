@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- Unique meta description for thank you page -->
-    <meta content="Thank you for contacting Tomi Šeregi. We will respond to your inquiry within 24 hours. Explore our AI solutions for Slovenian businesses while you wait."
-          name="description">
+    <meta
+        content="Thank you for contacting Tomi Šeregi. We will respond to your inquiry within 24 hours. Explore our AI solutions for Slovenian businesses while you wait."
+        name="description"
+    >
     <!-- Security Headers -->
-    <meta content="default-src 'self' https:; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' https:; font-src 'self' https://cdnjs.cloudflare.com; upgrade-insecure-requests;"
-          http-equiv="Content-Security-Policy">
+    <meta
+        content="default-src 'self' https:; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' https:; font-src 'self' https://cdnjs.cloudflare.com; upgrade-insecure-requests;"
+        http-equiv="Content-Security-Policy"
+    >
     <meta content="DENY" http-equiv="X-Frame-Options">
     <meta content="nosniff" http-equiv="X-Content-Type-Options">
     <meta content="strict-origin-when-cross-origin" http-equiv="Referrer-Policy">
@@ -19,35 +23,44 @@
     <!-- Different canonical URL -->
     <link href="https://www.tomiseregi.si/thank-you.html" rel="canonical"/>
     <link href="https://www.tomiseregi.si/favicon.svg" rel="icon" type="image/svg+xml">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        rel="stylesheet"
+    >
 
     <!-- Unique Open Graph tags -->
     <meta content="Hvala za vaše sporočilo | Tomi Šeregi" property="og:title"/>
-    <meta content="Thank you for reaching out! We will respond to your inquiry within 24 hours."
-          property="og:description"/>
+    <meta
+        content="Thank you for reaching out! We will respond to your inquiry within 24 hours."
+        property="og:description"
+    />
     <meta content="https://www.tomiseregi.si/thank-you.html" property="og:url"/>
     <meta content="website" property="og:type"/>
     <meta content="https://www.tomiseregi.si/logo.png" property="og:image"/>
 
     <!-- Unique Twitter tags -->
     <meta content="Hvala za vaše sporočilo | Tomi Šeregi" name="twitter:title"/>
-    <meta content="Thank you for reaching out! We will respond to your inquiry within 24 hours."
-          name="twitter:description"/>
+    <meta
+        content="Thank you for reaching out! We will respond to your inquiry within 24 hours."
+        name="twitter:description"
+    />
     <meta content="https://www.tomiseregi.si/thank-you.html" name="twitter:url"/>
     <meta content="AI Solutions Illustration by Tomi Šeregi" name="twitter:image:alt"/>
     <meta content="summary" name="twitter:card"/>
     <meta content="@tomiseregi" name="twitter:site"/>
     <meta content="https://tomiseregi.si/logo.webp" name="twitter:image"/>
 
-    <!-- Your existing styles remain the same -->
     <style>
-        /* Reusing your existing styles */
         :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
+            --primary: #4faaff; /* Using the same primary color as on main site */
+            --secondary: #ff5e5e;
             --text: #1f2937;
             --light: #f3f4f6;
             --accent: #dbeafe;
+
+            /* Font families from main site */
+            --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         * {
@@ -57,7 +70,7 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: var(--font-body);
             line-height: 1.6;
             color: var(--text);
         }
@@ -68,68 +81,110 @@
             padding: 0 1.5rem;
         }
 
-        /* Header styles */
-        header {
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        /* ------------------ NEW HEADER STYLES (from main site) ------------------ */
+        .modern-header {
+            background: transparent;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            transition: background-color 0.3s ease;
         }
-
+        .modern-header.scrolled {
+            background: #0A1426;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
         .header-content {
             display: flex;
-            justify-content: flex-start;
-            padding: 1rem 2rem;
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-       .brand-container {
-            display: flex;
+            justify-content: space-between;
             align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
         }
-
-        .brand-link {
+        .brand-container {
             display: flex;
             align-items: center;
             gap: 1rem;
-            text-decoration: none;
-            transition: transform 0.3s ease;
         }
-
-        .brand-link:hover {
-            transform: translateY(-1px);
+        .brand-name {
+            color: #ffffff;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-
         .logo-image {
             height: 48px;
             width: auto;
-            display: block;
         }
-
-        .name-container {
+        .main-nav .nav-list {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
-
-        .brand-name {
-            color: var(--primary);
+        .nav-toggle {
+            display: none; /* Not showing nav toggle on desktop here */
             font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
-            line-height: 1.2;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+        }
+        .nav-list {
+            position: relative;
+        }
+        .nav-link {
+            color: #B0B7C3;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem;
+        }
+        .nav-link:hover {
+            color: #ffffff;
+        }
+        /* If page is scrolled, nav-link color transitions from #B0B7C3 to #ffffff */
+        .scrolled .nav-link {
+            color: #B0B7C3;
+            text-shadow: none;
+        }
+        .scrolled .nav-link:hover {
+            color: #ffffff;
         }
 
-        .brand-tagline {
-            color: #4b5563;
-            font-size: 0.875rem;
-            margin: 0;
+        /* Mobile adjustments if needed */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            .main-nav .nav-list {
+                display: none;
+                flex-direction: column;
+                gap: 1.5rem;
+                background: #0A1426;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                margin: 0;
+                padding: 1.5rem;
+            }
+            .main-nav .nav-list.active {
+                display: flex;
+            }
+            .nav-link {
+                color: #ffffff;
+            }
         }
+        /* ------------------ END HEADER STYLES ------------------ */
 
-        /* Thank you section styles */
+        /* Thank you page main content */
         .thank-you {
             min-height: 80vh;
             display: flex;
@@ -139,7 +194,6 @@
             background: linear-gradient(135deg, var(--accent), white);
             text-align: center;
         }
-
         .thank-you-content {
             max-width: 800px;
             margin: 0 auto;
@@ -148,54 +202,104 @@
             border-radius: 1rem;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-
         .thank-you-icon {
             font-size: 4rem;
             color: var(--primary);
             margin-bottom: 1.5rem;
         }
-
         .thank-you h1 {
             font-size: 2.5rem;
             color: var(--text);
             margin-bottom: 1.5rem;
+            font-family: var(--font-heading);
         }
-
         .thank-you p {
             font-size: 1.25rem;
             color: #4b5563;
             margin-bottom: 2rem;
         }
-
-        .back-button {
+        .button-group a {
             display: inline-block;
             background: var(--primary);
-            color: white;
+            color: #fff;
             padding: 1rem 2rem;
             border-radius: 0.5rem;
             text-decoration: none;
             font-weight: 600;
             transition: background 0.3s;
         }
-
-        .back-button:hover {
+        .button-group a:hover {
             background: var(--secondary);
         }
 
-        /* Footer styles */
+        .resources {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(219, 234, 254, 0.3);
+            border-radius: 1rem;
+        }
+        .resources h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+            font-family: var(--font-heading);
+        }
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .resource-category {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .resource-category h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-family: var(--font-heading);
+        }
+        .resource-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .resource-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .resource-link:hover {
+            color: var(--primary);
+        }
+        .resource-link i {
+            font-size: 1rem;
+            color: var(--primary);
+        }
+
+        /* Footer */
         footer {
             background: var(--text);
             color: white;
             padding: 2rem 0;
             margin-top: auto;
         }
-
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
-
+        footer h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
         footer a {
             color: white;
             text-decoration: none;
@@ -205,85 +309,49 @@
             .thank-you-content {
                 padding: 2rem 1rem;
             }
-
             .thank-you h1 {
                 font-size: 2rem;
             }
-
             .thank-you p {
                 font-size: 1.125rem;
             }
-        }
-        .resources {
-            margin-top: 2rem;
-            padding: 2rem;
-            background: rgba(219, 234, 254, 0.3);
-            border-radius: 1rem;
-        }
-
-        .resources h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text);
-        }
-
-        .resources-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .resource-category {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .resource-category h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .resource-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .resource-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .resource-link:hover {
-            color: var(--primary);
-        }
-
-        .resource-link i {
-            font-size: 1rem;
-            color: var(--primary);
         }
     </style>
 </head>
 
 <body>
-<header role="banner">
+<!-- Updated Header with "modern-header" and structure from main site -->
+<header role="banner" class="modern-header">
     <div class="container header-content">
+        <!-- Logo and Brand Section -->
         <div class="brand-container">
-            <a class="brand-link" href="https://www.tomiseregi.si">
-                <img loading="lazy" alt="Tomi Šeregi Logo" class="logo-image" src="https://www.tomiseregi.si/logo.png">
-                <div class="name-container">
-                    <p class="brand-name">Tomi Šeregi</p>
-                    <p aria-label="Tagline" class="brand-tagline">AI Solutions</p>
-                </div>
-            </a>
+            <img
+                alt="Tomi Šeregi Logo"
+                class="logo-image"
+                src="https://www.tomiseregi.si/logo.png"
+                width="48"
+                height="48"
+                loading="lazy"
+            >
+            <p class="brand-name">Tomi Šeregi</p>
         </div>
+        <!-- Minimal nav for Thank You page -->
+        <nav aria-label="Main navigation" class="main-nav" role="navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-list">
+                <li>
+                    <a
+                        class="nav-link"
+                        href="https://www.tomiseregi.si"
+                        title="Go to Home"
+                    >
+                        Domov
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </header>
 
@@ -298,26 +366,53 @@
                 <p>Za več informacij o mojih storitvah me lahko medtem spremljate na LinkedInu ali si ogledate moje
                     reference.</p>
                 <div class="button-group" style="margin-top: 2rem;">
-                    <a class="back-button" href="https://www.tomiseregi.si" role="button">Nazaj na domačo stran</a>
-                    <a class="cta-button" href="https://www.linkedin.com/in/tomi-seregi/" role="button"
-                       style="margin-left: 1rem;">LinkedIn Profil</a>
+                    <a
+                        class="back-button"
+                        href="https://www.tomiseregi.si"
+                        role="button"
+                    >
+                        Nazaj na domačo stran
+                    </a>
+                    <a
+                        class="back-button"
+                        href="https://www.linkedin.com/in/tomi-seregi/"
+                        role="button"
+                        style="margin-left: 1rem;"
+                    >
+                        LinkedIn Profil
+                    </a>
                 </div>
+
                 <div class="resources">
                     <h2>Koristne povezave za vaše podjetje</h2>
                     <div class="resources-grid">
                         <div class="resource-category">
                             <h3>Poslovni viri</h3>
                             <div class="resource-links">
-                                <a class="resource-link" href="https://digitalna.si/" rel="noopener" target="_blank">
+                                <a
+                                    class="resource-link"
+                                    href="https://digitalna.si/"
+                                    rel="noopener"
+                                    target="_blank"
+                                >
                                     <i class="fas fa-external-link-alt"></i>
                                     Digital Slovenia
                                 </a>
-                                <a class="resource-link" href="https://www.spiritslovenia.si/" rel="noopener"
-                                   target="_blank">
+                                <a
+                                    class="resource-link"
+                                    href="https://www.spiritslovenia.si/"
+                                    rel="noopener"
+                                    target="_blank"
+                                >
                                     <i class="fas fa-external-link-alt"></i>
                                     SPIRIT Slovenia
                                 </a>
-                                <a class="resource-link" href="https://www.gzs.si/" rel="noopener" target="_blank">
+                                <a
+                                    class="resource-link"
+                                    href="https://www.gzs.si/"
+                                    rel="noopener"
+                                    target="_blank"
+                                >
                                     <i class="fas fa-external-link-alt"></i>
                                     Gospodarska zbornica Slovenije
                                 </a>
@@ -327,12 +422,21 @@
                         <div class="resource-category">
                             <h3>Tech Skupnost</h3>
                             <div class="resource-links">
-                                <a class="resource-link" href="https://www.meetup.com/slovenia-tech/" rel="noopener"
-                                   target="_blank">
+                                <a
+                                    class="resource-link"
+                                    href="https://www.meetup.com/slovenia-tech/"
+                                    rel="noopener"
+                                    target="_blank"
+                                >
                                     <i class="fas fa-users"></i>
                                     Slovenia Tech Community
                                 </a>
-                                <a class="resource-link" href="https://dihslovenia.si/" rel="noopener" target="_blank">
+                                <a
+                                    class="resource-link"
+                                    href="https://dihslovenia.si/"
+                                    rel="noopener"
+                                    target="_blank"
+                                >
                                     <i class="fas fa-microchip"></i>
                                     Digital Innovation Hub Slovenia
                                 </a>
@@ -342,13 +446,21 @@
                         <div class="resource-category">
                             <h3>Uporabna orodja</h3>
                             <div class="resource-links">
-                                <a class="resource-link" href="https://calendly.com/tomi-seregi99/30min" rel="noopener"
-                                   target="_blank">
+                                <a
+                                    class="resource-link"
+                                    href="https://calendly.com/tomi-seregi99/30min"
+                                    rel="noopener"
+                                    target="_blank"
+                                >
                                     <i class="fas fa-calendar"></i>
                                     Rezervirajte sestanek
                                 </a>
-                                <a class="resource-link" href="https://www.linkedin.com/in/tomi-seregi/" rel="noopener"
-                                   target="_blank">
+                                <a
+                                    class="resource-link"
+                                    href="https://www.linkedin.com/in/tomi-seregi/"
+                                    rel="noopener"
+                                    target="_blank"
+                                >
                                     <i class="fab fa-linkedin"></i>
                                     LinkedIn Profil
                                 </a>
@@ -358,7 +470,13 @@
                 </div>
 
                 <div class="button-group" style="margin-top: 2rem;">
-                    <a class="back-button" href="https://www.tomiseregi.si" role="button">Nazaj na domačo stran</a>
+                    <a
+                        class="back-button"
+                        href="https://www.tomiseregi.si"
+                        role="button"
+                    >
+                        Nazaj na domačo stran
+                    </a>
                 </div>
             </div>
         </div>
@@ -374,8 +492,13 @@
         <div>
             <h3>Kontakt</h3>
             <p>tomi.seregi99@gmail.com</p>
-            <a aria-label="Visit LinkedIn profile" href="https://www.linkedin.com/in/tomi-seregi/" style="color:white">LinkedIn:
-                Tomi Šeregi</a>
+            <a
+                aria-label="Visit LinkedIn profile"
+                href="https://www.linkedin.com/in/tomi-seregi/"
+                style="color:white"
+            >
+                LinkedIn: Tomi Šeregi
+            </a>
         </div>
     </div>
 </footer>
@@ -390,6 +513,16 @@
         'page_path': '/thank-you',
         'transport_url': 'https://ssl.google-analytics.com',
         'transport_type': 'beacon'
+    });
+
+    // Optional: small script to handle "scrolled" header class
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.modern-header');
+        if(window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
     });
 </script>
 </body>
