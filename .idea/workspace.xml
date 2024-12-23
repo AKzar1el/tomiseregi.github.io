@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed failed to load resource gtm 408">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed wrong aria role for maps">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,13 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00068" summary="fixed css link not loading">
-      <option name="closed" value="true" />
-      <created>1734871157707</created>
-      <option name="number" value="LOCAL−00068" />
-      <option name="presentableId" value="LOCAL−00068" />
-      <updated>1734871157707</updated>
     </task>
     <task id="LOCAL−00069" summary="changed section styling">
       <option name="closed" value="true" />
@@ -424,7 +417,14 @@
       <option name="presentableId" value="LOCAL−00116" />
       <updated>1734950118561</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL−00117" summary="fixed wrong aria role for maps">
+      <option name="closed" value="true" />
+      <created>1734950176081</created>
+      <option name="number" value="LOCAL−00117" />
+      <option name="presentableId" value="LOCAL−00117" />
+      <updated>1734950176081</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test" />
     <MESSAGE value="added new logo" />
     <MESSAGE value="changed background video" />
     <MESSAGE value="such wow" />
@@ -464,6 +463,7 @@
     <MESSAGE value="fixed thank u page" />
     <MESSAGE value="fixed typo" />
     <MESSAGE value="fixed failed to load resource gtm 408" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed failed to load resource gtm 408" />
+    <MESSAGE value="fixed wrong aria role for maps" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed wrong aria role for maps" />
   </component>
 </project>
