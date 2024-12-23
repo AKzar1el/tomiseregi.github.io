@@ -153,7 +153,7 @@
         /* Make the heading stand out a bit */
         .vision h3 {
           font-size: 1.75rem;
-          color: var(--secondary); /* or var(--primary) if you prefer */
+          color: var(--primary); /* or var(--primary) if you prefer */
           text-align: center;
           margin-bottom: 1.5rem;
         }
@@ -1199,37 +1199,53 @@
             color: #ffffff;
         }
 
+/* Example "jelly button" styling */
 .contact-button {
-    /* Base styles */
-    background: linear-gradient(135deg, #E91E63, #FF2D70);
-    color: #ffffff;
-    padding: 0.75rem 1.75rem;
-    border-radius: 100px;  /* Fully rounded edges for modern look */
-    font-weight: 500;
-    font-size: 0.95rem;
-    letter-spacing: 0.3px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
-    box-shadow: 0 2px 10px rgba(233, 30, 99, 0.2);
-    text-transform: uppercase;
+  /* Pill shape & overall sizing */
+  display: inline-block;
+  border: none;
+  border-radius: 9999px; /* big radius = pill shape */
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    /* Modern backdrop blur for transparent headers */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+  /* “Jelly” 3D effect – top highlight + gradient */
+  background: linear-gradient(
+    to bottom,
+    #ff5fac, /* top color (lighter) */
+    #e91e63  /* bottom color (darker) */
+  );
+
+  /* A subtle highlight shimmer on the top edge */
+  box-shadow:
+    /* outer drop shadow: “pop” the button out a bit */
+    0 8px 16px rgba(233, 30, 99, 0.3),
+    /* highlight glare across top half of button */
+    inset 0 8px 12px rgba(255, 255, 255, 0.1);
+
+  /* Add a gentle text shadow to help the text pop */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Hover & Active States */
 .contact-button:hover {
-    /* Hover state */
-    transform: translateY(-2px);
-    background: linear-gradient(135deg, #FF2D70, #E91E63);
-    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+  transform: translateY(-2px);  /* “lift” slightly */
+  box-shadow:
+    0 12px 20px rgba(233, 30, 99, 0.4),
+    inset 0 6px 10px rgba(255, 255, 255, 0.15);
 }
 
 .contact-button:active {
-    /* Click state */
-    transform: translateY(1px);
-    box-shadow: 0 2px 8px rgba(233, 30, 99, 0.2);
+  transform: scale(0.97); /* press “down” look */
+  box-shadow:
+    0 4px 8px rgba(233, 30, 99, 0.2),
+    inset 0 4px 6px rgba(255, 255, 255, 0.2);
 }
 
 /* When header becomes solid on scroll */
@@ -1455,7 +1471,7 @@
             <div class="hero-text">
                 <h1 id="hero-title"><span class="highlight-blue">Profesionalne</span> spletne strani za slovenska podjetja</h1>
                 <p>Preprosto, brezplačno, zaupanja vredno</p>
-                <a class="btn btn--primary" href="https://calendly.com/tomi-seregi99/30min" rel="noopener noreferrer" role="button" target="_blank">
+                <a class="contact-button" href="https://calendly.com/tomi-seregi99/30min" rel="noopener noreferrer" role="button" target="_blank">
                     <strong>Pridobite stran zdaj!</strong>
                 </a>
             </div>
@@ -1631,7 +1647,7 @@
                                 rows="4"
                         ></textarea>
                     </div>
-                    <button class="btn btn--primary" type="submit">
+                    <button class="contact-button" type="submit">
                         Začnite z brezplačno spletno stranjo
                     </button>
                 </form>

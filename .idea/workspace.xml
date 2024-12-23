@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed hero section title styling">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed title">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -81,13 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00058" summary="removed redundancies and added tailwin">
-      <option name="closed" value="true" />
-      <created>1734863693510</created>
-      <option name="number" value="LOCAL−00058" />
-      <option name="presentableId" value="LOCAL−00058" />
-      <updated>1734863693510</updated>
     </task>
     <task id="LOCAL−00059" summary="changed contact section structure">
       <option name="closed" value="true" />
@@ -425,7 +418,14 @@
       <option name="presentableId" value="LOCAL−00106" />
       <updated>1734915487520</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL−00107" summary="fixed title">
+      <option name="closed" value="true" />
+      <created>1734917804853</created>
+      <option name="number" value="LOCAL−00107" />
+      <option name="presentableId" value="LOCAL−00107" />
+      <updated>1734917804853</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +440,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed brand-name css" />
     <MESSAGE value="fixed brand-name css again" />
     <MESSAGE value="updated sitemap.xml" />
     <MESSAGE value="added defering img and fixed incomplete twitter card for thank you page" />
@@ -465,6 +464,7 @@
     <MESSAGE value="fixed x-frame-options may only be set via an http header sent along with a document. it may not be set inside meta" />
     <MESSAGE value="cleaned dir" />
     <MESSAGE value="fixed hero section title styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed hero section title styling" />
+    <MESSAGE value="fixed title" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed title" />
   </component>
 </project>
