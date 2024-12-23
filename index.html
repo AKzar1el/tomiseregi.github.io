@@ -159,7 +159,6 @@
         .brand-container {
           display: flex;
           align-items: center;
-          gap: 0.5rem;
         }
         .skip-link {
           position: absolute;
@@ -864,7 +863,7 @@
         }
         @media (max-width: 768px) {
           body {
-            padding-top: 50px;
+            padding-top: 0px;
           }
           .hero {
             padding: 4rem 1rem 3rem;
@@ -897,8 +896,9 @@
           .header-content {
             padding: 0.5rem 1rem;
           }
+          /* Hide nav toggle & nav links on mobile, keep Tomi Šeregi brand visible */
           .nav-toggle {
-            display: block;
+            display: none;
             font-size: 1.5rem;
             background: none;
             border: none;
@@ -909,22 +909,16 @@
             flex-direction: column;
             gap: 1.5rem;
             padding: 1.5rem;
-            background: white;
+            background: #0A1426 !important;
             position: absolute;
             top: 100%;
             left: 0;
             right: 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            display: none;
+            display: none !important;
           }
           .main-nav .nav-list.active {
-            display: flex;
-          }
-          .main-nav .nav-link {
-            display: block;
-            padding: 0.75rem;
-            text-align: center;
-            width: 100%;
+            display: none !important;
           }
           .about-content {
             grid-template-columns: 1fr;
@@ -1142,12 +1136,6 @@
         .scrolled .contact-button {
             background: #E91E63;
             box-shadow: 0 2px 8px rgba(233, 30, 99, 0.15);
-        }
-        @media (max-width: 768px) {
-            .contact-button {
-                padding: 0.65rem 1.5rem;
-                font-size: 0.9rem;
-            }
         }
     </style>
 

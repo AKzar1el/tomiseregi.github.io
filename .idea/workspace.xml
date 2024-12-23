@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="improved and changed alot of shit">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="updated alt texts for seo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -81,13 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00063" summary="optimized structure">
-      <option name="closed" value="true" />
-      <created>1734868111552</created>
-      <option name="number" value="LOCAL−00063" />
-      <option name="presentableId" value="LOCAL−00063" />
-      <updated>1734868111552</updated>
     </task>
     <task id="LOCAL−00064" summary="optimized structure again">
       <option name="closed" value="true" />
@@ -425,7 +418,14 @@
       <option name="presentableId" value="LOCAL−00111" />
       <updated>1734921375118</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL−00112" summary="updated alt texts for seo">
+      <option name="closed" value="true" />
+      <created>1734922834861</created>
+      <option name="number" value="LOCAL−00112" />
+      <option name="presentableId" value="LOCAL−00112" />
+      <updated>1734922834861</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +440,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reformated code" />
     <MESSAGE value="added faq" />
     <MESSAGE value="fixed footer structure" />
     <MESSAGE value="added new nav" />
@@ -465,6 +464,7 @@
     <MESSAGE value="fixed highligh blue" />
     <MESSAGE value="changed moje storitve section" />
     <MESSAGE value="improved and changed alot of shit" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved and changed alot of shit" />
+    <MESSAGE value="updated alt texts for seo" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated alt texts for seo" />
   </component>
 </project>
