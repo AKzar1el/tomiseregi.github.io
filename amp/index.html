@@ -1,61 +1,35 @@
 <!doctype html>
-<html lang="sl" ⚡>
+<html ⚡ lang="sl">
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width,minimum-scale=1,initial-scale=1" name="viewport">
-    <meta content="Tomi Šeregi - AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions."
-          name="description">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>Brezplačne Spletne Strani za Slovenska Podjetja | Tomi Šeregi</title>
 
-    <title>Tomi Šeregi | Slovenia</title>
-    <link href="https://tomiseregi.si/" rel="canonical">
-    <link href="https://tomiseregi.si/favicon.svg" rel="shortcut icon">
-
-    <!-- Add before title -->
-    <meta content="DENY" http-equiv="X-Frame-Options">
-    <meta content="nosniff" http-equiv="X-Content-Type-Options">
-    <meta content="strict-origin-when-cross-origin" http-equiv="Referrer-Policy">
-
-    <!-- Open Graph tags -->
-    <meta content="Tomi Šeregi" property="og:title">
-    <meta content="Free website creation and automated workflow solutions tailored for Slovenian businesses."
-          property="og:description">
-    <meta content="https://tomiseregi.si/logo.webp" property="og:image">
-    <meta content="https://tomiseregi.si/" property="og:url">
-    <meta content="index, follow" name="robots">
-    <!-- AMP boilerplate -->
-    <style amp-boilerplate>
-        body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
-    </style>
-    <noscript>
-        <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
-        </style>
-    </noscript>
-
-    <!-- AMP JS -->
+    <!-- AMP Runtime -->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-    <!-- AMP Components -->
-    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://tomiseregi.si/">
 
-    <!-- Custom Styles -->
+    <!-- AMP CSS Boilerplate -->
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <!-- Custom AMP styles must be in amp-custom -->
     <style amp-custom>
         :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
+            --primary: #4faaff;
+            --secondary: #ff5e5e;
             --text: #1f2937;
             --light: #f3f4f6;
             --accent: #dbeafe;
         }
 
-        * {
+        /* Base styles */
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: var(--text);
         }
@@ -66,10 +40,9 @@
             padding: 0 1.5rem;
         }
 
-        /* Header */
-        header {
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        /* Header styles */
+        .modern-header {
+            background: #0A1426;
             position: fixed;
             width: 100%;
             top: 0;
@@ -80,91 +53,65 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.75rem 1rem;
+            padding: 1rem 2rem;
         }
 
-        .brand-container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .brand-name {
-            color: var(--primary);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
-            line-height: 1.2;
-        }
-
-        .brand-tagline {
-            color: #4b5563;
-            font-size: 0.875rem;
-            margin: 0;
-        }
-
-        nav ul {
+        /* Navigation styles */
+        .nav-list {
             display: flex;
             gap: 2rem;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        nav a {
+        .nav-link {
+            color: #ffffff;
             text-decoration: none;
-            color: var(--text);
+            font-size: 1rem;
             font-weight: 500;
         }
 
-        /* Hero Section */
+        /* Hero section styles */
         .hero {
-            padding: 8rem 0 4rem;
-            background: linear-gradient(135deg, var(--accent), white);
+            padding-top: 80px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.75));
+            color: white;
+            text-align: center;
         }
 
         .hero-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-text {
-            flex: 1;
-            min-width: 300px;
+            padding: 4rem 1rem;
         }
 
         .hero-text h1 {
             font-size: 2.5rem;
-            line-height: 1.2;
             margin-bottom: 1.5rem;
         }
 
-        .cta-button {
+        /* Button styles */
+        .contact-button {
             display: inline-block;
-            background: var(--primary);
+            background: #E91E63;
             color: white;
             padding: 1rem 2rem;
-            border-radius: 0.5rem;
+            border-radius: 9999px;
             text-decoration: none;
             font-weight: 600;
+            margin-top: 2rem;
         }
 
-        /* Services Section */
+        /* Services section */
         .services {
             padding: 4rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
+            background: #f8f9fa;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            list-style: none;
-            padding: 0;
+            padding: 2rem 0;
         }
 
         .service-card {
@@ -174,40 +121,11 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* Contact Section */
-        .contact {
-            padding: 4rem 0;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .contact-form {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .form-group {
-            display: grid;
-            gap: 0.5rem;
-        }
-
-        input, textarea {
-            padding: 0.75rem;
-            border: 1px solid #d1d5db;
-            border-radius: 0.375rem;
-            width: 100%;
-        }
-
-        /* Footer */
+        /* Footer styles */
         footer {
             background: var(--text);
             color: white;
             padding: 2rem 0;
-            margin-top: 4rem;
         }
 
         .footer-content {
@@ -216,87 +134,26 @@
             gap: 2rem;
         }
 
+        /* Responsive styles */
         @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
+            .hero-text h1 {
+                font-size: 2rem;
             }
 
-            nav ul {
+            .nav-list {
                 display: none;
             }
         }
-        /* Accessibility and Motion Preferences */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation: none !important;
-                transition: none !important;
-            }
-        }
-
-        /* Form Loading State */
-        .loading-indicator {
-            text-align: center;
-            padding: 1rem;
-            background: var(--accent);
-            border-radius: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        /* Enhanced Focus States */
-        a:focus,
-        button:focus,
-        input:focus,
-        textarea:focus {
-            outline: 2px solid var(--primary);
-            outline-offset: 2px;
-        }
-
-        /* Form Success/Error States */
-        .form-success {
-            background: #ecfdf5;
-            color: #065f46;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .form-error {
-            background: #fef2f2;
-            color: #991b1b;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        /* Disable form during submission */
-        .submitting {
-            opacity: 0.7;
-            pointer-events: none;
-        }
     </style>
 
-    <!-- Add amp-mustache for form templates -->
-    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Tomi Šeregi",
-            "url": "https://tomiseregi.si/",
-            "logo": "https://tomiseregi.si/logo.webp",
-            "description": "AI Solutions for Slovenian Businesses. Free website creation and automated workflow solutions.",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "email": "tomi.seregi99@gmail.com"
-            }
-        }
-    </script>
+    <!-- AMP Components -->
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 </head>
 <body>
-<!-- Google Analytics -->
-<amp-analytics data-credentials="include" type="gtag">
-    <script type="application/json">
+    <!-- Google Analytics -->
+    <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
         {
             "vars": {
                 "gtag_id": "G-EM9CVPCXYC",
@@ -307,163 +164,103 @@
                 }
             }
         }
-    </script>
-</amp-analytics>
+        </script>
+    </amp-analytics>
 
-<header>
-    <div class="container header-content">
-        <div class="brand-container">
-            <amp-img
-                    alt="Tomi Šeregi Logo"
+    <header class="modern-header">
+        <div class="container header-content">
+            <div class="brand-container">
+                <amp-img
+                    src="https://tomiseregi.si/ts-initial.webp"
+                    width="48"
                     height="48"
-                    layout="fixed"
-                    src="https://tomiseregi.si/logo.webp"
-                    width="48">
-                <amp-img alt="Tomi Šeregi Logo"
-                         fallback
-                         height="48"
-                         src="https://tomiseregi.si/logo.png"
-                         width="48">
+                    alt="Tomi Šeregi Logo"
+                    layout="fixed">
                 </amp-img>
-            </amp-img>
-            <div class="name-container">
-                <p class="brand-name">Tomi Šeregi</p>
-                <p class="brand-tagline"><strong>AI Solutions</strong></p>
+                <span class="brand-name">Tomi Šeregi</span>
             </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#services">Storitve</a></li>
-                <li><a href="#about">O meni</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 
-<main>
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Brezplačne spletne strani za slovenska podjetja</h1>
-                <p><strong>Rastimo skupaj!</strong></p>
-                <a class="cta-button" href="https://calendly.com/tomi-seregi99/30min"><strong>Pridobite stran
-                    zdaj!</strong></a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#services" class="nav-link">Storitve</a></li>
+                    <li><a href="#about" class="nav-link">O meni</a></li>
+                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Profesionalne spletne strani za slovenska podjetja</h1>
+                    <p>Preprosto, brezplačno, zaupanja vredno</p>
+                    <a href="https://calendly.com/tomi-seregi99/30min" class="contact-button">
+                        Pridobite stran zdaj!
+                    </a>
+                </div>
             </div>
-            <amp-img
-                    alt="AI Solutions Illustration"
-                    height="400"
-                    layout="responsive"
-                    src="https://tomiseregi.si/tomi.webp"
-                    width="600">
-                <div fallback>
-                    Unable to load image
-                </div>
-            </amp-img>
-        </div>
-    </section>
+        </section>
 
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Moje storitve</h2>
-            <ul class="services-grid">
-                <li class="service-card">
-                    <h3><strong>Brezplačne spletne strani</strong></h3>
-                    <p>Profesionalne spletne strani, izdelane s pomočjo <strong>AI tehnologije</strong>, <strong>brezplačno</strong>
-                        za vaše podjetje.</p>
-                </li>
-                <li class="service-card">
-                    <h3><strong>Avtomatizacija procesov</strong></h3>
-                    <p>(kmalu na voljo)</p>
-                </li>
-                <li class="service-card">
-                    <h3><strong>Partnerski program</strong></h3>
-                    <p>Pridružite se naši <strong>rastoči mreži podjetij</strong> za medsebojno rast in promocijo.</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Kontaktirajte me</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3><strong>Stopite v stik</strong></h3>
-                    <p>Zainteresirani za <strong>brezplačno spletno stran</strong>? Kontaktirajte me še danes!</p>
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Moje storitve</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Brezplačne spletne strani</h3>
+                        <p>Profesionalne spletne strani, popolnoma brezplačno za vaše podjetje.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Avtomatizacija procesov</h3>
+                        <p>(kmalu na voljo)</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Partnerski program</h3>
+                        <p>Pridružite se naši rastoči mreži podjetij za medsebojno rast in promocijo.</p>
+                    </div>
                 </div>
-                <form action-xhr="https://api.staticforms.xyz/submit"
-                      class="contact-form"
-                      method="POST"
-                      on="submit:loading.show,form-content.hide;
-          submit-success:loading.hide,form-content.show,success-message.show;
-          submit-error:loading.hide,form-content.show,error-message.show"
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Kontaktirajte me</h2>
+                <form method="POST"
+                      action-xhr="https://api.staticforms.xyz/submit"
                       target="_top">
-
-                    <!-- Hidden loading indicator -->
-                    <div class="loading-indicator" hidden id="loading">
-                        <p><strong>Pošiljanje...</strong></p>
+                    <input type="hidden" name="accessKey" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
+                    <input type="hidden" name="subject" value="Nova stranka na tomiseregi.si">
+                    <div>
+                        <label for="name">Ime in priimek</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-
-                    <!-- Form content wrapper -->
-                    <div id="form-content">
-                        <input name="accessKey" type="hidden" value="eb0290ca-6234-4963-a8a1-525b02c4dc66">
-                        <input name="subject" type="hidden" value="Nova stranka na tomiseregi.si">
-                        <input name="redirectTo" type="hidden" value="https://www.tomiseregi.si">
-
-                        <div class="form-group">
-                            <label for="name">Ime in priimek</label>
-                            <input id="name" name="name" required type="text">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">E-pošta</label>
-                            <input id="email" name="email" required type="email">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Sporočilo</label>
-                            <textarea id="message" name="message" required rows="5"></textarea>
-                        </div>
-
-                        <button class="cta-button" type="submit">
-                            <strong>Pošlji sporočilo</strong>
-                        </button>
+                    <div>
+                        <label for="email">E-pošta</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-
-                    <!-- Success message -->
-                    <div class="form-success" hidden id="success-message">
-                        <template type="amp-mustache">
-                            <p><strong>Sporočilo uspešno poslano!</strong></p>
-                            <p>Hvala za vaše sporočilo. Odgovorili vam bomo v najkrajšem možnem času.</p>
-                        </template>
+                    <div>
+                        <label for="message">Sporočilo</label>
+                        <textarea id="message" name="message" required></textarea>
                     </div>
-
-                    <!-- Error message -->
-                    <div class="form-error" hidden id="error-message">
-                        <template type="amp-mustache">
-                            <p><strong>Prišlo je do napake.</strong></p>
-                            <p>Prosimo, poskusite ponovno ali nas kontaktirajte preko e-pošte.</p>
-                        </template>
-                    </div>
+                    <button type="submit" class="contact-button">Pošlji sporočilo</button>
                 </form>
             </div>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
 
-<footer>
-    <div class="container footer-content">
-        <div>
-            <h3>Tomi Šeregi</h3>
-            <p><strong>AI rešitve za rast vašega podjetja</strong></p>
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <h3>Tomi Šeregi</h3>
+                <p>Rešitve za rast vašega podjetja</p>
+            </div>
+            <div>
+                <h3>Kontakt</h3>
+                <p>info@tomiseregi.si</p>
+                <a href="https://www.linkedin.com/in/tomi-seregi/" style="color: white">LinkedIn: Tomi Šeregi</a>
+            </div>
         </div>
-        <div>
-            <h3>Kontakt</h3>
-            <p><strong>tomi.seregi99@gmail.com</strong></p>
-            <a href="https://www.linkedin.com/in/tomi-seregi/" style="color:white">LinkedIn: Tomi Šeregi</a>
-        </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
