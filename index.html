@@ -10,59 +10,6 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Tomi Šeregi" name="description">
 
-    <!-- Refined Content Security Policy -->
-    <meta
-            content="
-        default-src 'self';
-        script-src
-          'self'
-          'nonce-abc123'
-          https://www.googletagmanager.com
-          https://ssl.google-analytics.com
-          https://www.google-analytics.com
-          https://*.googleapis.com
-          https://cdnjs.cloudflare.com;
-        style-src
-          'self'
-          'nonce-abc123'
-          https://cdnjs.cloudflare.com;
-        img-src
-          'self'
-          https://www.tomiseregi.si
-          https://www.google-analytics.com
-          https://ssl.google-analytics.com
-          https://*.google.com
-          https://*.googleapis.com
-          https://*.gstatic.com
-          data:;
-        font-src
-          'self'
-          https://cdnjs.cloudflare.com;
-        connect-src
-          'self'
-          https://www.google-analytics.com
-          https://ssl.google-analytics.com;
-        frame-src
-          'self'
-          https://calendly.com
-          https://www.google.com
-          https://www.google.com/maps/
-          https://maps.google.com/;
-        form-action
-          'self'
-          https://api.staticforms.xyz;
-        base-uri
-          'self';
-        object-src
-          'none';
-        frame-ancestors
-          'none';
-        upgrade-insecure-requests;
-        block-all-mixed-content;
-      "
-            http-equiv="Content-Security-Policy"
-    >
-
     <meta content="DENY" http-equiv="X-Frame-Options">
     <meta content="nosniff" http-equiv="X-Content-Type-Options">
     <meta content="1; mode=block" http-equiv="X-XSS-Protection">
