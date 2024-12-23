@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="removed inline style for elements">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added local business schema">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,13 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00076" summary="added contact image">
-      <option name="closed" value="true" />
-      <created>1734884198172</created>
-      <option name="number" value="LOCAL−00076" />
-      <option name="presentableId" value="LOCAL−00076" />
-      <updated>1734884198172</updated>
     </task>
     <task id="LOCAL−00077" summary="changed heading divider">
       <option name="closed" value="true" />
@@ -424,7 +418,14 @@
       <option name="presentableId" value="LOCAL−00124" />
       <updated>1734953197310</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL−00125" summary="added local business schema">
+      <option name="closed" value="true" />
+      <created>1734953405729</created>
+      <option name="number" value="LOCAL−00125" />
+      <option name="presentableId" value="LOCAL−00125" />
+      <updated>1734953405729</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +440,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed sw.js error again again" />
     <MESSAGE value="fixed more js console errors" />
     <MESSAGE value="fixed sw.js again" />
     <MESSAGE value="fixed frame-ancestor ignored when delivered via a meta element" />
@@ -464,6 +464,7 @@
     <MESSAGE value="fixed illegal use of eval in csp functions" />
     <MESSAGE value="fixed amp broken version" />
     <MESSAGE value="removed inline style for elements" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed inline style for elements" />
+    <MESSAGE value="added local business schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="added local business schema" />
   </component>
 </project>
