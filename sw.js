@@ -112,6 +112,10 @@ self.addEventListener('fetch', (event) => {
           return response;
         }
 
+        if (!response.status == 206){
+            return response
+        }
+
         // If you want extra safety, you can also check for Content-Range header:
         // if (response.headers.has('Content-Range')) {
         //   return response;
