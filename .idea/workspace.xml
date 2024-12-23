@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed title">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="added jelly buttons">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,13 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00059" summary="changed contact section structure">
-      <option name="closed" value="true" />
-      <created>1734863930978</created>
-      <option name="number" value="LOCAL−00059" />
-      <option name="presentableId" value="LOCAL−00059" />
-      <updated>1734863930978</updated>
     </task>
     <task id="LOCAL−00060" summary="refactored index.html formating">
       <option name="closed" value="true" />
@@ -425,7 +417,14 @@
       <option name="presentableId" value="LOCAL−00107" />
       <updated>1734917804853</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL−00108" summary="added jelly buttons">
+      <option name="closed" value="true" />
+      <created>1734918619314</created>
+      <option name="number" value="LOCAL−00108" />
+      <option name="presentableId" value="LOCAL−00108" />
+      <updated>1734918619314</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed brand-name css again" />
     <MESSAGE value="updated sitemap.xml" />
     <MESSAGE value="added defering img and fixed incomplete twitter card for thank you page" />
     <MESSAGE value="minified js" />
@@ -465,6 +463,7 @@
     <MESSAGE value="cleaned dir" />
     <MESSAGE value="fixed hero section title styling" />
     <MESSAGE value="fixed title" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed title" />
+    <MESSAGE value="added jelly buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="added jelly buttons" />
   </component>
 </project>
