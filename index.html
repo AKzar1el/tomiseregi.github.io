@@ -1653,112 +1653,123 @@
 
 <!-- Main JavaScript - Minified -->
 <script nonce="abc123">
+// Main JavaScript - Refactored without eval
 document.addEventListener('DOMContentLoaded', () => {
-    const o = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('active');
-            }
-        });
-    }, {threshold: 0.1});
+    // Intersection Observer for reveal animations
+    const observeElements = (elements, callback, options = { threshold: 0.1 }) => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(callback);
+        }, options);
 
-    ['.services-grid','.portfolio-grid','.contact-grid','.service-card','.portfolio-item']
-      .forEach(selector => {
-        document.querySelectorAll(selector).forEach(el => {
-            el.classList.add('reveal');
-            o.observe(el);
-        });
+        elements.forEach(element => observer.observe(element));
+    };
+
+    // Handle reveal animations
+    const revealElements = document.querySelectorAll('.reveal');
+    observeElements(revealElements, (entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
     });
 
-    document.querySelectorAll('.service-card').forEach((el, index) => {
-        el.style.animationDelay = `${0.2 * index}s`;
+    // Handle service card animations
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach((card, index) => {
+        card.style.animationDelay = `${0.2 * index}s`;
     });
 
-    const r = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {threshold: 0.2});
+    // Section visibility observer
+    const sections = document.querySelectorAll('.services, .about, .vision, .contact, .faq');
+    observeElements(sections, (entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    }, { threshold: 0.2 });
 
-    document.querySelectorAll('.services, .about, .vision, .contact, .faq')
-      .forEach(section => {
-        r.observe(section);
-    });
-
-    if('serviceWorker' in navigator){
+    // Service Worker Registration
+    if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js').then(reg => {
-                console.log('ServiceWorker registration successful');
-            }).catch(err => {
-                console.log('ServiceWorker registration failed: ', err);
-            });
+            navigator.serviceWorker.register('/sw.js')
+                .then(() => {
+                    console.log('ServiceWorker registration successful');
+                })
+                .catch((err) => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
         });
     }
 
+    // Navigation highlighting
     const navLinks = document.querySelectorAll('.nav-link');
-    function highlightNav() {
-        const sections = ['services','about','contact'];
-        sections.forEach(sec => {
-            const sectionEl = document.getElementById(sec);
-            if(sectionEl){
-                const rect = sectionEl.getBoundingClientRect();
-                if(rect.top <= 150 && rect.bottom >= 150){
+    const highlightNav = () => {
+        const sections = ['services', 'about', 'contact'];
+        sections.forEach(sectionId => {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 150 && rect.bottom >= 150) {
                     navLinks.forEach(link => {
-                        link.getAttribute('href') === `#${sec}`
-                          ? link.classList.add('active')
-                          : link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
                     });
                 }
             }
         });
-    }
+    };
+
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
             navLinks.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
         });
     });
+
     window.addEventListener('scroll', highlightNav);
     highlightNav();
 
+    // Scroll to top functionality
     const scrollBtn = document.querySelector('.scroll-to-top');
-    window.addEventListener('scroll', () => {
-        if(window.scrollY > 200) scrollBtn.classList.add('show');
-        else scrollBtn.classList.remove('show');
-    });
-    scrollBtn.addEventListener('click', () => {
-        window.scrollTo({top:0, behavior:'smooth'});
-    });
-});
-</script>
+    const handleScroll = () => {
+        if (window.scrollY > 200) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    };
 
-<script nonce="abc123">
-document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('scroll', handleScroll);
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Header scroll behavior
     const header = document.querySelector('.modern-header');
     const scrollThreshold = 50;
 
-    function updateHeader() {
+    const updateHeader = () => {
         if (window.scrollY > scrollThreshold) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
-    }
+    };
 
     window.addEventListener('scroll', updateHeader);
     updateHeader();
-});
-</script>
 
-<script nonce="abc123">
-document.addEventListener('DOMContentLoaded', () => {
+    // Video playback rate
     const video = document.querySelector('.video-background video');
     if (video) {
         video.playbackRate = 0.9;
     }
 });
 </script>
+
 </body>
 </html>

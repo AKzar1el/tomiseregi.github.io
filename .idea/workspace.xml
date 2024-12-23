@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed seo for meta even more">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed google tag">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,13 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00072" summary="added new badge">
-      <option name="closed" value="true" />
-      <created>1734879761242</created>
-      <option name="number" value="LOCAL−00072" />
-      <option name="presentableId" value="LOCAL−00072" />
-      <updated>1734879761242</updated>
     </task>
     <task id="LOCAL−00073" summary="added thank you page">
       <option name="closed" value="true" />
@@ -424,7 +417,14 @@
       <option name="presentableId" value="LOCAL−00120" />
       <updated>1734952089177</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL−00121" summary="fixed google tag">
+      <option name="closed" value="true" />
+      <created>1734952261024</created>
+      <option name="number" value="LOCAL−00121" />
+      <option name="presentableId" value="LOCAL−00121" />
+      <updated>1734952261024</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed some js errors" />
     <MESSAGE value="embeded manifest.json" />
     <MESSAGE value="fixed sw.js error" />
     <MESSAGE value="fixed sw.js error again" />
@@ -464,6 +463,7 @@
     <MESSAGE value="fixed wrong area role for service cards" />
     <MESSAGE value="fixed seo for meta" />
     <MESSAGE value="fixed seo for meta even more" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed seo for meta even more" />
+    <MESSAGE value="fixed google tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed google tag" />
   </component>
 </project>
