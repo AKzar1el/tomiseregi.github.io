@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed frame-ancestor ignored when delivered via a meta element" />
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed x-frame-options may only be set via an http header sent along with a document. it may not be set inside meta" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,13 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00055" summary="added section separators">
-      <option name="closed" value="true" />
-      <created>1734821986547</created>
-      <option name="number" value="LOCAL−00055" />
-      <option name="presentableId" value="LOCAL−00055" />
-      <updated>1734821986547</updated>
     </task>
     <task id="LOCAL−00056" summary="changed font and added seo">
       <option name="closed" value="true" />
@@ -422,7 +415,14 @@
       <option name="presentableId" value="LOCAL−00103" />
       <updated>1734914556326</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL−00104" summary="fixed x-frame-options may only be set via an http header sent along with a document. it may not be set inside meta">
+      <option name="closed" value="true" />
+      <created>1734914816403</created>
+      <option name="number" value="LOCAL−00104" />
+      <option name="presentableId" value="LOCAL−00104" />
+      <updated>1734914816403</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,7 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added new contact content" />
     <MESSAGE value="added contact image" />
     <MESSAGE value="changed heading divider" />
     <MESSAGE value="fixed brand-name css" />
@@ -462,6 +461,7 @@
     <MESSAGE value="fixed more js console errors" />
     <MESSAGE value="fixed sw.js again" />
     <MESSAGE value="fixed frame-ancestor ignored when delivered via a meta element" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed frame-ancestor ignored when delivered via a meta element" />
+    <MESSAGE value="fixed x-frame-options may only be set via an http header sent along with a document. it may not be set inside meta" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed x-frame-options may only be set via an http header sent along with a document. it may not be set inside meta" />
   </component>
 </project>
