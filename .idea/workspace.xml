@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed mobile fuked up version">
+    <list default="true" id="1f2ba5dd-7bf4-47a8-a1ec-9dcbc779b31e" name="Changes" comment="fixed typo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thank-you.html" beforeDir="false" afterPath="$PROJECT_DIR$/thank-you.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,20 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734604354580</updated>
-    </task>
-    <task id="LOCAL−00065" summary="fixed mobile design">
-      <option name="closed" value="true" />
-      <created>1734869098107</created>
-      <option name="number" value="LOCAL−00065" />
-      <option name="presentableId" value="LOCAL−00065" />
-      <updated>1734869098107</updated>
-    </task>
-    <task id="LOCAL−00066" summary="fixed mobile hero and nav section">
-      <option name="closed" value="true" />
-      <created>1734869427095</created>
-      <option name="number" value="LOCAL−00066" />
-      <option name="presentableId" value="LOCAL−00066" />
-      <updated>1734869427095</updated>
     </task>
     <task id="LOCAL−00067" summary="fixed mobile hero and nav section">
       <option name="closed" value="true" />
@@ -425,7 +410,21 @@
       <option name="presentableId" value="LOCAL−00113" />
       <updated>1734923618462</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL−00114" summary="fixed thank u page">
+      <option name="closed" value="true" />
+      <created>1734925483756</created>
+      <option name="number" value="LOCAL−00114" />
+      <option name="presentableId" value="LOCAL−00114" />
+      <updated>1734925483756</updated>
+    </task>
+    <task id="LOCAL−00115" summary="fixed typo">
+      <option name="closed" value="true" />
+      <created>1734925638554</created>
+      <option name="number" value="LOCAL−00115" />
+      <option name="presentableId" value="LOCAL−00115" />
+      <updated>1734925638554</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,8 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed footer structure" />
-    <MESSAGE value="added new nav" />
     <MESSAGE value="added new logo again" />
     <MESSAGE value="test" />
     <MESSAGE value="added new logo" />
@@ -465,6 +462,8 @@
     <MESSAGE value="improved and changed alot of shit" />
     <MESSAGE value="updated alt texts for seo" />
     <MESSAGE value="fixed mobile fuked up version" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed mobile fuked up version" />
+    <MESSAGE value="fixed thank u page" />
+    <MESSAGE value="fixed typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed typo" />
   </component>
 </project>
